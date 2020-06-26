@@ -20,6 +20,10 @@ module.exports = function (eleventyConfig) {
     return `<img class="twemoji ${className}" draggable="false" src="${twemoji.base}svg/${codePoint}.svg" alt="${emoji}">`;
   });
 
+  eleventyConfig.addShortcode("hash", function () {
+    return String(Date.now());
+  });
+
   return {
     dir: {
       input: "src",
