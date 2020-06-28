@@ -20,7 +20,7 @@
       "headers": {
         "X-Content-Type-Options": "nosniff",
         "X-Frame-Options": "DENY",
-        "Content-Security-Policy": "default-src 'self'; img-src https://*; script-src: 'self' 'unsafe-inline' https://www.googletagmanager.com; child-src 'none';",
+        "Content-Security-Policy": "default-src 'self'; img-src https://*; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; child-src 'none';",
         "X-XSS-Protection": "1; mode=block"
       },
       "continue": true
