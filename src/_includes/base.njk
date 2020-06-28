@@ -11,5 +11,14 @@
     <main class="sm:w-3/5 mx-auto my-32 px-6">
       {{ content | safe }}
     </main>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143999766-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-143999766-1');
+    </script>
   </body>
 </html>
