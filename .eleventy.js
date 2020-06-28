@@ -1,5 +1,3 @@
-const twemoji = require("twemoji");
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     // Templates:
@@ -14,15 +12,8 @@ module.exports = function (eleventyConfig) {
   ]);
   eleventyConfig.addPassthroughCopy("static");
 
-  // twemoji
-  eleventyConfig.addShortcode("twemoji", function(emoji, className="") {
-    const codePoint = twemoji.convert.toCodePoint(emoji)
-    return `<img class="twemoji ${className}" draggable="false" src="${twemoji.base}svg/${codePoint}.svg" alt="${emoji}">`;
-  });
-
-  eleventyConfig.addShortcode("hash", function () {
-    return String(Date.now());
-  });
+  eleventyConfig.addShortcode("twemoji", require("./src/shortcodes/twemoji"));
+  eleventyConfig.addAsyncShortcode("loadcss", require("./src/shortcodes/loadcss"));
 
   return {
     dir: {
