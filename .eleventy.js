@@ -13,8 +13,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
 
   eleventyConfig.addShortcode("twemoji", require("./src/shortcodes/twemoji"));
-  eleventyConfig.addAsyncShortcode("loadcss", require("./src/shortcodes/loadcss"));
 
+  eleventyConfig.addWatchTarget("./src/_styles/");
+  eleventyConfig.addWatchTarget('./tailwind.config.js')
+  eleventyConfig.addAsyncShortcode("loadcss", require("./src/shortcodes/loadcss"));
+  
   return {
     dir: {
       input: "src",
