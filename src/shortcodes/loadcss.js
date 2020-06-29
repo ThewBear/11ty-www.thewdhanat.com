@@ -3,12 +3,20 @@ const crypto = require("crypto");
 const postcss = require("postcss");
 const path = require("path");
 
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
+
 const parsedCss = {};
+
+const postcssConfig = [
+  require("tailwindcss"),
+  require("autoprefixer"),
+  ...(IS_PRODUCTION ? [require("cssnano")] : []),
+];
 
 module.exports = async function (input) {
   let filePath;
 
-  if (parsedCss[input] && process.env.NODE_ENV === "production") {
+  if (parsedCss[input] && IS_PRODUCTION) {
     // Already parsed css file
     filePath = parsedCss[input].filePath;
   } else {
@@ -20,14 +28,12 @@ module.exports = async function (input) {
     } else {
       // CSS changed
       const rawCss = fs.readFileSync(input);
-      const css = await postcss([
-        require("tailwindcss"),
-        require("autoprefixer"),
-        require("cssnano"),
-      ])
+      const css = await postcss(postcssConfig)
         .process(rawCss, { from: input })
         .then((result) => result.css);
-      const hash = crypto.createHash("md5").update(css).digest("hex");
+      const hash = IS_PRODUCTION
+        ? crypto.createHash("md5").update(css).digest("hex")
+        : "dev";
       const fileName = `${path.basename(input, ".css")}.${hash}.css`;
       try {
         fs.mkdirSync("_site/css", { recursive: true });
