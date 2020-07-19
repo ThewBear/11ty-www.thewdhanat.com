@@ -1,10 +1,26 @@
 ---
 layout: base.njk
 title: Home
+contents:
+  - url: /awesome/
+    text: My personal awesome list
 ---
 
-<h1 class="text-4xl font-bold">
-  Hi
-  {% twemoji "👋" %}
-</h1>
-<h2 class="text-3xl">I'm Thew Dhanat</h2>
+<main class="sm:w-3/5 mx-auto my-32 px-6">
+  <section class="mt-4 mb-8">
+    <h1 class="text-4xl font-bold">
+      Hi
+      {% twemoji "👋" %}
+    </h1>
+    <h2 class="text-3xl">I'm Thew Dhanat</h2>
+  </section>
+  <hr>
+  <section class="my-8">
+    <h2 class="text-2xl">Contents</h2>
+    <div class="flex flex-wrap my-4">
+      {% for content in contents %}
+        <a class="bg-black text-white p-4 m-4 hover:bg-gray-700" href="{{ content.url }}">{{ content.text }}</a>
+      {% endfor %}
+    </div>
+  </section>
+</main>
