@@ -38,7 +38,7 @@ module.exports = async function (input) {
       try {
         fs.mkdirSync("_site/css", { recursive: true });
       } catch (err) {}
-      filePath = `css/${fileName}`;
+      filePath = `/css/${fileName}`;
       parsedCss[input] = {
         lastModified,
         filePath,
