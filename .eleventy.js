@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     "njk",
     "md",
     // Static Assets:
+    "txt",
     "svg",
     "png",
     "jpg",
