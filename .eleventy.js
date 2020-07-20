@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/_styles/");
   eleventyConfig.addWatchTarget('./tailwind.config.js')
   eleventyConfig.addAsyncShortcode("loadcss", require("./src/shortcodes/loadcss"));
+
+  eleventyConfig.addAsyncShortcode("loadjs", require("./src/shortcodes/loadjs"));
   
   return {
     dir: {

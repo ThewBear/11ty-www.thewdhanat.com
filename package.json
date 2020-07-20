@@ -15,6 +15,7 @@
     "prettier": "^2.0.0",
     "snowpack": "^2.6.4",
     "tailwindcss": "^1.5.1",
+    "terser": "^4.8.0",
     "twemoji": "^13.0.1"
   }
 }
