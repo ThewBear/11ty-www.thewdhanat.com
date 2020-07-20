@@ -6,7 +6,7 @@ contents:
     text: My personal awesome list
 ---
 
-<main class="sm:w-3/5 mx-auto my-32 px-6">
+<main class="sm:w-3/5 mx-auto my-20 px-6">
   <section class="mt-4 mb-8">
     <h1 class="text-4xl font-bold">
       Hi
@@ -22,5 +22,21 @@ contents:
         <a class="bg-black text-white p-4 m-4 hover:bg-gray-700" href="{{ content.url }}">{{ content.text }}</a>
       {% endfor %}
     </div>
+  </section>
+  <section>
+    <h2 class="mb-4">
+      <a class="text-2xl underline" href="https://speedlify.thewdhanat.com">Speedlify</a>
+      by
+      <a class="underline" href="https://www.zachleat.com/">@zachleats</a>
+    </h2>
+    <p class="my-2">This is the latest Lighthouse scores of the
+      <a class="underline" href="https://speedlify.thewdhanat.com/thewdhanat.com/">current page</a>. Automated measure every day by Speedlify on GitHub Actions.</p>
+    <speedlify-score class="border-gray-300 border-solid border-2 py-2 px-4" speedlify-url="https://speedlify.thewdhanat.com" url="https://www.thewdhanat.com/"></speedlify-score>
+    <p class="my-2">Lighthouse scores measure how
+      <em>fast</em>
+      and following best practices the website is. The maximum score is
+      {% twemoji "💯" %}.
+      <a class="underline" href="https://developers.google.com/web/tools/lighthouse">Learn more.</a>
+    </p>
   </section>
 </main>
