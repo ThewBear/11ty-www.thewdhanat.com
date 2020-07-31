@@ -2,8 +2,8 @@
   "name": "www.thewdhanat.com",
   "license": "MIT",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
+    "start": "eleventy --serve",
+    "build": "eleventy",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.css\"",
     "lint": "prettier --check \"src/**/*.js\" \"src/**/*.css\"",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
@@ -13,7 +13,6 @@
     "@11ty/eleventy": "^0.11.0",
     "cssnano": "^4.1.10",
     "prettier": "^2.0.0",
-    "snowpack": "^2.7.2",
     "tailwindcss": "^1.6.0",
     "terser": "^4.8.0",
     "twemoji": "^13.0.1"
