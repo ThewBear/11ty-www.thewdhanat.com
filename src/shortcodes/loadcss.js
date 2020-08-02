@@ -13,39 +13,39 @@ const postcssConfig = [
   ...(IS_PRODUCTION ? [require("cssnano")] : []),
 ];
 
-module.exports = async function (input) {
-  let filePath;
+async function parseCss(input) {
+  const rawCss = fs.readFileSync(input);
+  const css = await postcss(postcssConfig)
+    .process(rawCss, { from: input })
+    .then((result) => result.css);
+  const hash = IS_PRODUCTION
+    ? crypto.createHash("md5").update(css).digest("hex")
+    : "dev";
+  const fileName = `${path.basename(input, ".css")}.${hash}.css`;
+  try {
+    fs.mkdirSync("_site/css", { recursive: true });
+  } catch (err) {}
+  filePath = `/css/${fileName}`;
+  fs.writeFileSync(`_site/css/${fileName}`, css);
+  return filePath;
+}
 
-  if (parsedCss[input] && IS_PRODUCTION) {
+module.exports = async function loadcss(input) {
+  let filePath;
+  const lastModified = fs.statSync(input).mtime.getTime();
+
+  if (
+    parsedCss[input] &&
+    (IS_PRODUCTION || parsedCss[input].lastModified === lastModified)
+  ) {
     // Already parsed css file
-    filePath = parsedCss[input].filePath;
+    filePath = await parsedCss[input].filePath;
   } else {
     // Parse css file
-    const lastModified = fs.statSync(input).mtime.getTime();
-    if (parsedCss[input] && parsedCss[input].lastModified === lastModified) {
-      // No css change
-      filePath = parsedCss[input].filePath;
-    } else {
-      // CSS changed
-      const rawCss = fs.readFileSync(input);
-      const css = await postcss(postcssConfig)
-        .process(rawCss, { from: input })
-        .then((result) => result.css);
-      const hash = IS_PRODUCTION
-        ? crypto.createHash("md5").update(css).digest("hex")
-        : "dev";
-      const fileName = `${path.basename(input, ".css")}.${hash}.css`;
-      try {
-        fs.mkdirSync("_site/css", { recursive: true });
-      } catch (err) {}
-      filePath = `/css/${fileName}`;
-      parsedCss[input] = {
-        lastModified,
-        filePath,
-        hash,
-      };
-      fs.writeFileSync(`_site/css/${fileName}`, css);
-    }
+    parsedCss[input] = {
+      lastModified,
+    };
+    parsedCss[input].filePath = parseCss(input);
   }
 
   return `<link rel="stylesheet" type="text/css" href="${filePath}" />`;

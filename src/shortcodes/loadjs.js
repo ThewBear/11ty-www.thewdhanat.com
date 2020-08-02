@@ -7,44 +7,44 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 const parsedJs = {};
 
-module.exports = async function (input, attributes) {
-  let filePath;
+async function parseJs(input) {
+  const rawJs = fs.readFileSync(input, "utf8");
+  const minified = Terser.minify(rawJs);
+  let code;
+  if (minified.error) {
+    console.log("Terser error: ", minified.error);
+    code = rawJs;
+  } else {
+    code = minified.code;
+  }
+  const hash = IS_PRODUCTION
+    ? crypto.createHash("md5").update(code).digest("hex")
+    : "dev";
+  const fileName = `${path.basename(input, ".js")}.${hash}.js`;
+  try {
+    fs.mkdirSync("_site/js", { recursive: true });
+  } catch (err) {}
+  filePath = `/js/${fileName}`;
+  fs.writeFileSync(`_site/js/${fileName}`, code);
+  return filePath;
+}
 
-  if (parsedJs[input] && IS_PRODUCTION) {
+module.exports = async function loadjs(input, attributes) {
+  let filePath;
+  const lastModified = fs.statSync(input).mtime.getTime();
+
+  if (
+    parsedJs[input] &&
+    (IS_PRODUCTION || parsedJs[input].lastModified === lastModified)
+  ) {
     // Already parsed js file
-    filePath = parsedJs[input].filePath;
+    filePath = await parsedJs[input].filePath;
   } else {
     // Parse js file
-    const lastModified = fs.statSync(input).mtime.getTime();
-    if (parsedJs[input] && parsedJs[input].lastModified === lastModified) {
-      // No js change
-      filePath = parsedJs[input].filePath;
-    } else {
-      // JS changed
-      const rawJs = fs.readFileSync(input, "utf8");
-      const minified = Terser.minify(rawJs);
-      let code;
-      if (minified.error) {
-        console.log("Terser error: ", minified.error);
-        code = rawJs;
-      } else {
-        code = minified.code;
-      }
-      const hash = IS_PRODUCTION
-        ? crypto.createHash("md5").update(code).digest("hex")
-        : "dev";
-      const fileName = `${path.basename(input, ".js")}.${hash}.js`;
-      try {
-        fs.mkdirSync("_site/js", { recursive: true });
-      } catch (err) {}
-      filePath = `/js/${fileName}`;
-      parsedJs[input] = {
-        lastModified,
-        filePath,
-        hash,
-      };
-      fs.writeFileSync(`_site/js/${fileName}`, code);
-    }
+    parsedJs[input] = {
+      lastModified,
+    };
+    parsedJs[input].filePath = parseJs(input);
   }
 
   return `<script ${attributes} src="${filePath}"></script>`;
