@@ -46,6 +46,7 @@ module.exports = async function loadcss(input) {
       lastModified,
     };
     parsedCss[input].filePath = parseCss(input);
+    filePath = await parsedCss[input].filePath;
   }
 
   return `<link rel="stylesheet" type="text/css" href="${filePath}" />`;

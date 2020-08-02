@@ -45,6 +45,7 @@ module.exports = async function loadjs(input, attributes) {
       lastModified,
     };
     parsedJs[input].filePath = parseJs(input);
+    filePath = await parsedJs[input].filePath;
   }
 
   return `<script ${attributes} src="${filePath}"></script>`;
