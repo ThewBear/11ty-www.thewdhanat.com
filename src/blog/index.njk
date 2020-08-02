@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/
+---
+
+<main class="w-full sm:w-4/5 lg:w-3/5 mx-auto my-12 px-6">
+  <section class="mt-4 mb-8">
+    <h1 class="text-4xl font-bold mb-2">
+      Thew Dhanat's Blog
+    </h1>
+    <p class="mb-2">Medical student · Software engineer · Learning Machine learning</p>
+    <p class="mb-2">
+      <a class="underline" href="/">← About me</a>
+    </p>
+  </section>
+  <hr>
+  <section class="my-8">
+    <h2 class="text-2xl">All posts</h2>
+    {%- for year, posts in collections.blogByYear | dictsort | reverse -%}
+      <div class="ml-2 my-4">
+        <h3 class="text-xl mb-2">{{ year }}</h3>
+        <ul class="ml-2">
+          {%- for post in posts | reverse -%}
+            <li class="mb-2 text-indigo-800">
+              <a class="hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </section>
+</main>

@@ -1,0 +1,1 @@
+{ "layout": "blogPost.njk", "permalink": "/blog/{{ title | slug }}/" }
