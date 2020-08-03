@@ -12,7 +12,7 @@ I build this blog as my [Digital Garden](https://joelhooks.com/digital-garden)�
 
 The goal of my website is to try out modern web technology✨, optimize it to be as fast⚡️ as possible, and achieve 90+ scores on Lighthouse. Hence my current stack is 11ty with custom shortcodes to process css & js.
 
-I also setup [Speedlify](https://speedlify.thewdhanat.com/), a tool to monitor website Lighthouse scores created by Zach Leatherman, to monitor some pages of my website every day. You can deploy your instance by following [this guide](https://www.zachleat.com/web/speedlify/).
+I also setup [Speedlify](https://speedlify.thewdhanat.com/), a tool to monitor website Lighthouse scores created by Zach Leatherman, to monitor some [pages](https://speedlify.thewdhanat.com/thewdhanat.com/) of my website every day. You can deploy your instance by following [this guide](https://www.zachleat.com/web/speedlify/).
 
 You may notice that I use emoji a lot. They are [Twemoji](https://twemoji.twitter.com/) by Twitter loaded through CDN as an SVG. I use Twemoji for consistency across platforms and because it supports the latest Unicode emoji. So no more rectangle emoji, and looking nice. 🥰
 
