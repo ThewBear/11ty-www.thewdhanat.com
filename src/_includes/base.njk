@@ -7,7 +7,11 @@ lang: en
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Dhanat Satta-awalo"/>
+    <meta name="description" content="Dhanat Satta-awalo - Medical student · Software engineer · Learning Machine learning"/>
+    {% if author %}
+      <meta name="author" content="{{ author }}"/>
+      <link rel="canonical" href="https://www.thewdhanat.com{{ page.url }}"/>
+    {% endif %}
     {% loadcss "src/_styles/index.css" %}
     <title>{{ title }}
       | Thew Dhanat</title>

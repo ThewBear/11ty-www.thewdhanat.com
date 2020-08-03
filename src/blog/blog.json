@@ -1,1 +1,1 @@
-{ "layout": "blogPost.njk", "permalink": "/blog/{{ title | slug }}/" }
+{ "layout": "blogPost.njk", "permalink": "/blog/{{ title | slug }}/", "author": "Dhanat Satta-awalo (Thew)" }
