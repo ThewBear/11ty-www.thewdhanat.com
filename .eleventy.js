@@ -14,16 +14,29 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
 
   eleventyConfig.addShortcode("twemoji", require("./src/shortcodes/twemoji"));
-  eleventyConfig.addFilter("readableDate", require("./src/filters/readableDate"));
+  eleventyConfig.addFilter("twemoji", require("./src/filters/twemoji"));
+  eleventyConfig.addFilter(
+    "readableDate",
+    require("./src/filters/readableDate")
+  );
 
   eleventyConfig.addWatchTarget("./src/_styles/");
-  eleventyConfig.addWatchTarget('./tailwind.config.js')
-  eleventyConfig.addAsyncShortcode("loadcss", require("./src/shortcodes/loadcss"));
+  eleventyConfig.addWatchTarget("./tailwind.config.js");
+  eleventyConfig.addAsyncShortcode(
+    "loadcss",
+    require("./src/shortcodes/loadcss")
+  );
 
-  eleventyConfig.addAsyncShortcode("loadjs", require("./src/shortcodes/loadjs"));
+  eleventyConfig.addAsyncShortcode(
+    "loadjs",
+    require("./src/shortcodes/loadjs")
+  );
 
-  eleventyConfig.addCollection("blogByYear", require("./src/collections/blogByYear"))
-  
+  eleventyConfig.addCollection(
+    "blogByYear",
+    require("./src/collections/blogByYear")
+  );
+
   return {
     dir: {
       input: "src",

@@ -23,7 +23,7 @@ permalink: /blog/
         <ul class="ml-2">
           {%- for post in posts | reverse -%}
             <li class="mb-2 text-indigo-800">
-              <a class="hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
+              <a class="hover:underline" href="{{ post.url }}">{{ post.data.title | e | twemoji | safe }}</a>
             </li>
           {%- endfor -%}
         </ul>
