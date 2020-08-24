@@ -16,7 +16,7 @@
     "luxon": "^1.25.0",
     "prettier": "^2.1.0",
     "tailwindcss": "^1.7.3",
-    "terser": "^4.8.0",
+    "terser": "^5.2.1",
     "twemoji": "^13.0.1"
   }
 }

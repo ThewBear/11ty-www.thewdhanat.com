@@ -9,7 +9,7 @@ const parsedJs = {};
 
 async function parseJs(input) {
   const rawJs = fs.readFileSync(input, "utf8");
-  const minified = Terser.minify(rawJs);
+  const minified = await Terser.minify(rawJs);
   let code;
   if (minified.error) {
     console.log("Terser error: ", minified.error);
