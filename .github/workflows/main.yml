@@ -23,6 +23,26 @@ jobs:
       - run: npm run build
       - run: "[ -f _site/index.html ]"
 
+  deployPullRequest:
+    if: github.event_name	== 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npx vercel --confirm --token $VERCEL_TOKEN -S $VERCEL_SCOPE -n $VERCEL_NAME > previewUrl.txt
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+          VERCEL_NAME: ${{ secrets.VERCEL_NAME }}
+      - uses: actions/github-script@v3
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
+            })
+
   deploy:
     if: github.event_name	== 'push'
     runs-on: ubuntu-latest
