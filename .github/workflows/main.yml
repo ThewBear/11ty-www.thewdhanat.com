@@ -40,7 +40,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Preview: ${require('fs').readFileSync('previewUrl.txt', 'utf8')}`
+              body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
 
   deploy:
