@@ -60,7 +60,8 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: context.ref,
-              required_contexts: []
+              required_contexts: [],
+              environment: 'preview'
             });
             github.repos.createDeploymentStatus({
               owner: context.repo.owner,
@@ -79,8 +80,27 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v2
-      - run: npx vercel --prod --confirm --token $VERCEL_TOKEN -S $VERCEL_SCOPE -n $VERCEL_NAME
+      - run: npx vercel --prod --confirm --token $VERCEL_TOKEN -S $VERCEL_SCOPE -n $VERCEL_NAME > previewUrl.txt
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
           VERCEL_NAME: ${{ secrets.VERCEL_NAME }}
+      - uses: actions/github-script@v3
+        with:
+          script: |
+            const { data: deployment } = await github.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              required_contexts: [],
+            });
+            github.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.id,
+              state: 'success',
+              log_url: require('fs').readFileSync('previewUrl.txt', 'utf8'),
+              mediaType: {
+                previews: "ant-man"
+              }
+            });
