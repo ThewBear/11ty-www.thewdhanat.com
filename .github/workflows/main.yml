@@ -59,7 +59,7 @@ jobs:
             const { id } = await github.repos.createDeployment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: github.ref
+              ref: context.ref
             });
             github.repos.createDeploymentStatus({
               owner: context.repo.owner,
