@@ -15,7 +15,7 @@
     "cssnano": "^4.1.10",
     "luxon": "^1.25.0",
     "prettier": "^2.1.0",
-    "tailwindcss": "^1.7.3",
+    "tailwindcss": "^1.7.6",
     "terser": "^5.2.1",
     "twemoji": "^13.0.1"
   }
