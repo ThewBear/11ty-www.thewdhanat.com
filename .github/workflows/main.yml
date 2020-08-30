@@ -5,7 +5,6 @@ on:
   schedule:
     - cron:  '0 5 * * *'
 
-
 jobs:
   # test:
   #   runs-on: ubuntu-latest
@@ -34,11 +33,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npx vercel --confirm --token $VERCEL_TOKEN -S $VERCEL_SCOPE -n $VERCEL_NAME > previewUrl.txt
+      - run: |
+          mkdir .vercel
+          echo $VERCEL_PROJECT > .vercel/project.json
+          npx vercel --token $VERCEL_TOKEN > previewUrl.txt
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
-          VERCEL_NAME: ${{ secrets.VERCEL_NAME }}
+          VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
       - uses: actions/github-script@v3
         with:
           script: |
