@@ -4,6 +4,28 @@
 
 @tailwind utilities;
 
+.prose a[href^="//"]::after,
+.prose a[href^="http://"]::after,
+.prose a[href^="https://"]::after
+{
+  content: "↗";
+  font-family: system-ui, -apple-system, sans-serif;
+  @apply font-black text-indigo-600 leading-3 pl-px inline-block;
+}
+
+.prose a[href^="//"]:hover::after,
+.prose a[href^="//"]:active::after,
+.prose a[href^="//"]:focus::after,
+.prose a[href^="http://"]:hover::after,
+.prose a[href^="http://"]:active::after,
+.prose a[href^="http://"]:focus::after,
+.prose a[href^="https://"]:hover::after,
+.prose a[href^="https://"]:active::after,
+.prose a[href^="https://"]:focus::after
+{
+  @apply text-indigo-800;
+}
+
 img.twemoji {
   height: 1em;
   width: 1em;
