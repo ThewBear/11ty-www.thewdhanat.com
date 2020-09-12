@@ -19,7 +19,7 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
   </head>
   <body class="flex flex-col min-h-screen">
     {{ content | safe }}
-    <footer class="w-full sm:w-4/5 lg:w-3/5 mt-auto flex justify-between mx-auto py-8 px-6">
+    <footer class="w-full sm:w-4/5 lg:w-3/5 mt-auto flex justify-between mx-auto pt-8 pb-24 sm:py-8 px-6">
       <div>
         <a href="/">Thew Dhanat</a>
       </div>
@@ -55,6 +55,34 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
       gtag("js", new Date());
 
       gtag("config", "UA-143999766-1");
+    </script>
+    <script>
+      let BMCAppended = false;
+      function BMCHandler() {
+        const pageHeight = (document.body.clientHeight - window.innerHeight)
+        if ((window.scrollY > pageHeight / 4 || pageHeight < 100) && !BMCAppended) {
+          const s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src = "https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js";
+          s.dataset.name = "BMC-Widget"
+          s.dataset.id = "thew"
+          s.dataset.description = "Support me on Buy me a coffee!"
+          s.dataset.message = "Thank you for visiting. You can now buy me a coffee!"
+          s.dataset.color = "#5F7FFF"
+          s.dataset.position = ""
+          s.dataset.x_margin = "18"
+          s.dataset.y_margin = "18"
+          document
+            .body
+            .appendChild(s);
+          BMCAppended = true
+          s.onload = () => window.onload()
+          window.removeEventListener("scroll", BMCHandler)
+        }
+      }
+
+      BMCHandler();
+      window.addEventListener("scroll", BMCHandler)
     </script>
   </body>
 </html>
