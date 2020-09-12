@@ -13,6 +13,14 @@ module.exports = function (eleventyConfig) {
   ]);
   eleventyConfig.addPassthroughCopy("static");
 
+  /* Markdown Overrides */
+  let markdownLibrary = require("markdown-it")({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(require('markdown-it-anchor'));
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
   eleventyConfig.addShortcode("twemoji", require("./src/shortcodes/twemoji"));
   eleventyConfig.addFilter("twemoji", require("./src/filters/twemoji"));
   eleventyConfig.addFilter(
