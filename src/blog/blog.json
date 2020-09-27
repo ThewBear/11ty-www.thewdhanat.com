@@ -1,6 +1,6 @@
 {
   "layout": "blogPost.njk",
-  "permalink": "/blog/{{ title | slug }}/",
+  "permalink": "/blog/{% if slug %}{{ slug }}{% else %}{{ title | slug }}{% endif %}/",
   "author": "Dhanat Satta-awalo (Thew)",
   "prism_theme": "https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-dracula.css"
 }
