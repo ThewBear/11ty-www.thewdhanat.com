@@ -6,7 +6,7 @@ postLang: th
 
 โดยปกติแล้ว เอกสารใน Google Drive ทั้ง Google Docs, Google Sheets และ Google Slides จะสามารถใช้ Font ที่มีอยู่ใน [Google Fonts](https://fonts.google.com/) เท่านั้น ผ่านทางเมนู **More fonts 🔽**
 
-![More fonts in the font menu dropdown](../2020-09-20-google-docs-local-fonts/more-fonts.png)
+![More fonts in the font menu dropdown](./2020-09-27-google-docs-local-fonts/more-fonts.png)
 
 โดย font ที่รองรับภาษาไทยนั้น คือ [13 fonts แห่งชาติ](https://gsuiteupdates.googleblog.com/2019/02/expanded-thai-fonts-editors.html) ดังนี้
 
