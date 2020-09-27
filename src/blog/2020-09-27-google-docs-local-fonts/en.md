@@ -6,7 +6,7 @@ Currently, we can use [Google Fonts](https://fonts.google.com/) in our Google Dr
 
 ![More fonts in the font menu dropdown](../2020-09-27-google-docs-local-fonts/more-fonts.png)
 
-However, if we would like to use a local font from your computer, Google only supports [some fonts](#supported-fonts). 🤷
+However, if we would like to use a local font from our computer, Google only supports [some fonts](#supported-fonts). 🤷
 
 The local fonts is categorized by language and will be available when all these conditions are met:
 
