@@ -7,6 +7,10 @@ module.exports = {
         css: {
           color: theme("colors.black"),
           maxWidth: "80ch",
+          img: {
+            marginLeft: "auto",
+            marginRight: "auto"
+          }
         },
       },
     }),
