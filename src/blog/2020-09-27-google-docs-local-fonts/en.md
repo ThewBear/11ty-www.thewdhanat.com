@@ -2,7 +2,7 @@
 title: How to use local fonts in Google Docs / Sheets / Slides
 ---
 
-Currently, we can use [Google Fonts](https://fonts.google.com/) in our Google Drive document including Google Docs, Google Sheets, and Google Slides by selecting **More fonts 🔽** in the font menu dropdown. 
+Currently, we can use [Google Fonts](https://fonts.google.com/) in our Google Drive document including Google Docs, Google Sheets, and Google Slides by selecting **More fonts** in the font menu dropdown menu.
 
 ![More fonts in the font menu dropdown](../2020-09-27-google-docs-local-fonts/more-fonts.png)
 
@@ -13,6 +13,10 @@ The local fonts is categorized by language and will be available when all these 
 1. That font is **[supported](#supported-fonts)** by Google.
 1. We have [set the document language](#set-the-document-language) to **match** that font.
 1. We have that font **installed locally**. If we open the document on another machine that the font is not installed, our document will be formatted weirdly.
+
+After we have completed the setup process, local fonts will be available immediately in the **font dropdown menu 🔽**.
+
+![Local fonts in the font dropdown menu](../2020-09-27-google-docs-local-fonts/local-fonts.png)
 
 ## Set the document language
 
