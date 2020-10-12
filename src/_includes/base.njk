@@ -81,7 +81,12 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
           BMCAppended = true
           s.onload = () => {
             gtag("event", "show_bmc", {"event_category": "monetization"});
-            window.onload()
+            window
+              .document
+              .dispatchEvent(new Event("DOMContentLoaded", {
+                bubbles: true,
+                cancelable: true
+              }));
           }
           window.removeEventListener("scroll", BMCHandler)
         }
