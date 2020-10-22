@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm i -g npm@7
+      - run: sudo npm i -g npm@7
       - run: npm ci
       - run: npm run lint
 
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm i -g npm@7
+      - run: sudo npm i -g npm@7
       - run: npm ci
       - run: npm run build
       - run: "[ -f _site/index.html ]"
