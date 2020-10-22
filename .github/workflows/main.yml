@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm i
       - run: npm run lint
 
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm i
       - run: npm run build
       - run: "[ -f _site/index.html ]"
 
