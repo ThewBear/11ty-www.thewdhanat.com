@@ -9,15 +9,15 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@tailwindcss/typography": "^0.2.0",
     "cssnano": "^4.1.10",
     "luxon": "^1.25.0",
-    "markdown-it": "^12.0.1",
+    "markdown-it": "^12.0.2",
     "markdown-it-anchor": "^6.0.0",
     "prettier": "^2.1.2",
-    "tailwindcss": "^1.8.10",
+    "tailwindcss": "^1.9.6",
     "terser": "^5.3.8",
     "twemoji": "^13.0.1"
   }
