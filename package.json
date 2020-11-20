@@ -18,7 +18,7 @@
     "markdown-it-anchor": "^6.0.0",
     "prettier": "^2.1.2",
     "tailwindcss": "^1.9.6",
-    "terser": "^5.3.8",
+    "terser": "^5.5.0",
     "twemoji": "^13.0.1"
   }
 }
