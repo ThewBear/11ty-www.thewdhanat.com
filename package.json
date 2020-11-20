@@ -15,7 +15,7 @@
     "cssnano": "^4.1.10",
     "luxon": "^1.25.0",
     "markdown-it": "^12.0.2",
-    "markdown-it-anchor": "^6.0.0",
+    "markdown-it-anchor": "^6.0.1",
     "prettier": "^2.1.2",
     "tailwindcss": "^1.9.6",
     "terser": "^5.3.8",
