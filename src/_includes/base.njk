@@ -22,11 +22,12 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
   </head>
   <body class="flex flex-col min-h-screen">
     {{ content | safe }}
-    <footer class="w-full sm:w-4/5 lg:w-3/5 mt-auto flex justify-between mx-auto pt-8 pb-24 sm:py-8 px-6">
-      <div>
+    <footer class="w-full sm:w-4/5 lg:w-3/5 mt-auto flex flex-col sm:flex-row justify-between items-center mx-auto pt-4 pb-8 md:pb-16 px-6">
+      <div class="my-4 sm:my-0">
         <a href="/">Thew Dhanat</a>
       </div>
-      <div class="flex items-center">
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thew" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>
+      <div class="flex items-center my-4 sm:my-0">
         <a class="mx-2" href="https://twitter.com/ThewDhanat" aria-label="My Twitter">
           <svg class="w-5 h-5 fill-current" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>My Twitter (thewdhanat)</title>
@@ -60,40 +61,18 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
       gtag("config", "UA-143999766-1");
     </script>
     <script>
-      let BMCAppended = false;
-      function BMCHandler() {
-        const pageHeight = (document.body.clientHeight - window.innerHeight)
-        if ((window.scrollY > pageHeight / 4 || pageHeight < 100) && !BMCAppended) {
-          const s = document.createElement("script");
-          s.type = "text/javascript";
-          s.src = "https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js";
-          s.dataset.name = "BMC-Widget"
-          s.dataset.id = "thew"
-          s.dataset.description = "Support me on Buy me a coffee!"
-          s.dataset.message = "Thank you for visiting. You can now buy me a coffee!"
-          s.dataset.color = "#5F7FFF"
-          s.dataset.position = ""
-          s.dataset.x_margin = "18"
-          s.dataset.y_margin = "18"
-          document
-            .body
-            .appendChild(s);
-          BMCAppended = true
-          s.onload = () => {
+      const bmcObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             gtag("event", "show_bmc", {"event_category": "monetization"});
-            window
-              .document
-              .dispatchEvent(new Event("DOMContentLoaded", {
-                bubbles: true,
-                cancelable: true
-              }));
           }
-          window.removeEventListener("scroll", BMCHandler)
-        }
-      }
+        })
+      }, {
+        root: document,
+        threshold: 1.0
+      });
 
-      BMCHandler();
-      window.addEventListener("scroll", BMCHandler)
+      bmcObserver.observe(document.getElementsByClassName("bmc-btn-container")[0])
     </script>
   </body>
 </html>
