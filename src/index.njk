@@ -10,11 +10,11 @@ contents:
 
 <main class="sm:w-4/5 lg:w-3/5 mx-auto my-8 px-6">
   <section class="mt-4 mb-8">
-    <h1 class="text-4xl font-bold mb-2">
+    <h1 class="text-4xl font-bold leading-normal mb-2">
       Hi
       {% twemoji "👋" %}
     </h1>
-    <h2 class="text-3xl mb-2">I'm Thew Dhanat</h2>
+    <h2 class="text-3xl leading-normal mb-2">I'm Thew Dhanat</h2>
     <p class="mb-2">Medical student · Software engineer · Learning Machine learning</p>
     <div class="my-4 flex items-center">
       <p class="mr-2">Follow me on</p>
@@ -40,7 +40,7 @@ contents:
   </section>
   <hr>
   <section class="my-8">
-    <h2 class="text-2xl">Contents</h2>
+    <h2 class="text-2xl leading-normal">Contents</h2>
     <div class="flex flex-wrap my-4">
       {% for content in contents %}
         <a class="bg-black text-white p-4 m-4 hover:bg-gray-700" href="{{ content.url }}">{{ content.text }}</a>
