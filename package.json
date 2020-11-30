@@ -16,7 +16,7 @@
     "luxon": "^1.25.0",
     "markdown-it": "^12.0.2",
     "markdown-it-anchor": "^6.0.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.1",
     "tailwindcss": "^1.9.6",
     "terser": "^5.3.8",
     "twemoji": "^13.0.1"
