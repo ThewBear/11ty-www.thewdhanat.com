@@ -4,9 +4,9 @@
 
 @tailwind utilities;
 
-.prose a[href^="//"]::after,
-.prose a[href^="http://"]::after,
-.prose a[href^="https://"]::after
+.prose a[href^="//"]:not(.no-external-icon)::after,
+.prose a[href^="http://"]:not(.no-external-icon)::after,
+.prose a[href^="https://"]:not(.no-external-icon)::after
 {
   content: "↗";
   font-family: system-ui, -apple-system, sans-serif;
