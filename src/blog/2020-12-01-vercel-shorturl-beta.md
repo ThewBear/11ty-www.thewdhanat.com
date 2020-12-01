@@ -18,6 +18,8 @@ Or click the below button to deploy to Vercel immediately!😊
 
 With this new version, you can edit your configuration through GitHub web interface and let Vercel GitHub Integration deploy it immediately.❤
 
+Currently, it is still a beta version and I would like to hear your feedback!🤗 You can reach me on [Twitter](https://twitter.com/ThewDhanat).
+
 ## Demo
 
 [Demo](https://vercel-shorturl-starter.vercel.app) is deployed with the example [redirects.yml](https://github.com/ThewApp/vercel-shorturl/blob/Main/assets/redirects.example.yml).
