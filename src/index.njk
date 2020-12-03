@@ -78,6 +78,19 @@ contents:
         {% endfor %}
       </div>
     </section>
+    <section class="my-4">
+      <h3 class="text-lg leading-normal text-blue-700">Accomplishments</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
+        {% for accomplishment in accomplishments %}
+          {% if accomplishment.url %}<a href="{{ accomplishment.url }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+            <div class="shadow bg-blue-400 p-4 h-full">
+              <h4 class="font-medium">{{ accomplishment.title }}</h4>
+              <span class="text-sm">{{ accomplishment.summary }}</span>
+            </div>
+          </{{"a" if certificate.url else "div"}}>
+        {% endfor %}
+      </div>
+    </section>
   </article>
   <aside>
     {% include "speedlify-score.njk" %}

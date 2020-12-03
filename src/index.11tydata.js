@@ -32,4 +32,12 @@ module.exports = {
       platform: "datacamp",
     },
   ],
+  accomplishments: [
+    {
+      url:
+        "https://opensource.googleblog.com/2017/01/announcing-google-code-in-2016-winners.html",
+      title: "Google Code-in 2016",
+      summary: "Grand Prize Winner",
+    },
+  ],
 };
