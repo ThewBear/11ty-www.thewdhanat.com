@@ -7,10 +7,8 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 const parsedCss = {};
 
-const postcssPlugins = require(path.resolve(
-  process.cwd(),
-  "postcss.config.js"
-)).plugins;
+const postcssPlugins = require(path.resolve(process.cwd(), "postcss.config.js"))
+  .plugins;
 
 async function parseCss(input) {
   const rawCss = fs.readFileSync(input);
