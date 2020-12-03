@@ -61,9 +61,9 @@ contents:
       <p>These are some certificates that I earned from taking online courses during free time.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for certificate in online_certificates %}
-          {% if certificate.url %}<a href="{{ certificate.url }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+          {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.url | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
             <div class="shadow bg-blue-400 p-4 h-full">
-              <h4 class="font-medium">{{ certificate.title }}</h4>
+              <h4 class="font-medium" id="{{ certificate.url | slug }}">{{ certificate.title }}</h4>
               <span class="text-sm">{{ certificate.platform }}
                 {% if certificate.notes %}
                   •
@@ -82,17 +82,17 @@ contents:
       <h3 class="text-lg leading-normal text-blue-700">Accomplishments</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for accomplishment in accomplishments %}
-          {% if accomplishment.url %}<a href="{{ accomplishment.url }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+          {% if accomplishment.url %}<a href="{{ accomplishment.url }}" aria-labelledby="{{ accomplishment.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
             <div class="shadow bg-blue-400 p-4 h-full">
-              <h4 class="font-medium">{{ accomplishment.title }}</h4>
+              <h4 class="font-medium" id="{{ accomplishment.title | slug }}">{{ accomplishment.title }}</h4>
               <span class="text-sm">{{ accomplishment.summary }}</span>
             </div>
-          </{{"a" if certificate.url else "div"}}>
+          </{{"a" if accomplishment.url else "div"}}>
         {% endfor %}
       </div>
     </section>
   </article>
-  <aside>
+  <section>
     {% include "speedlify-score.njk" %}
-  </aside>
+  </section>
 </main>
