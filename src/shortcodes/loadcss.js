@@ -7,15 +7,14 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 const parsedCss = {};
 
-const postcssConfig = [
-  require("tailwindcss"),
-  require("autoprefixer"),
-  ...(IS_PRODUCTION ? [require("cssnano")] : []),
-];
+const postcssPlugins = require(path.resolve(
+  process.cwd(),
+  "postcss.config.js"
+)).plugins;
 
 async function parseCss(input) {
   const rawCss = fs.readFileSync(input);
-  const css = await postcss(postcssConfig)
+  const css = await postcss(postcssPlugins)
     .process(rawCss, { from: input })
     .then((result) => result.css);
   const hash = IS_PRODUCTION

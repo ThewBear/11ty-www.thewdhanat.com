@@ -1,7 +1,9 @@
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
+
 module.exports = {
   plugins: [
     require("tailwindcss"),
     require("autoprefixer"),
-    require("cssnano"),
+    ...(IS_PRODUCTION ? [require("cssnano")] : []),
   ],
 };
