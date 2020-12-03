@@ -46,14 +46,40 @@ contents:
   </section>
   <hr>
   <section class="my-8">
-    <h2 class="text-2xl leading-normal">Contents</h2>
+    <h2 id="contents" class="text-2xl font-medium leading-normal">Contents</h2>
     <div class="flex flex-wrap my-4">
       {% for content in contents %}
         <a class="bg-black text-white p-4 m-4 hover:bg-gray-700" href="{{ content.url }}">{{ content.text }}</a>
       {% endfor %}
     </div>
   </section>
-  <section>
+  <article class="my-4 py-4 border-t-4 border-b-4	border-blue-400 border-solid">
+    <h2 id="about" class="text-2xl font-medium leading-normal mb-4">About</h2>
+    <p>My name is Dhanat Satta-awalo. I am a medical student at Chulalongkorn university.</p>
+    <section class="my-4">
+      <h3 class="text-lg leading-normal text-blue-700">Online course certificates</h3>
+      <p>These are some certificates that I earned from taking online courses during free time.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
+        {% for certificate in online_certificates %}
+          {% if certificate.url %}<a href="{{ certificate.url }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+            <div class="shadow bg-blue-400 p-4 h-full">
+              <h4 class="font-medium">{{ certificate.title }}</h4>
+              <span class="text-sm">{{ certificate.platform }}
+                {% if certificate.notes %}
+                  •
+                  {{ certificate.notes }}
+                {% endif %}
+                {% if not certificate.url %}
+                  <em>• In progress</em>
+                {% endif %}
+              </span>
+            </div>
+          </{{"a" if certificate.url else "div"}}>
+        {% endfor %}
+      </div>
+    </section>
+  </article>
+  <aside>
     {% include "speedlify-score.njk" %}
-  </section>
+  </aside>
 </main>
