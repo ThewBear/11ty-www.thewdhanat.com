@@ -10,6 +10,8 @@ module.exports = function (eleventyConfig) {
     "png",
     "jpg",
     "jpeg",
+    "ico",
+    "webmanifest",
   ]);
   eleventyConfig.addPassthroughCopy("static");
 
