@@ -7,6 +7,12 @@ module.exports = {
     },
     {
       url:
+        "https://www.coursera.org/account/accomplishments/certificate/WT2H5VTZWYNB",
+      title: "COVID-19 Contact Tracing",
+      platform: "Coursera",
+    },
+    {
+      url:
         "https://www.coursera.org/account/accomplishments/certificate/QJRDNMFVA2AF",
       title: "AI For Everyone",
       platform: "Coursera",
