@@ -24,13 +24,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          curl -sL https://raw.githubusercontent.com/mklement0/n-install/stable/bin/n-install | bash -s -- -ny -
-          ~/n/bin/n lts
-          npm install -g grunt gulp n parcel-bundler typescript newman
-          npm install -g --save-dev webpack webpack-cli
-          npm install -g npm
-          rm -rf ~/n
       - run: npm ci
       - run: npm run build
       - run: "[ -f _site/index.html ]"
