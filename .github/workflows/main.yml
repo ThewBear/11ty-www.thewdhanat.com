@@ -70,7 +70,11 @@ jobs:
               repo: context.repo.repo,
               ref: context.ref,
               required_contexts: [],
-              environment: 'preview'
+              environment: 'preview',
+              transient_environment: true,
+              mediaType: {
+                previews: "ant-man"
+              }
             });
             github.repos.createDeploymentStatus({
               owner: context.repo.owner,
