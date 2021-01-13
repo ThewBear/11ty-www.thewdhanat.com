@@ -28,8 +28,7 @@ jobs:
       - run: npm run build
       - run: "[ -f _site/index.html ]"
 
-  deployPullRequest:
-    if: github.event_name	== 'pull_request'
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -41,6 +40,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
       - uses: actions/github-script@v3
+        if: github.event_name	== 'pull_request'
         with:
           script: |
             github.issues.createComment({
@@ -49,19 +49,6 @@ jobs:
               repo: context.repo.repo,
               body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
-
-  deploy:
-    if: github.event_name	== 'push' || github.event_name	== 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          mkdir .vercel
-          echo $VERCEL_PROJECT > .vercel/project.json
-          npx vercel --token $VERCEL_TOKEN > previewUrl.txt
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
       - uses: actions/github-script@v3
         with:
           script: |
