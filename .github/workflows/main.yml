@@ -50,6 +50,7 @@ jobs:
               body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
       - uses: actions/github-script@v3
+        if: github.event_name	!= 'pull_request'
         with:
           script: |
             const { data: deployment } = await github.repos.createDeployment({
