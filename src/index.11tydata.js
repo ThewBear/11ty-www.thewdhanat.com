@@ -6,7 +6,8 @@ module.exports = {
       platform: "Coursera",
     },
     {
-      url: "https://www.coursera.org/account/accomplishments/certificate/426PWL4NMXND",
+      url:
+        "https://www.coursera.org/account/accomplishments/certificate/426PWL4NMXND",
       title: "COVID-19 Training for Healthcare Workers",
       platform: "Coursera",
     },
