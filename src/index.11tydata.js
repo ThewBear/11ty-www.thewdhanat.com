@@ -1,7 +1,8 @@
 module.exports = {
   online_certificates: [
     {
-      url: "https://www.coursera.org/account/accomplishments/specialization/certificate/9PWKSNT8CJKA",
+      url:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/9PWKSNT8CJKA",
       title: "AI for Medicine",
       platform: "Coursera",
     },
