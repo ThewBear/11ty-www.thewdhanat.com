@@ -19,7 +19,7 @@
     "markdown-it-anchor": "^7.0.1",
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.0.3",
     "terser": "^5.5.1",
     "twemoji": "^13.0.1"
   }
