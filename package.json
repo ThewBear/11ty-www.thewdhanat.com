@@ -17,7 +17,7 @@
     "luxon": "^1.26.0",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.1",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.7",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
     "terser": "^5.5.1",
