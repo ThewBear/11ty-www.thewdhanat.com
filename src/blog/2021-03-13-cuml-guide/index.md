@@ -33,6 +33,6 @@ postLang: th
 1. ลาก <a href="javascript:window.location.href='https://login.cuml1.md.chula.ac.th/login?qurl='+encodeURIComponent(document.location">CUML1</a> ขึ้นไปไว้ที่ bookmarks bar
 1. ในหน้าของบทความที่ต้องการ กดที่ **CUML1** บน bookmarks bar
 1. อาจต้องเข้าสู่ระบบเมื่อใช้ครั้งแรก
-![MDCU Library Website](../2021-03-13-cuml-guide/drag.gif)
+![Drag to bookmarks bar](../2021-03-13-cuml-guide/drag.gif)
 
 ข้อดีของวิธีการนี้คือ เราสามารถเลือกเฉพาะ URL ที่เราต้องการได้ แต่ก็มีข้อเสียคือ สามารถใช้ได้กับเฉพาะเว็บที่คณะเปิดให้เชื่อมต่อผ่านวิธีนี้ อาจเกิดความสับสนระหว่างใช้งานว่าขณะนี้เข้าผ่าน CUML1 (EZproxy) หรือไม่ รวมทั้งไม่สามารถใช้โปรแกรมลิขสิทธิ์ต่าง ๆ ได้
