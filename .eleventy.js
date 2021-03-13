@@ -7,9 +7,11 @@ module.exports = function (eleventyConfig) {
     // Static Assets:
     "txt",
     "svg",
+    "webp",
     "png",
     "jpg",
     "jpeg",
+    "gif",
     "ico",
     "webmanifest",
   ]);
