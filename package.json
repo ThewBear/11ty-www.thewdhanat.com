@@ -21,6 +21,6 @@
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
     "terser": "^5.5.1",
-    "twemoji": "^13.0.1"
+    "twemoji": "^13.0.2"
   }
 }
