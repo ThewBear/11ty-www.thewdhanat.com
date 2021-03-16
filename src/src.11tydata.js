@@ -65,7 +65,7 @@ const online_certificates = [
         url:
           "https://www.coursera.org/account/accomplishments/certificate/EBZGV2U5HDPD",
         title: "Essential Google Cloud Infrastructure: Core Services",
-      },      
+      },
       {
         url:
           "https://www.coursera.org/account/accomplishments/certificate/FKKBJTYNYCLX",
@@ -88,7 +88,8 @@ const online_certificates = [
       {
         url:
           "https://www.coursera.org/account/accomplishments/certificate/CM2XU48XV37G",
-        title: "Google Cloud Platform Big Data and Machine Learning Fundamentals",
+        title:
+          "Google Cloud Platform Big Data and Machine Learning Fundamentals",
       },
       {
         url:
