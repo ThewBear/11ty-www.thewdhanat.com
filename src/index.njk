@@ -60,14 +60,14 @@ contents:
       <h3 class="text-lg leading-normal text-blue-700">Online course certificates</h3>
       <p>These are some certificates that I earned from taking online courses during free time.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
-        {% for certificate in online_certificates %}
+        {% for certificate in online_certificates_front %}
           {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
             <div class="shadow bg-blue-400 p-4 h-full">
               <h4 class="font-medium" id="{{ certificate.title | slug }}">{{ certificate.title }}</h4>
               <span class="text-sm">{{ certificate.platform }}
-                {% if certificate.notes %}
+                {% if certificate.children %}
                   •
-                  {{ certificate.notes }}
+                  {{ certificate.children | length }} courses
                 {% endif %}
                 {% if not certificate.url %}
                   <em>• In progress</em>
@@ -76,6 +76,11 @@ contents:
             </div>
           </{{"a" if certificate.url else "div"}}>
         {% endfor %}
+        <a href="/certificates" aria-labelledby="more-certificates" class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+          <div class="shadow bg-blue-400 p-4 h-full flex flex-col justify-center">
+            <h4 class="font-medium text-xl" id="more-certificates">All {{ online_certificates | length }} certificates</h4>
+          </div>
+        </a>
       </div>
     </section>
     <section class="my-4">

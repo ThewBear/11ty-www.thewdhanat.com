@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Certificates
+permalink: /certificates/
+---
+
+<main class="w-full sm:w-4/5 lg:w-3/5 mx-auto my-4 px-6">
+  <section class="mt-4 mb-8">
+    <h1 class="text-4xl leading-normal font-bold mb-2">
+      Thew Dhanat's Certificates
+    </h1>
+    <p class="mb-2">Medical student · Software engineer · Learning Machine learning</p>
+    <p class="mb-2">
+      <a class="underline" href="/">← About me</a>
+    </p>
+  </section>
+  <hr>
+  <section class="my-8">
+    <h2 class="text-2xl leading-normal">All certificates</h2>
+    {%- for year, certificates in online_certificates_by_year | dictsort -%}
+      <div class="ml-2 my-4">
+        <h3 class="text-xl mb-2">{{ year }}</h3>
+        <ul class="ml-2">
+          {%- for certificate in certificates -%}
+            <li class="mb-4">
+              <h4 class="text-lg text-indigo-900 font-bold">{{ certificate.title }}
+                {% if certificate.children %}
+                  <span  class="text-base text-gray-700 font-normal">({{ certificate.children | length}} courses)</span>
+                {% endif %}
+              </h4>
+              {{ certificate.platform }}
+              {% if certificate.url %}
+                <a class="ml-6 hover:underline font-medium" href="{{ certificate.url }}">
+                  See certificate
+                </a>
+              {% else %}
+                <span class="ml-6 text-gray-700 italic">In progress</span>
+              {% endif %}
+              {% if certificate.children %}
+                {% for certificate in certificate.children %}
+                <ul class="m-2 ml-6">
+                  <li class="mb-2">
+                    {{ certificate.title }}
+                    {% if certificate.url %}
+                      <a class="ml-6 hover:underline font-medium" href="{{ certificate.url }}">
+                        See certificate
+                      </a>
+                    {% else %}
+                      <span class="ml-6 text-gray-700 italic">In progress</span>
+                    {% endif %}
+                  </li>
+                </ul>
+                {% endfor %}
+              {% endif %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </section>
+  <section>
+    {% include "speedlify-score.njk" %}
+  </section>
+</main>
