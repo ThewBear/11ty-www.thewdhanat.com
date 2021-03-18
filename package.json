@@ -20,7 +20,7 @@
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2",
-    "terser": "^5.5.1",
+    "terser": "^5.6.1",
     "twemoji": "^13.0.1"
   }
 }
