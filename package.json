@@ -9,7 +9,7 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
@@ -19,8 +19,8 @@
     "markdown-it-anchor": "^7.1.0",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.2",
-    "terser": "^5.5.1",
-    "twemoji": "^13.0.1"
+    "tailwindcss": "^2.0.4",
+    "terser": "^5.6.1",
+    "twemoji": "^13.0.2"
   }
 }
