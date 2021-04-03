@@ -1,5 +1,6 @@
 ---
 title: วิธีใช้ Font ในเครื่องบน Google Docs / Sheets / Slides
+description: วิธีการเพิ่ม Font ภาษาไทย บน Google Docs / Sheets / Slides โดยใช้ font ในเครื่อง
 slug: how-to-use-local-thai-fonts-in-google-docs-sheets-slides
 postLang: th
 ---
