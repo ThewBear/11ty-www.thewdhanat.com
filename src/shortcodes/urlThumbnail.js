@@ -19,7 +19,7 @@ class Browser {
       deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
       viewport: {
         width: 1440,
-        height: IS_PRODUCTION ? 1440 * 2 : 1440,
+        height: 1440,
       },
     });
     return this.page;
