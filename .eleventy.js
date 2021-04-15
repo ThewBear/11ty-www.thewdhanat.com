@@ -45,6 +45,11 @@ module.exports = function (eleventyConfig) {
     require("./src/shortcodes/loadjs")
   );
 
+  eleventyConfig.addAsyncShortcode(
+    "urlThumbnail",
+    require("./src/shortcodes/urlThumbnail")
+  );
+
   eleventyConfig.addCollection(
     "blogByYear",
     require("./src/collections/blogByYear")
