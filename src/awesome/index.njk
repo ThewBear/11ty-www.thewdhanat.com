@@ -3,11 +3,12 @@ layout: base.njk
 title: Awesome Thew
 ---
 
-<header class="sm:w-4/5 xl:w-3/5 mx-auto my-4 px-6">
+<header class="w-full sm:w-4/5 xl:w-3/5 mx-auto my-4 px-4">
   <h1 class="text-4xl font-bold mb-2">Awesome Thew</h1>
   <p class="mb-2">
     Awesome tools / resources curated by
-    <strong><a class="underline" href="/"> Thew Dhanat </a></strong>.
+    <strong><a class="underline" href="/">Thew Dhanat</a></strong
+    >.
   </p>
   <p class="mb-2">
     Inspired by
@@ -19,34 +20,51 @@ title: Awesome Thew
     <a class="underline" href="https://github.com/wesbos/awesome-uses">uses</a>.
   </p>
 </header>
-<main class="sm:w-4/5 xl:w-3/5 mx-auto my-4 px-6">
-  <section>
-    <h1 class="text-3xl font-semibold mb-2">General Programming</h1>
-    {%- for programming in programmings -%}
-    <h2 class="text-2xl font-medium mb-2">{{ programming.title }}</h2>
-    <p class="mb-2">{{ programming.description }}</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {%- for item in programming.items -%}
-      <div class="relative flex justify-end">
-        <div class="rounded-xl overflow-hidden w-1/2 m-2">
-          <a class="block h-28" href="{{ item.url }}"
-            >{% urlThumbnail item.url %}</a
-          >
+<main class="w-full sm:w-4/5 xl:w-3/5 mx-auto mb-4 px-4">
+  <section class="">
+    <h2 id="contents" class="text-3xl font-bold">Contents</h2>
+    <div class="flex flex-wrap my-2">
+      {% for title in contents.keys() %}
+      <a
+        class="bg-black text-white p-2 m-4 hover:bg-gray-700"
+        href="#{{ title | slug }}"
+      >
+        {{ title }}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {%- for key, content in contents -%}
+  <section id="{{ key | slug }}" class="mb-4">
+    <h1 class="text-3xl font-semibold">{{ key }}</h1>
+    <div class="border-l-4 rounded border-black border-solid p-2">
+      {%- for subcontent in content -%}
+      <h2 class="text-2xl font-medium mb-2">{{ subcontent.title }}</h2>
+      <p class="mb-2">{{ subcontent.description }}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {%- for item in subcontent.items -%}
+        <div class="relative flex justify-end">
+          <div class="rounded-xl overflow-hidden w-1/2 m-2">
+            <a class="block h-28" href="{{ item.url }}"
+              >{% urlThumbnail item.url %}</a
+            >
+          </div>
+          <div class="w-1/2">
+            <a
+              href="{{ item.url }}"
+              class="text-blue-900 hover:text-blue-800 hover:underline"
+            >
+              <h3 class="font-medium text-lg">{{ item.title }}</h3>
+            </a>
+            <p>{{ item.description }}</p>
+          </div>
         </div>
-        <div class="w-1/2">
-          <a
-            href="{{ item.url }}"
-            class="text-blue-900 hover:text-blue-800 hover:underline"
-          >
-            <h3 class="font-medium text-lg">{{ item.title }}</h3>
-          </a>
-          <p>{{ item.description }}</p>
-        </div>
+        {%- endfor -%}
       </div>
       {%- endfor -%}
     </div>
-    {%- endfor -%}
   </section>
+  {%- endfor -%}
   <p class="my-12 text-center text-xl">
     {% twemoji "🚧" %} Work in progress {% twemoji "🚧" %}
   </p>
