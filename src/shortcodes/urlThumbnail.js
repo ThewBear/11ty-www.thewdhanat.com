@@ -6,6 +6,28 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 const cached = {};
 
+class Browser {
+  constructor() {
+    this.browser = null;
+    this.page = null;
+  }
+
+  async getPage() {
+    if (this.page) return this.page;
+    this.browser = await chromium.launch();
+    this.page = await this.browser.newPage({
+      deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
+      viewport: {
+        width: 1440,
+        height: IS_PRODUCTION ? 1440 * 2 : 1440,
+      },
+    });
+    return this.page;
+  }
+}
+
+const browser = new Browser();
+
 module.exports = async function urlThumbnail(
   src,
   alt = "",
@@ -26,17 +48,9 @@ module.exports = async function urlThumbnail(
 
   // Capture new screenshot
   const thumbnailFile = `_site/_urlThumbnail/${slug}.png`;
-  const browser = await chromium.launch();
-  const page = await browser.newPage({
-    deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
-    viewport: {
-      width: 1440,
-      height: IS_PRODUCTION ? 1440 * 2 : 1440,
-    },
-  });
+  const page = await browser.getPage();
   await page.goto(src);
   await page.screenshot({ path: thumbnailFile });
-  await browser.close();
 
   // Generate optimized image
   const metadata = await Image(thumbnailFile, {
