@@ -4,15 +4,14 @@ const Image = require("@11ty/eleventy-img");
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
-process.env.UV_THREADPOOL_SIZE = 2; // https://github.com/lovell/sharp/issues/138
-require("sharp").concurrency(1);
+// process.env.UV_THREADPOOL_SIZE = 2; // https://github.com/lovell/sharp/issues/138
 
 const cached = {};
 
 module.exports = async function urlThumbnail(
   src,
   alt = "",
-  sizes = "(min-width: 768px) 50vw, 50vw"
+  sizes = "(min-width: 768px) 25vw, 50vw"
 ) {
   const slug = slugify(src.replace(/https?:\/\/|[.]/g, ""));
   const imageAttributes = {
@@ -31,7 +30,6 @@ module.exports = async function urlThumbnail(
   const thumbnailFile = `_site/_urlThumbnail/${slug}.png`;
   const browser = await chromium.launch();
   const page = await browser.newPage({
-    deviceScaleFactor: IS_PRODUCTION ? 1.5 : 1,
     viewport: {
       width: 1440,
       height: 1440 * 2,
@@ -43,7 +41,7 @@ module.exports = async function urlThumbnail(
 
   // Generate optimized image
   const metadata = await Image(thumbnailFile, {
-    widths: IS_PRODUCTION ? [400, 800, 1200, 1600, 2000, null] : [null],
+    widths: IS_PRODUCTION ? [400, 800, 1200, null] : [null],
     formats: IS_PRODUCTION ? ["avif", "webp", "jpeg"] : ["jpeg"],
     outputDir: "_site/img",
   });
