@@ -27,7 +27,8 @@ module.exports = async function urlThumbnail(
   }
 
   // Capture new screenshot
-  const thumbnailFile = `_site/_urlThumbnail/${slug}.png`;
+  const randomString = require("crypto").randomBytes(4).toString("hex");
+  const thumbnailFile = `_site/_urlThumbnail/${slug}_${randomString}.png`;
   const browser = await chromium.launch();
   const page = await browser.newPage({
     viewport: {
@@ -43,7 +44,8 @@ module.exports = async function urlThumbnail(
   const metadata = await Image(thumbnailFile, {
     widths: IS_PRODUCTION ? [200, 400, 600, 800, 1000, 1200, null] : [null],
     formats: IS_PRODUCTION ? ["avif", "webp", "jpeg"] : ["jpeg"],
-    outputDir: "_site/img",
+    outputDir: "_site/static/img",
+    urlPath: "/static/img/",
   });
 
   // Save cache
