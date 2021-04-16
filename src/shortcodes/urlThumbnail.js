@@ -4,7 +4,7 @@ const Image = require("@11ty/eleventy-img");
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
-process.env.UV_THREADPOOL_SIZE = 1; // https://github.com/lovell/sharp/issues/138
+process.env.UV_THREADPOOL_SIZE = 2; // https://github.com/lovell/sharp/issues/138
 
 const cached = {};
 
@@ -30,10 +30,10 @@ module.exports = async function urlThumbnail(
   const thumbnailFile = `_site/_urlThumbnail/${slug}.png`;
   const browser = await chromium.launch();
   const page = await browser.newPage({
-    deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
+    deviceScaleFactor: IS_PRODUCTION ? 1.5 : 1,
     viewport: {
       width: 1440,
-      height: 1440 * 2.5,
+      height: 1440 * 2,
     },
   });
   await page.goto(src);
