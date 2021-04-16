@@ -1,6 +1,6 @@
 ---
-title: วิธีใช้งาน CUML1 (EZproxy) ของ MDCU
-description: วิธีใช้งาน CUML1 (EZproxy) ของคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย (MDCU)
+title: วิธีใช้งาน CUML1 (EZproxy) / VPN ของ MDCU
+description: วิธีใช้งาน CUML1 (EZproxy) และ VPN ของคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย (MDCU)
 slug: cuml-guide
 postLang: th
 ---
