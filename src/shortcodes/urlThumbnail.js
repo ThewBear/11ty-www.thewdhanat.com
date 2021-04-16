@@ -5,7 +5,7 @@ const Image = require("@11ty/eleventy-img");
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 process.env.UV_THREADPOOL_SIZE = 2; // https://github.com/lovell/sharp/issues/138
-require("sharp").concurrency(2);
+require("sharp").concurrency(1);
 
 const cached = {};
 
