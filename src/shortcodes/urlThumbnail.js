@@ -33,7 +33,7 @@ module.exports = async function urlThumbnail(
     deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
     viewport: {
       width: 1440,
-      height: 1440,
+      height: 1440 * 2,
     },
   });
   await page.goto(src);
