@@ -4,12 +4,7 @@ const Image = require("@11ty/eleventy-img");
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
-
-const os = require('os');
-console.log(os.cpus());
-console.log(os.totalmem());
-console.log(os.freemem())
-console.log(require("sharp").concurrency())
+require("sharp").concurrency(1);
 
 const cached = {};
 
