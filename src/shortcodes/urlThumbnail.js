@@ -30,10 +30,10 @@ module.exports = async function urlThumbnail(
   const thumbnailFile = `_site/_urlThumbnail/${slug}.png`;
   const browser = await chromium.launch();
   const page = await browser.newPage({
-    deviceScaleFactor: IS_PRODUCTION ? 2 : 1,
+    deviceScaleFactor: IS_PRODUCTION ? 1.5 : 1,
     viewport: {
       width: 1440,
-      height: 1440 * 2,
+      height: 1440 * 2.5,
     },
   });
   await page.goto(src);
