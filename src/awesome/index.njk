@@ -45,16 +45,22 @@ title: Awesome Thew
         {%- for item in subcontent.items -%}
         <div class="relative flex justify-end">
           <div class="rounded-xl overflow-hidden w-1/2 m-2">
-            <a class="block h-28" href="{{ item.url }}"
-              >{% urlThumbnail item.url %}</a
+            <a
+              class="block h-28"
+              href="{{ item.url }}"
+              aria-labelledby="{{ item.title | slug }}"
             >
+              {% urlThumbnail item.url %}
+            </a>
           </div>
           <div class="w-1/2">
             <a
               href="{{ item.url }}"
               class="text-blue-900 hover:text-blue-800 hover:underline"
             >
-              <h3 class="font-medium text-lg">{{ item.title }}</h3>
+              <h3 class="font-medium text-lg" id="{{ item.title | slug }}">
+                {{ item.title }}
+              </h3>
             </a>
             <p>{{ item.description }}</p>
           </div>
