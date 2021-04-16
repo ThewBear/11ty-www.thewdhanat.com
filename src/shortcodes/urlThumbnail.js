@@ -4,7 +4,7 @@ const Image = require("@11ty/eleventy-img");
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
-if (IS_PRODUCTION) Image.concurrency = 1;
+console.log(require("sharp").concurrency())
 
 const cached = {};
 
