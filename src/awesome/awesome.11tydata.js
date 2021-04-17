@@ -58,9 +58,25 @@ const python = [
   },
 ];
 
+const web = [
+  {
+    title: "Design",
+    description: "UX/UI",
+    items: [
+      {
+        title: "30 Awesome places to find design inspiration",
+        description: "",
+        url:
+          "https://dev.to/cruip/30-awesome-places-to-find-design-inspiration-1hpn",
+      },
+    ],
+  },
+];
+
 module.exports = {
   contents: new Map([
     ["General Programming", programmings],
     ["Python", python],
+    ["Web", web]
   ]),
 };
