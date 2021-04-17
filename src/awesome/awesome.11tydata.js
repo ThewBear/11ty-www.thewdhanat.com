@@ -77,6 +77,6 @@ module.exports = {
   contents: new Map([
     ["General Programming", programmings],
     ["Python", python],
-    ["Web", web]
+    ["Web", web],
   ]),
 };
