@@ -43,6 +43,24 @@ const programmings = [
   },
 ];
 
+const python = [
+  {
+    title: "Books",
+    description: "",
+    items: [
+      {
+        title: "Free Python Books",
+        description:
+          "A list of Python books in English that are free to read online or download.",
+        url: "https://github.com/pamoroso/free-python-books#readme",
+      },
+    ],
+  },
+];
+
 module.exports = {
-  contents: new Map([["General Programming", programmings]]),
+  contents: new Map([
+    ["General Programming", programmings],
+    ["Python", python],
+  ]),
 };
