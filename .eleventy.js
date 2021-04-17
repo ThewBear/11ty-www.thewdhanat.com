@@ -20,39 +20,34 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
   /* Markdown Overrides */
-  let markdownLibrary = require("markdown-it")({
-    html: true,
-    breaks: true,
-    linkify: true,
-  }).use(require("markdown-it-anchor"));
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  eleventyConfig.setLibrary("md", require("./lib/markdown"));
 
-  eleventyConfig.addShortcode("twemoji", require("./src/shortcodes/twemoji"));
-  eleventyConfig.addFilter("twemoji", require("./src/filters/twemoji"));
+  eleventyConfig.addShortcode("twemoji", require("./lib/shortcodes/twemoji"));
+  eleventyConfig.addFilter("twemoji", require("./lib/filters/twemoji"));
   eleventyConfig.addFilter(
     "readableDate",
-    require("./src/filters/readableDate")
+    require("./lib/filters/readableDate")
   );
 
   eleventyConfig.addWatchTarget("./src/_styles/");
   eleventyConfig.addAsyncShortcode(
     "loadcss",
-    require("./src/shortcodes/loadcss")
+    require("./lib/shortcodes/loadcss")
   );
 
   eleventyConfig.addAsyncShortcode(
     "loadjs",
-    require("./src/shortcodes/loadjs")
+    require("./lib/shortcodes/loadjs")
   );
 
   eleventyConfig.addAsyncShortcode(
     "urlThumbnail",
-    require("./src/shortcodes/urlThumbnail")
+    require("./lib/shortcodes/urlThumbnail")
   );
 
   eleventyConfig.addCollection(
     "blogByYear",
-    require("./src/collections/blogByYear")
+    require("./lib/collections/blogByYear")
   );
 
   return {
