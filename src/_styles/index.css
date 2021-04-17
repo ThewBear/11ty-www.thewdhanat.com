@@ -90,38 +90,25 @@ speedlify-score > :first-child {
 }
 
 .bmc-btn svg {
-  height: 32px !important;
-  margin-bottom: 0px !important;
-  box-shadow: none !important;
-  border: none !important;
-  vertical-align: middle !important;
+  height: 2rem;
+  margin-bottom: 0px;
+  box-shadow: none;
+  border: none;
+  vertical-align: middle;
   transform: scale(0.9);
 }
 
 .bmc-btn {
-  min-width: 210px;
-  color: #ffffff;
-  background-color: #5f7fff !important;
+  border: 0.125rem solid #5f7fff;
   height: 60px;
   border-radius: 12px;
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: Normal;
-  border: none;
-  padding: 0px 24px;
-  line-height: 27px;
-  text-decoration: none !important;
-  display: inline-flex !important;
+  padding: 0px 1.25rem;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  font-family: "Cookie", cursive !important;
-  -webkit-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-}
-
-.bmc-btn:hover,
-.bmc-btn:active,
-.bmc-btn:focus {
-  text-decoration: none !important;
-  cursor: pointer;
+  font-family: "Cookie", cursive;
 }
 
 .bmc-btn-text {
