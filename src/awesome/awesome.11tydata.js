@@ -71,6 +71,17 @@ const web = [
       },
     ],
   },
+  {
+    title: "JavaScript",
+    description: "",
+    items: [
+      {
+        title: "JavaScript Algorithms and Data Structures",
+        description: "",
+        url: "https://github.com/trekhleb/javascript-algorithms#readme",
+      },
+    ],
+  },
 ];
 
 module.exports = {
