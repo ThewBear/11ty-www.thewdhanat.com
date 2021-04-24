@@ -1,6 +1,13 @@
 const online_certificates = [
   {
     url:
+      "https://www.coursera.org/account/accomplishments/certificate/3PBL9MU6VGYR",
+    title: "How to Manage a Remote Team",
+    platform: "Coursera",
+    date: new Date("April 2021"),
+  },
+  {
+    url:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/9PWKSNT8CJKA",
     title: "AI for Medicine",
     platform: "Coursera Specialization",
