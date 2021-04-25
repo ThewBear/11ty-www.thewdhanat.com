@@ -34,7 +34,6 @@ const programmings = [
       },
     ],
   },
-
   {
     title: "Tools",
     description: "",
@@ -44,6 +43,23 @@ const programmings = [
         description:
           "This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers.",
         url: "https://free-for.dev/",
+      },
+      {
+        title: "Public APIs",
+        description:
+          "A collective list of free APIs for use in software and web development.",
+        url: "https://github.com/public-apis/public-apis#readme",
+      },
+    ],
+  },
+  {
+    title: "Tutorials",
+    description: "Learning by doing",
+    items: [
+      {
+        title: "Build your own X",
+        description: "",
+        url: "https://github.com/danistefanovic/build-your-own-x",
       },
     ],
   },
