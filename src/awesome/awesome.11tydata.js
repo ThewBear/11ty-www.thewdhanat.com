@@ -14,6 +14,12 @@ const programmings = [
         description: "Learn to code. Build projects. Earn certifications.",
         url: "https://www.freecodecamp.org/",
       },
+      {
+        title: "Open Source Society University",
+        description:
+          "Path to a free self-taught education in Computer Science!",
+        url: "https://github.com/ossu/computer-science#readme",
+      },
     ],
   },
   {
