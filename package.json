@@ -4,8 +4,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "NODE_ENV=production eleventy",
-    "format": "prettier --write \"src/**/*.js\" \"src/**/*.css\"",
-    "lint": "prettier --check \"src/**/*.js\" \"src/**/*.css\"",
+    "format": "prettier --write \"src/**/*.js\" \"src/**/*.css\" \"lib/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\" \"src/**/*.css\" \"lib/**/*.js\"",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
