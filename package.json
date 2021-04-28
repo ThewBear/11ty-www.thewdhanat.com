@@ -22,7 +22,7 @@
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "sharp": "^0.27.2",
-    "tailwindcss": "^2.1.1",
+    "tailwindcss": "^2.1.2",
     "terser": "^5.6.1",
     "twemoji": "^13.0.2"
   }
