@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
     require("./lib/shortcodes/loadjs")
   );
 
-  eleventyConfig.addAsyncShortcode(
+  eleventyConfig.addShortcode(
     "urlThumbnail",
     require("./lib/shortcodes/urlThumbnail")
   );
@@ -49,6 +49,8 @@ module.exports = function (eleventyConfig) {
     "blogByYear",
     require("./lib/collections/blogByYear")
   );
+
+  eleventyConfig.addTransform("image", require("./lib/image").transform);
 
   return {
     dir: {
