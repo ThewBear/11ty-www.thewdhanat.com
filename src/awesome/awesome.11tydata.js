@@ -82,6 +82,18 @@ const python = [
 
 const web = [
   {
+    title: "Web Dev",
+    description: "",
+    items: [
+      {
+        title: "165+ Developer Resources I Discovered in 2020-2021",
+        description: "",
+        url:
+          "https://dev.to/gedalyakrycer/165-developer-resources-i-discovered-in-2020-2021-6ma",
+      },
+    ],
+  },
+  {
     title: "Design",
     description: "UX/UI",
     items: [
