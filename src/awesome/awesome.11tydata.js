@@ -103,6 +103,12 @@ const web = [
         url:
           "https://dev.to/cruip/30-awesome-places-to-find-design-inspiration-1hpn",
       },
+      {
+        title: "40+ Awesome Illustrations Resources For Your Web Projects",
+        description: "",
+        url:
+          "https://dev.to/kiranrajvjd/40-awesome-illustrations-resources-for-your-web-projects-2fea",
+      },
     ],
   },
   {
@@ -113,6 +119,12 @@ const web = [
         title: "JavaScript Algorithms and Data Structures",
         description: "",
         url: "https://github.com/trekhleb/javascript-algorithms#readme",
+      },
+      {
+        title: "JavaScript Interview Questions & Answers",
+        description: "",
+        url:
+          "https://github.com/sudheerj/javascript-interview-questions#readme",
       },
     ],
   },
