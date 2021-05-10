@@ -20,7 +20,7 @@
     "p-queue": "^6.6.2",
     "playwright": "^1.10.0",
     "postcss": "^8.2.14",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "sharp": "^0.28.1",
     "tailwindcss": "^2.1.2",
     "terser": "^5.7.0",
