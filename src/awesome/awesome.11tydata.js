@@ -91,6 +91,11 @@ const web = [
         url:
           "https://dev.to/gedalyakrycer/165-developer-resources-i-discovered-in-2020-2021-6ma",
       },
+      {
+        title: "Top 10 Must-Have Web Dev Tools",
+        description: "Monthly series",
+        url: "https://dev.to/villivald/series/11610",
+      },
     ],
   },
   {
