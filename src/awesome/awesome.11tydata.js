@@ -24,13 +24,18 @@ const programmings = [
   },
   {
     title: "Books",
-    description: "Computer science",
+    description: "",
     items: [
       {
         title: "Electronic References",
         description:
           "CS textbooks in a variety of areas that are freely available online.",
         url: "https://csgordon.github.io/books.html",
+      },
+      {
+        title: "Free programming books",
+        description: "Freely available programming books",
+        url: "https://github.com/EbookFoundation/free-programming-books",
       },
     ],
   },
@@ -85,6 +90,12 @@ const web = [
     title: "Web Dev",
     description: "",
     items: [
+      {
+        title: "Developer Roadmap",
+        description: "Roadmap to becoming a web developer",
+        url:
+          "https://github.com/kamranahmedse/developer-roadmap",
+      },
       {
         title: "165+ Developer Resources I Discovered in 2020-2021",
         description: "",
