@@ -93,8 +93,7 @@ const web = [
       {
         title: "Developer Roadmap",
         description: "Roadmap to becoming a web developer",
-        url:
-          "https://github.com/kamranahmedse/developer-roadmap",
+        url: "https://github.com/kamranahmedse/developer-roadmap",
       },
       {
         title: "165+ Developer Resources I Discovered in 2020-2021",
