@@ -98,8 +98,7 @@ const web = [
       {
         title: "165+ Developer Resources I Discovered in 2020-2021",
         description: "",
-        url:
-          "https://dev.to/gedalyakrycer/165-developer-resources-i-discovered-in-2020-2021-6ma",
+        url: "https://dev.to/gedalyakrycer/165-developer-resources-i-discovered-in-2020-2021-6ma",
       },
       {
         title: "Top 10 Must-Have Web Dev Tools",
@@ -115,14 +114,12 @@ const web = [
       {
         title: "30 Awesome places to find design inspiration",
         description: "",
-        url:
-          "https://dev.to/cruip/30-awesome-places-to-find-design-inspiration-1hpn",
+        url: "https://dev.to/cruip/30-awesome-places-to-find-design-inspiration-1hpn",
       },
       {
         title: "40+ Awesome Illustrations Resources For Your Web Projects",
         description: "",
-        url:
-          "https://dev.to/kiranrajvjd/40-awesome-illustrations-resources-for-your-web-projects-2fea",
+        url: "https://dev.to/kiranrajvjd/40-awesome-illustrations-resources-for-your-web-projects-2fea",
       },
     ],
   },
@@ -138,8 +135,7 @@ const web = [
       {
         title: "JavaScript Interview Questions & Answers",
         description: "",
-        url:
-          "https://github.com/sudheerj/javascript-interview-questions#readme",
+        url: "https://github.com/sudheerj/javascript-interview-questions#readme",
       },
     ],
   },
