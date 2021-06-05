@@ -55,6 +55,11 @@ const programmings = [
           "A collective list of free APIs for use in software and web development.",
         url: "https://github.com/public-apis/public-apis#readme",
       },
+      {
+        title: "The Art of Command Line",
+        description: "Master the command line, in one page",
+        url: "https://github.com/jlevy/the-art-of-command-line#readme",
+      },
     ],
   },
   {
