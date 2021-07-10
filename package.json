@@ -14,16 +14,16 @@
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.6",
     "cssnano": "^5.0.6",
-    "luxon": "^1.27.0",
-    "markdown-it": "^12.0.6",
-    "markdown-it-anchor": "^8.0.1",
+    "luxon": "^1.28.0",
+    "markdown-it": "^12.1.0",
+    "markdown-it-anchor": "^8.1.0",
     "p-queue": "^6.6.2",
-    "playwright": "^1.12.2",
+    "playwright": "^1.12.3",
     "postcss": "^8.3.5",
-    "prettier": "^2.3.1",
+    "prettier": "^2.3.2",
     "sharp": "^0.28.3",
-    "tailwindcss": "^2.1.4",
-    "terser": "^5.7.0",
+    "tailwindcss": "^2.2.4",
+    "terser": "^5.7.1",
     "twemoji": "^13.1.0"
   }
 }
