@@ -144,6 +144,17 @@ const web = [
       },
     ],
   },
+  {
+    title: "Go",
+    description: "",
+    items: [
+      {
+        title: "7 GitHub projects to make you a better Go Developer",
+        description: "",
+        url: "https://dev.to/ankit01oss/7-github-projects-to-make-you-a-better-go-developer-2nmh",
+      },
+    ],
+  },
 ];
 
 module.exports = {
