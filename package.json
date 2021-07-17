@@ -17,7 +17,7 @@
     "luxon": "^2.0.1",
     "markdown-it": "^12.1.0",
     "markdown-it-anchor": "^8.1.0",
-    "p-queue": "^6.6.2",
+    "p-queue": "^7.1.0",
     "playwright": "^1.12.3",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
