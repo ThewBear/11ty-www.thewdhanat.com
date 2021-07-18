@@ -1,5 +1,25 @@
 const online_certificates = [
   {
+    url: "https://www.coursera.org/account/accomplishments/specialization/certificate/BMH4M7236L6G",
+    title: "Generative Adversarial Networks (GANs)",
+    platform: "Coursera Specialization",
+    date: new Date("July 2021"),
+    children: [
+      {
+        url: "https://www.coursera.org/account/accomplishments/certificate/PD47TRSVH7D5",
+        title: "Build Basic Generative Adversarial Networks (GANs)",
+      },
+      {
+        url: "https://www.coursera.org/account/accomplishments/certificate/T8825ZUEJQUF",
+        title: "Build Better Generative Adversarial Networks (GANs)",
+      },
+      {
+        url: "https://www.coursera.org/account/accomplishments/certificate/BL7TSCNMYQFD",
+        title: "Apply Generative Adversarial Networks (GANs)",
+      },
+    ],
+  },
+  {
     url: "https://www.coursera.org/account/accomplishments/certificate/PY2U24S8WA25",
     title: "Introduction to Machine Learning",
     platform: "Coursera",
