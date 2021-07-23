@@ -1,0 +1,17 @@
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: node bin/awesome.mjs
+      - uses: actions/upload-artifact@v2
+        with:
+          name: awesome
+          path: _data/awesome
