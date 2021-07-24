@@ -1,4 +1,3 @@
-import crypto from "crypto";
 import fs from "fs/promises";
 import data from "../src/awesome/awesome.11tydata.js";
 import PQueue from "p-queue";
@@ -9,7 +8,6 @@ const queue = new PQueue.default({ concurrency: 5 });
 const chrome = await chromium.launch();
 queue.on("idle", async () => {
   await chrome.close();
-  await fs.writeFile("_data/awesome/data.json", JSON.stringify(pages));
 });
 
 const pages = {};
@@ -34,8 +32,7 @@ Object.keys(pages).forEach((url, index) => {
     format: "png",
   };
 
-  const randomString = crypto.randomBytes(4).toString("hex");
-  const thumbnailFile = `${slug}_${randomString}.png`;
+  const thumbnailFile = `${slug}.png`;
 
   queue.add(async () => {
     const page = await chrome.newPage({
@@ -53,10 +50,10 @@ Object.keys(pages).forEach((url, index) => {
     await page.close();
     console.log(`${Date().toString()} : finished ${index + 1}/${totalPages}`);
   });
-  pages[url] = {
-    slug,
-    thumbnailFile,
-  };
+  pages[url] = { thumbnailFile };
+  if (process.env.GITHUB_SHA) pages[url].sha = process.env.GITHUB_SHA;
 });
+
+await fs.writeFile("_data/awesome/data.json", JSON.stringify(pages));
 
 console.log(pages);

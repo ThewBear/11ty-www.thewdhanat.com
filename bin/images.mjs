@@ -15,6 +15,9 @@ await fg([
 ]).then((entries) => entries.forEach((image) => (images[image] = null)));
 
 const queue = new PQueue.default({ concurrency: 3 });
+queue.on("idle", async () => {
+  await fs.writeFile("_data/images/data.json", JSON.stringify(images));
+});
 
 const widths = IS_PRODUCTION
   ? [400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2400, 2800, null]
@@ -27,14 +30,11 @@ const totalImages = Object.keys(images).length;
 Object.keys(images).forEach(async (image, index) => {
   const sharpInstance = sharp(image);
   const metadata = await sharpInstance.metadata();
-  const randomString = crypto
+  const hash = crypto
     .createHash("sha1")
     .update(image + JSON.stringify(metadata))
     .digest("hex");
-  const fileNamePrefix = `${path.basename(
-    image,
-    path.extname(image)
-  )}_${randomString}`;
+  const fileNamePrefix = `${path.basename(image, path.extname(image))}_${hash}`;
 
   images[image] = {
     files: [],
@@ -43,14 +43,14 @@ Object.keys(images).forEach(async (image, index) => {
   };
 
   formats.forEach((f) => {
-    images[image]["sources"][f] = [];
+    images[image]["sources"][f] = {};
     widths
       .filter((w) => (w === null ? true : w <= metadata.width))
       .forEach((w) => {
         const width = w === null ? metadata.width : w;
         const fileName = `${fileNamePrefix}-${width}.${f}`;
         images[image]["files"].push(fileName);
-        images[image]["sources"][f].push(`${fileName} ${width}w`);
+        images[image]["sources"][f][width] = fileName;
         queue.add(() =>
           sharpInstance
             .resize(w)
@@ -65,7 +65,6 @@ Object.keys(images).forEach(async (image, index) => {
         );
       });
   });
-  await fs.writeFile("_data/images/data.json", JSON.stringify(images));
 });
 
 console.log(images);
