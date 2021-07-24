@@ -20,7 +20,8 @@ data.contents.forEach((value) => {
   );
 });
 
-Object.keys(pages).forEach((url) => {
+const totalPages = Object.keys(pages).length;
+Object.keys(pages).forEach((url, index) => {
   if (pages[url]) {
     return pages[url];
   }
@@ -50,6 +51,7 @@ Object.keys(pages).forEach((url) => {
       type: metadata.format,
     });
     await page.close();
+    console.log(`${Date().toString()} : finished ${index}/${totalPages}`);
   });
   pages[url] = {
     slug,

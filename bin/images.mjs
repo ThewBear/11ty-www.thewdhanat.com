@@ -20,7 +20,8 @@ const formats = IS_PRODUCTION ? ["avif", "webp", "jpeg"] : ["jpeg"];
 
 await fs.mkdir("_data/images", { recursive: true });
 
-Object.keys(images).forEach(async (image) => {
+const totalImages = Object.keys(images).length;
+Object.keys(images).forEach(async (image, index) => {
   const sharpInstance = sharp(image);
   const metadata = await sharpInstance.metadata();
   const randomString = crypto
@@ -47,7 +48,16 @@ Object.keys(images).forEach(async (image) => {
         const fileName = `${fileNamePrefix}-${width}.${f}`;
         images[image]["files"].push(fileName);
         images[image]["sources"][f].push(`${fileName} ${width}w`);
-        sharpInstance.resize(w).toFile(path.join("_data/images", fileName));
+        sharpInstance
+          .resize(w)
+          .toFile(path.join("_data/images", fileName))
+          .then(() =>
+            console.log(
+              `${Date().toString()} : finished ${index}/${totalImages}`,
+              f,
+              w
+            )
+          );
       });
   });
   await fs.writeFile("_data/images/data.json", JSON.stringify(images));
