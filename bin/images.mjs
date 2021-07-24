@@ -4,7 +4,7 @@ import path from "path";
 import fg from "fast-glob";
 import sharp from "sharp";
 
-const IS_PRODUCTION = process.env.NODE_ENV === "production";
+const IS_PRODUCTION = process.env.CI === "true";
 
 const images = {};
 await fg([

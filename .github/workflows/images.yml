@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "20 4 * * *"
 
-env:
-  NODE_ENV: production
-
 jobs:
   build:
     runs-on: ubuntu-latest
