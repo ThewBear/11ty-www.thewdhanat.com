@@ -1,4 +1,3 @@
-import crypto from "crypto";
 import fs from "fs/promises";
 import path from "path";
 import fg from "fast-glob";
@@ -30,11 +29,7 @@ const totalImages = Object.keys(images).length;
 Object.keys(images).forEach(async (image, index) => {
   const sharpInstance = sharp(image);
   const metadata = await sharpInstance.metadata();
-  const hash = crypto
-    .createHash("sha1")
-    .update(image + JSON.stringify(metadata))
-    .digest("hex");
-  const fileNamePrefix = `${path.basename(image, path.extname(image))}_${hash}`;
+  const fileNamePrefix = path.basename(image, path.extname(image));
 
   images[image] = {
     files: [],
