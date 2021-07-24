@@ -4,12 +4,6 @@ import PQueue from "p-queue";
 import slugify from "slugify";
 import { chromium } from "playwright";
 
-const queue = new PQueue.default({ concurrency: 5 });
-const chrome = await chromium.launch();
-queue.on("idle", async () => {
-  await chrome.close();
-});
-
 const pages = {};
 
 data.contents.forEach((value) => {
@@ -17,6 +11,14 @@ data.contents.forEach((value) => {
     topic.items.forEach(({ url }) => (pages[url] = null))
   );
 });
+
+const queue = new PQueue.default({ concurrency: 5 });
+const chrome = await chromium.launch();
+queue.on("idle", async () => {
+  await chrome.close();
+});
+
+await fs.mkdir("_data/awesome", { recursive: true });
 
 const totalPages = Object.keys(pages).length;
 Object.keys(pages).forEach((url, index) => {
