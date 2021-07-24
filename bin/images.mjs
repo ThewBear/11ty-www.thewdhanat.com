@@ -2,6 +2,7 @@ import crypto from "crypto";
 import fs from "fs/promises";
 import path from "path";
 import fg from "fast-glob";
+import PQueue from "p-queue";
 import sharp from "sharp";
 
 const IS_PRODUCTION = process.env.CI === "true";
@@ -12,6 +13,8 @@ await fg([
   "src/**/*.{jpg,jpeg,png,webp,avif}",
   "!src/static/**/*",
 ]).then((entries) => entries.forEach((image) => (images[image] = null)));
+
+const queue = new PQueue.default({ concurrency: 3 });
 
 const widths = IS_PRODUCTION
   ? [400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2400, 2800, null]
@@ -48,16 +51,18 @@ Object.keys(images).forEach(async (image, index) => {
         const fileName = `${fileNamePrefix}-${width}.${f}`;
         images[image]["files"].push(fileName);
         images[image]["sources"][f].push(`${fileName} ${width}w`);
-        sharpInstance
-          .resize(w)
-          .toFile(path.join("_data/images", fileName))
-          .then(() =>
-            console.log(
-              `${Date().toString()} : finished ${index + 1}/${totalImages}`,
-              f,
-              w
+        queue.add(() =>
+          sharpInstance
+            .resize(w)
+            .toFile(path.join("_data/images", fileName))
+            .then(() =>
+              console.log(
+                `${Date().toString()} : finished ${index + 1}/${totalImages}`,
+                f,
+                w
+              )
             )
-          );
+        );
       });
   });
   await fs.writeFile("_data/images/data.json", JSON.stringify(images));
