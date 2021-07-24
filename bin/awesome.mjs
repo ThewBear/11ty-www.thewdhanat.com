@@ -51,7 +51,7 @@ Object.keys(pages).forEach((url, index) => {
       type: metadata.format,
     });
     await page.close();
-    console.log(`${Date().toString()} : finished ${index}/${totalPages}`);
+    console.log(`${Date().toString()} : finished ${index + 1}/${totalPages}`);
   });
   pages[url] = {
     slug,

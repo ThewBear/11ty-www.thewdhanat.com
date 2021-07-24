@@ -53,7 +53,7 @@ Object.keys(images).forEach(async (image, index) => {
           .toFile(path.join("_data/images", fileName))
           .then(() =>
             console.log(
-              `${Date().toString()} : finished ${index}/${totalImages}`,
+              `${Date().toString()} : finished ${index + 1}/${totalImages}`,
               f,
               w
             )
