@@ -53,7 +53,7 @@ Object.keys(pages).forEach((url, index) => {
     console.log(`${Date().toString()} : finished ${index + 1}/${totalPages}`);
   });
   pages[url] = { thumbnailFile };
-  if (process.env.GITHUB_SHA) pages[url].sha = process.env.GITHUB_SHA;
+  if (process.env.GITHUB_RUN_ID) pages[url].version = process.env.GITHUB_RUN_ID;
 });
 
 await fs.writeFile("_data/awesome/data.json", JSON.stringify(pages));
