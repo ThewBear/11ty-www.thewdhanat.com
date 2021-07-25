@@ -1,5 +1,6 @@
 ---
 title: How to use local fonts in Google Docs / Sheets / Slides
+updated: 2021-07-25
 ---
 
 Currently, we can use [Google Fonts](https://fonts.google.com/) in our Google Drive document including Google Docs, Google Sheets, and Google Slides by selecting **More fonts** in the font menu dropdown menu.
@@ -61,17 +62,18 @@ Here is the list of the supported local fonts by language.
 
 ### Hebrew
 
-- Meiryo
-- MS Gothic
-- MS Mincho
-- MS PGothic
-- MS PMincho
-- HiraMaruPro-W4
-- HiraMinPro-W3
-- HiraKakuPro-W3
-- HiraMaruProN-W4
-- HiraMinProN-W3
-- HiraKakuProN-W3
+- Aharoni
+- David
+- FrankRuehl
+- Gisha
+- Levenim MT
+- Miriam
+- Narkisim
+- Rod
+- Arial Hebrew
+- Corsiva Hebrew
+- New Peninim MT
+- Raanana
 
 ### Japanese
 
