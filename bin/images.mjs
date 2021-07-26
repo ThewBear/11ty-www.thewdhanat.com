@@ -43,7 +43,7 @@ Object.keys(images).forEach(async (image, index) => {
       .filter((w) => (w === null ? true : w <= metadata.width))
       .forEach((w) => {
         const width = w === null ? metadata.width : w;
-        const fileName = `${fileNamePrefix}-${width}.${f}`;
+        const fileName = `${fileNamePrefix}.${width}.${f}`;
         images[image]["files"].push(fileName);
         images[image]["sources"][f][width] = fileName;
         queue.add(() =>
