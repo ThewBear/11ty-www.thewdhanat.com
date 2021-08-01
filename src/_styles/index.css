@@ -26,6 +26,17 @@
   @apply text-indigo-800;
 }
 
+.prose a:not(.header-anchor),
+.prose a:hover,
+.prose a:active,
+.prose a:active {
+  text-decoration: underline;
+}
+
+.prose a.header-anchor {
+  font-weight: inherit;
+}
+
 img.twemoji {
   height: 1em;
   width: 1em;

@@ -10,7 +10,7 @@ Recently, I searched for a system to store my backup data for good. Although con
 
 Here I compare the following S3-compatible object storage providers.
 
-- [AWS S3, Google Cloud, Azure](#aws-s3%2C-google-cloud%2C-azure)
+- [AWS S3, Google Cloud, Azure](#aws-s3-google-cloud-azure)
 - [DigitalOcean and Linode](#digitalocean-and-linode)
 - [Backblaze B2 and Wasabi](#backblaze-b2-and-wasabi)
 
