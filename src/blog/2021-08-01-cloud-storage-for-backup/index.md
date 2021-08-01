@@ -51,6 +51,8 @@ AWS S3 Glacier Deep Archive is the lowest cost storage at the moment considering
 - [AWS Customers Rack Up Hefty Bills for Moving Data](https://news.ycombinator.com/item?id=21314412)
 - [How cheap can cloud object storage be?](https://simon-80033.medium.com/how-cheap-can-cloud-storage-be-8262c67b48c1)
 - [How does CloudFlare themselves afford to give bandwidth for free?](https://news.ycombinator.com/item?id=20791563)
+- [Transparency in Cloud Storage Costs: Still Elusive](https://www.backblaze.com/blog/transparency-in-cloud-storage-costs/)
+- [Backblaze Cuts B2 Download Price in Half](https://www.backblaze.com/blog/backblaze-b2-drops-download-price-in-half/)
 
 Another attractive public cloud provider is [Oracle](https://www.oracle.com/cloud/storage/pricing.html). Unlike other providers, Oracle gives free 10 TB outbound transfer.
 
