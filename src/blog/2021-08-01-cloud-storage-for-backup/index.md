@@ -18,7 +18,7 @@ When considering their pricing, you must look at data storage and inbound/outbou
 
 ## AWS S3, Google Cloud, Azure
 
-![AWS S3, Google Cloud, Azure website](../2021-08-01-cloud-storage/awsgcpaz.png)
+![AWS S3, Google Cloud, Azure website](../2021-08-01-cloud-storage-for-backup/awsgcpaz.png)
 
 They are the top 3 largest public cloud providers that offer similar object storage plans and have many storage tiers which suit different purposes. Their archival class for long-term data backup have different naming. You can read more information by clicking the link in the table.
 
@@ -56,7 +56,7 @@ Another attractive public cloud provider is [Oracle](https://www.oracle.com/clou
 
 ## DigitalOcean and Linode
 
-![DigitalOcean and Linode website](../2021-08-01-cloud-storage/doli.png)
+![DigitalOcean and Linode website](../2021-08-01-cloud-storage-for-backup/doli.png)
 
 Smaller cloud providers like [DigitalOcean](https://www.digitalocean.com/products/spaces/), [Linode](https://www.linode.com/products/object-storage/), [Vultr](https://www.vultr.com/products/object-storage/), and [UpCloud](https://upcloud.com/products/object-storage/) provide single class S3-compatible object storage. Their billing is more simple and does not charge for API operations. Their prices are very similar.
 
@@ -73,7 +73,7 @@ Another notable provider is Scaleway. Scaleway has [C14 Cold Storage](https://ww
 
 ## Backblaze B2 and Wasabi
 
-![Backblaze B2 and Wasabi website](../2021-08-01-cloud-storage/bbwa.png)
+![Backblaze B2 and Wasabi website](../2021-08-01-cloud-storage-for-backup/bbwa.png)
 
 Unlike the above providers, which mainly sell computing, [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) and [Wasabi](https://wasabi.com/) offer only a cloud storage solution. Their overall pricing is reasonable for ageless backup storage and impressively cheaper than those top providers. They do not have a retrieval fee and a delayed retrieval period. Although Wasabi is relatively new, it is recommended by [Stanford University IT](https://uit.stanford.edu/storage/wasabi-cloud-storage). You can read more information by clicking the link in the table.
 
