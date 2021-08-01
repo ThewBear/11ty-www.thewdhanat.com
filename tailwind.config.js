@@ -11,6 +11,9 @@ module.exports = {
               marginLeft: "auto",
               marginRight: "auto",
             },
+            a: {
+              textDecoration: "none",
+            },
           },
         },
       }),

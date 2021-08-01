@@ -10,7 +10,7 @@
 {
   content: "↗";
   font-family: system-ui, -apple-system, sans-serif;
-  @apply font-black text-indigo-600 leading-3 pl-px inline-block;
+  @apply font-black text-indigo-600 leading-3 pl-px;
 }
 
 .prose a[href^="//"]:hover::after,
