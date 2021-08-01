@@ -8,7 +8,7 @@ Despite the data we own are growing every day, [cloud storage providers](https:/
 
 Recently, I searched for a system to store my backup data for good. Although consumer clouds like Google Drive, Microsoft OneDrive, Dropbox offer a paid plan, they are suitable for storing short-term and frequently accessed data. They also have a download quota limit which the file may be locked if there are multiple downloads in 24 hours. But for permanent backup, I prefer a more geeky solution like object storage because I can use [the brilliant S3 API](https://aws.amazon.com/s3/storage-launches-infographic/) to manage, access, and share my data through custom scripting and tools like [Rclone](https://rclone.org/).
 
-Here I compare the following S3-compatible object storage providers.
+Here I compare the following S3-compatible object storage providers. Only the links in [the referrals section](#referrals) are affiliated. 🤗
 
 - [AWS S3, Google Cloud, Azure](#aws-s3-google-cloud-azure)
 - [DigitalOcean and Linode](#digitalocean-and-linode)
@@ -108,3 +108,8 @@ Backblaze B2 and Wasabi offer a fantastic solution for data hoarders like me. I 
 - [10 Best Amazon S3 Alternatives](https://www.coralnodes.com/amazon-s3-alternatives/)
 - [Wasabi review](https://www.coralnodes.com/wasabi-storage-review/)
 - [DataHoarder reddit community](https://www.reddit.com/r/DataHoarder/)
+
+## Referrals
+
+- [DigitalOcean](https://m.do.co/c/61b92fc0f519) $100, 60-day credit
+- [Linode](https://www.linode.com/?r=4c3a05eecf7237278fe445912471f8e51019bee5) $100, 60-day credit
