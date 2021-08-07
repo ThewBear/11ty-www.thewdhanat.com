@@ -2,3 +2,5 @@ node_modules
 _site
 build
 _data
+
+.vercel

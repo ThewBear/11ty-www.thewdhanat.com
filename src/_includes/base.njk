@@ -8,7 +8,12 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ title }} | Thew Dhanat</title>
     <meta name="description" content="{{ description }}"/>
+    <meta property="og:title" content="{{ ogTitle | default(title) }} | Thew Dhanat" />
+    <meta property="og:type" content="{{ ogType | default("website") }}" />
+    <meta property="og:url" content="https://www.thewdhanat.com{{ page.url }}" />
+    <meta property="og:image" content="https://www.thewdhanat.com/api/og-image?url={{ page.url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
@@ -23,8 +28,6 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
       <link href="{{ prism_theme | safe }}" rel="stylesheet" media="print" onload="this.media='all'">
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap&text=Buy%20me%20a%20coffee" rel="stylesheet" media="print" onload="this.media='all'">
-    <title>{{ title }}
-      | Thew Dhanat</title>
   </head>
   <body class="flex flex-col min-h-screen">
     {{ content | safe }}
@@ -34,7 +37,7 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
           <a href="/">Thew Dhanat</a>        
         </div>
         <div class="bmc-btn-container">
-          <a class="bmc-btn" rel="noopener" target="_blank" href="http://buymeacoffee.com/thew">
+          <a class="bmc-btn" rel="noopener" target="_blank" href="https://buymeacoffee.com/thew">
             <svg viewbox="0 0 884 1279" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z" fill="#0D0C22"></path>
               <path d="M803.896 388.891L802.916 389.166L803.896 388.891Z" fill="#0D0C22"></path>
@@ -84,7 +87,7 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
         <a href="/privacy">Privacy</a>
       </div>
     </footer>
-    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-143999766-1"></script>
     <script>

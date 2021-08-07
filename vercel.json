@@ -1,37 +1,52 @@
 {
-  "routes": [
+  "headers": [
     {
-      "src": "^/static/(.*)$",
-      "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "continue": true
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     },
     {
-      "src": "^/.*\\.(js|css)$",
-      "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "continue": true
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public,max-age=31536000,immutable"
+        }
+      ]
     },
     {
-      "src": "^/(sw\\.js|app-data\\.json|.*\\.html|page-data/.*)$",
-      "headers": { "cache-control": "public,max-age=0,must-revalidate" },
-      "continue": true
+      "source": "/(.*).(js|css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public,max-age=31536000,immutable"
+        }
+      ]
     },
     {
-      "src": ".*",
-      "headers": {
-        "X-Content-Type-Options": "nosniff",
-        "X-Frame-Options": "DENY",
-        "Content-Security-Policy": "default-src https: 'unsafe-inline'",
-        "X-XSS-Protection": "1; mode=block"
-      },
-      "continue": true
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": ".*",
-      "status": 404,
-      "dest": "index.html"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src https: 'self' 'unsafe-inline'"
+        }
+      ]
     }
   ]
 }
