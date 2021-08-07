@@ -25,7 +25,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   res.setHeader("Content-Type", `image/png`);
   res.setHeader(
     "Cache-Control",
-    `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
+    `public, no-transform, s-maxage=86400, max-age=0`
   );
   res.setHeader("x-size", JSON.stringify(page.viewportSize()));
   const file = await page.screenshot();
