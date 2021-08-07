@@ -8,6 +8,9 @@
     "lint": "prettier --check \"src/**/*.js\" \"src/**/*.css\" \"lib/**/*.js\"",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
+  "dependencies": {
+    "playwright": "^1.13.1"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
@@ -20,7 +23,6 @@
     "markdown-it": "^12.1.0",
     "markdown-it-anchor": "^8.1.2",
     "p-queue": "^6.6.2",
-    "playwright": "^1.13.1",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "sharp": "^0.28.3",
