@@ -51,8 +51,8 @@
   ],
   "rewrites": [
     {
-      "source": "/og-image/:match*",
-      "destination": "https://og-image.thewdhanat.com/www.thewdhanat.com/:match*"
+      "source": "/og-image",
+      "destination": "https://og-image.thewdhanat.com/www.thewdhanat.com"
     }
   ]
 }
