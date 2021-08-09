@@ -48,5 +48,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/og-image/:match*",
+      "destination": "https://og-image.thewdhanat.com/www.thewdhanat.com/:match*"
+    }
   ]
 }
