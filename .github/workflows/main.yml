@@ -57,7 +57,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v3
+      - uses: actions/github-script@v4.1
         if: github.event_name	== 'pull_request'
         with:
           script: |
@@ -67,7 +67,7 @@ jobs:
               repo: context.repo.repo,
               body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
-      - uses: actions/github-script@v3
+      - uses: actions/github-script@v4.1
         if: github.event_name	!= 'pull_request'
         with:
           script: |
@@ -115,7 +115,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v3
+      - uses: actions/github-script@v4.1
         with:
           script: |
             const { data: deployment } = await github.repos.createDeployment({
