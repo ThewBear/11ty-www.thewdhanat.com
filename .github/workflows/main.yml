@@ -94,7 +94,7 @@ jobs:
             });
 
   deployToProduction:
-    if: github.event_name	== 'push' && github.ref == 'refs/heads/main' || github.event_name == 'schedule'
+    if: (github.event_name	== 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
