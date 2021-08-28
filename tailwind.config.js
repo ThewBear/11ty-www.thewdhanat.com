@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.njk", "./_site/**/*.html"],
+  purge: ["./src/**/*.html", "./src/**/*.njk", "./src/**/*.md"],
   theme: {
     extend: {
       typography: (theme) => ({
