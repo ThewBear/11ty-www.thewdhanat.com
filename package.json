@@ -12,7 +12,7 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "@tailwindcss/typography": "^0.4.1",
-    "autoprefixer": "^10.3.3",
+    "autoprefixer": "^10.3.4",
     "esbuild": "^0.12.24",
     "fast-glob": "^3.2.7",
     "luxon": "^2.0.2",
