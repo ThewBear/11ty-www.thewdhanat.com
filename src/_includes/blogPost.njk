@@ -11,7 +11,7 @@ layout: base.njk
 </header>
 <main class="w-full sm:w-4/5 lg:w-3/5 my-4 mx-auto px-6" {{ ("lang=\"" + postLang + "\"" if postLang) | safe }}>
     <div class="flex flex-col md:flex-wrap-reverse md:flex-row justify-between items-baseline">
-        <h1 class="text-5xl my-4 font-extrabold order-2 md:order-1 text-indigo-700">{{ title | e | twemoji | safe }}</h1>
+        <h1 class="text-5xl my-4 font-extrabold order-2 md:order-1 text-indigo-700 dark:text-indigo-500">{{ title | e | twemoji | safe }}</h1>
         <div class="order-1 md:order-2 opacity-75">
             {{ page.date | readableDate}}
             {% if updated %}
@@ -19,7 +19,7 @@ layout: base.njk
             {% endif %}
         </div>
     </div>
-    <div class="prose my-4 mx-auto">
+    <div class="prose my-4 mx-auto dark:prose-dark">
         {{ content | safe }}
     </div>
 </main>

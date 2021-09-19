@@ -27,7 +27,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
     <div class="flex flex-wrap my-2">
       {% for title in contents.keys() %}
       <a
-        class="bg-black text-white py-2 px-4 hover:bg-gray-700 my-2 mx-2"
+        class="bg-black text-white dark:bg-gray-100 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 py-2 px-4 my-2 mx-2"
         href="#{{ title | slug }}"
       >
         {{ title }}
@@ -57,7 +57,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
           <div class="w-1/2">
             <a
               href="{{ item.url }}"
-              class="text-blue-900 hover:text-blue-800 hover:underline"
+              class="text-blue-900 dark:text-blue-200 hover:text-blue-800 dark:hover:text-blue-300 hover:underline"
             >
               <h3 class="font-medium text-lg" id="{{ item.title | slug }}">
                 {{ item.title }}

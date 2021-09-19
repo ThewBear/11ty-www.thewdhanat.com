@@ -46,7 +46,7 @@ contents:
         <a class="my-2 mx-2" href="https://polywork.thewdhanat.com/" aria-label="My Polywork">
           <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
             <title>My Polywork (thewdhanat)</title>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 199.219V50.7813C0 22.6563 22.6562 0 50.7812 0H199.219C227.344 0 250 22.6563 250 50.7813V122.656C250 150.781 227.344 173.437 199.219 173.437H170.312V199.219C170.312 227.344 147.656 250 119.531 250H50.7812C22.6562 250 0 227.344 0 199.219ZM78.1249 78.9063H13.2812V50C13.2812 29.6875 29.6875 12.5 50.7812 12.5H78.1249V78.9063ZM199.219 160.937H171.875V93.7498H236.719V123.437C236.719 143.75 220.312 160.937 199.219 160.937ZM119.531 237.5H92.1871V175.781H157.031V200C157.031 220.312 140.625 237.5 119.531 237.5ZM92.1871 160.937H157.031V93.7498H92.1871V160.937ZM171.875 78.9063H236.719V50.7813C236.719 29.6875 219.531 13.2813 199.219 13.2813H171.875V78.9063ZM157.031 78.9063H92.1871V12.5H157.031V78.9063ZM12.5 175V199.219C12.5 220.312 29.6875 236.719 50 236.719H78.1249V175H12.5ZM78.1249 160.937H12.5V93.7498H78.1249V160.937Z" fill="#333342"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 199.219V50.7813C0 22.6563 22.6562 0 50.7812 0H199.219C227.344 0 250 22.6563 250 50.7813V122.656C250 150.781 227.344 173.437 199.219 173.437H170.312V199.219C170.312 227.344 147.656 250 119.531 250H50.7812C22.6562 250 0 227.344 0 199.219ZM78.1249 78.9063H13.2812V50C13.2812 29.6875 29.6875 12.5 50.7812 12.5H78.1249V78.9063ZM199.219 160.937H171.875V93.7498H236.719V123.437C236.719 143.75 220.312 160.937 199.219 160.937ZM119.531 237.5H92.1871V175.781H157.031V200C157.031 220.312 140.625 237.5 119.531 237.5ZM92.1871 160.937H157.031V93.7498H92.1871V160.937ZM171.875 78.9063H236.719V50.7813C236.719 29.6875 219.531 13.2813 199.219 13.2813H171.875V78.9063ZM157.031 78.9063H92.1871V12.5H157.031V78.9063ZM12.5 175V199.219C12.5 220.312 29.6875 236.719 50 236.719H78.1249V175H12.5ZM78.1249 160.937H12.5V93.7498H78.1249V160.937Z"/>
           </svg>
         </a>
       </div>
@@ -57,20 +57,20 @@ contents:
     <h2 id="contents" class="text-2xl font-medium leading-normal">Contents</h2>
     <div class="flex flex-wrap my-4">
       {% for content in contents %}
-        <a class="bg-black text-white p-4 m-4 hover:bg-gray-700" href="{{ content.url }}">{{ content.text }}</a>
+        <a class="bg-black dark:bg-gray-100 dark:text-black font-medium text-white p-4 m-4 hover:bg-gray-700 dark:hover:bg-gray-300" href="{{ content.url }}">{{ content.text }}</a>
       {% endfor %}
     </div>
   </section>
   <article class="my-4 py-4 border-t-4 border-b-4	border-blue-400 border-solid">
-    <h2 id="about" class="text-2xl font-medium leading-normal mb-4">About</h2>
+    <h2 id="about" class="text-2xl font-semibold leading-normal mb-4">About</h2>
     <p>My name is Dhanat Satta-awalo. I am a medical student at Chulalongkorn university.</p>
     <section class="my-4">
-      <h3 class="text-lg leading-normal text-blue-700">Online course certificates</h3>
+      <h3 class="text-lg leading-normal font-medium text-blue-700 dark:text-blue-300">Online course certificates</h3>
       <p>These are some certificates that I earned from taking online courses during free time.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for certificate in online_certificates_front %}
           {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
-            <div class="shadow bg-blue-400 p-4 h-full">
+            <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ certificate.title | slug }}">{{ certificate.title }}</h4>
               <span class="text-sm">{{ certificate.platform }}
                 {% if certificate.children %}
@@ -85,18 +85,18 @@ contents:
           </{{"a" if certificate.url else "div"}}>
         {% endfor %}
         <a href="/certificates/" aria-labelledby="more-certificates" class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
-          <div class="shadow bg-blue-400 p-4 h-full flex flex-col justify-center">
+          <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full flex flex-col justify-center">
             <h4 class="font-medium text-xl" id="more-certificates">All {{ online_certificates | length }} certificates</h4>
           </div>
         </a>
       </div>
     </section>
     <section class="my-4">
-      <h3 class="text-lg leading-normal text-blue-700">Accomplishments</h3>
+      <h3 class="text-lg leading-normal font-medium text-blue-700 dark:text-blue-300">Accomplishments</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for accomplishment in accomplishments %}
           {% if accomplishment.url %}<a href="{{ accomplishment.url }}" aria-labelledby="{{ accomplishment.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
-            <div class="shadow bg-blue-400 p-4 h-full">
+            <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ accomplishment.title | slug }}">{{ accomplishment.title }}</h4>
               <span class="text-sm">{{ accomplishment.summary }}</span>
             </div>

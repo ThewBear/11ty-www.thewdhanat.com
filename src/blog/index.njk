@@ -24,7 +24,7 @@ ogType: website
         <h3 class="text-xl mb-2">{{ year }}</h3>
         <ul class="ml-2">
           {%- for post in posts | reverse -%}
-            <li class="mb-2 text-indigo-800">
+            <li class="mb-2 text-indigo-800 dark:text-indigo-300">
               <a class="hover:underline" href="{{ post.url }}">{{ post.data.title | e | twemoji | safe }}</a>
             </li>
           {%- endfor -%}

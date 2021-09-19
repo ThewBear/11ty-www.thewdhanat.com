@@ -23,7 +23,7 @@
 .prose a[href^="https://"]:active::after,
 .prose a[href^="https://"]:focus::after
 {
-  @apply text-indigo-800;
+  @apply text-indigo-800 dark:text-indigo-400;
 }
 
 .prose a:not(.header-anchor) span,
@@ -63,6 +63,11 @@ speedlify-score {
   border: 2px solid #0cce6b;
   color: #088645;
   margin-left: 0.4615384615385em; /* 6px /13 */
+}
+@media (prefers-color-scheme: dark) {
+  .speedlify-score {
+    color: #3fe48f;
+  }
 }
 .speedlify-score-ok {
   color: #ffa400;
@@ -126,10 +131,6 @@ speedlify-score > :first-child {
   margin-left: 8px;
   display: inline;
   line-height: 0;
-}
-
-.logo-outline {
-  fill: #000000;
 }
 
 .logo-coffee {

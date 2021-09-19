@@ -1,5 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.njk", "./src/**/*.md"],
+  darkMode: "media",
   theme: {
     extend: {
       typography: (theme) => ({
@@ -16,11 +17,31 @@ module.exports = {
             },
           },
         },
+        dark: {
+          css: {
+            color: theme("colors.gray.100"),
+            a: {
+              color: theme("colors.gray.200"),
+              code: {
+                color: theme("colors.gray.200"),
+              },
+            },
+            code: {
+              color: theme("colors.gray.200"),
+            },
+            strong: {
+              color: theme("colors.gray.200"),
+            },
+            thead: {
+              color: theme("colors.gray.200"),
+            },
+          },
+        },
       }),
     },
   },
   variants: {
-    typography: [],
+    typography: ["dark"],
   },
   plugins: [
     require("@tailwindcss/typography")({

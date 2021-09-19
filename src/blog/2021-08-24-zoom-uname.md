@@ -14,9 +14,9 @@ Use this generator to create a zoom meeting display name bookmarklet.
 <div class="">
   <div class="flex items-center">
     <label class="block " for="uname">Display name:</label>
-    <input class="block ml-2 p-2 border-2 border-gray-400 rounded-md" id="uname" size="30">
+    <input class="block ml-2 p-2 border-2 border-gray-400 rounded-md dark:text-black" id="uname" size="30">
   </div>
-  <p>Drag <a id="bookmarklet" class="p-1 border border-indigo-600 hover:bg-indigo-100" href="">zoom bookmarklet</a> to your bookmark bar. You can then rename it and add as many as you want.</p>
+  <p>Drag <a id="bookmarklet" class="p-1 border border-indigo-600 hover:bg-indigo-100 dark:hover:bg-indigo-900" href="">zoom bookmarklet</a> to your bookmark bar. You can then rename it and add as many as you want.</p>
   <script defer>
     function setHref(name) {
       const nameString = JSON.stringify(name);

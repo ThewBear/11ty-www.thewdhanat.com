@@ -16,37 +16,37 @@ permalink: /certificates/
   </section>
   <hr>
   <section class="my-8">
-    <h2 class="text-2xl leading-normal">All certificates</h2>
+    <h2 class="text-2xl leading-normal font-medium">All certificates</h2>
     {%- for year, certificates in online_certificates_by_year | dictsort -%}
       <div class="ml-2 my-4">
-        <h3 class="text-xl mb-2">{{ year }}</h3>
+        <h3 class="text-xl font-bold mb-2">{{ year }}</h3>
         <ul class="ml-2">
           {%- for certificate in certificates -%}
             <li class="mb-4">
-              <h4 class="text-lg text-indigo-900 font-bold">{{ certificate.title }}
+              <h4 class="text-lg text-indigo-900 dark:text-indigo-100 font-bold">{{ certificate.title }}
                 {% if certificate.children %}
-                  <span  class="text-base text-gray-700 font-normal">({{ certificate.children | length}} courses)</span>
+                  <span class="text-base opacity-75 font-normal">({{ certificate.children | length}} courses)</span>
                 {% endif %}
               </h4>
               {{ certificate.platform }}
               {% if certificate.url %}
-                <a class="ml-6 hover:underline font-medium" href="{{ certificate.url }}">
+                <a class="ml-2 md:ml-6 hover:underline font-medium" href="{{ certificate.url }}">
                   See certificate
                 </a>
               {% else %}
-                <span class="ml-6 text-gray-700 italic">In progress</span>
+                <span class="ml-2 md:ml-6 opacity-75 italic">In progress</span>
               {% endif %}
               {% if certificate.children %}
                 {% for certificate in certificate.children %}
-                <ul class="m-2 ml-6">
+                <ul class="m-2 md:ml-6">
                   <li class="mb-2">
                     {{ certificate.title }}
                     {% if certificate.url %}
-                      <a class="ml-6 hover:underline font-medium" href="{{ certificate.url }}">
+                      <a class="ml-2 md:ml-6 hover:underline font-medium" href="{{ certificate.url }}">
                         See certificate
                       </a>
                     {% else %}
-                      <span class="ml-6 text-gray-700 italic">In progress</span>
+                      <span class="ml-2 md:ml-6 opacity-75 italic">In progress</span>
                     {% endif %}
                   </li>
                 </ul>
