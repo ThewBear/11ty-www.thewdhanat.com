@@ -19,7 +19,7 @@
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.3.1",
     "p-queue": "^6.6.2",
-    "playwright": "^1.14.1",
+    "playwright": "^1.15.0",
     "postcss": "^8.3.6",
     "prettier": "^2.4.1",
     "sharp": "^0.29.1",
