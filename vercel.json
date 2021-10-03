@@ -52,7 +52,7 @@
   "rewrites": [
     {
       "source": "/og-image.png",
-      "destination": "https://og-image.thewdhanat.com/www.thewdhanat.com/image.png",
+      "destination": "https://og-image.thew.pro/www.thewdhanat.com/image.png",
       "has": [
         {
           "type": "query",
