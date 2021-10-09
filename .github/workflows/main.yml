@@ -57,21 +57,21 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v4
+      - uses: actions/github-script@v5
         if: github.event_name	== 'pull_request'
         with:
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
-      - uses: actions/github-script@v4
+      - uses: actions/github-script@v5
         if: github.event_name	!= 'pull_request'
         with:
           script: |
-            const { data: deployment } = await github.repos.createDeployment({
+            const { data: deployment } = await github.rest.repos.createDeployment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: context.ref,
@@ -82,7 +82,7 @@ jobs:
                 previews: "ant-man"
               }
             });
-            github.repos.createDeploymentStatus({
+            github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               deployment_id: deployment.id,
@@ -115,16 +115,16 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v4
+      - uses: actions/github-script@v5
         with:
           script: |
-            const { data: deployment } = await github.repos.createDeployment({
+            const { data: deployment } = await github.rest.repos.createDeployment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: context.ref,
               required_contexts: [],
             });
-            github.repos.createDeploymentStatus({
+            github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               deployment_id: deployment.id,
