@@ -15,7 +15,7 @@
     "autoprefixer": "^10.4.0",
     "esbuild": "^0.13.10",
     "fast-glob": "^3.2.7",
-    "luxon": "^2.0.2",
+    "luxon": "^2.1.1",
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.4.1",
     "p-queue": "^6.6.2",
