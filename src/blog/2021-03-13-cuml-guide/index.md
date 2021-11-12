@@ -1,6 +1,6 @@
 ---
 title: วิธีใช้งาน CUML1 (EZproxy) / VPN ของ MDCU
-description: วิธีใช้งาน CUML1 (EZproxy) และ VPN ของคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย (MDCU)
+description: วิธีใช้งาน CUML1 (EZproxy) และ VPN ของคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย (MDCU) สำหรับ นิสิต แพทย์ประจำบ้าน resident อาจารย์ staff เจ้าหน้าที่ บุคลากร
 slug: cuml-guide
 postLang: th
 ---
@@ -22,17 +22,23 @@ postLang: th
 เมื่อเข้าผ่านวิธีนี้ ทุกเว็บไซต์จะลงท้ายด้วย `.cuml1.md.chula.ac.th` เป็นการยืนยันว่าเราได้เข้าผ่าน CUML1 (EZproxy)
 
 หากเรามี URL ของบทความอยู่แล้ว และต้องการเข้าถึงบทความเต็มผ่านเครือข่ายของคณะ สามารถใช้ CUML1 (EZproxy) ได้ 2 วิธี
+
 #### วิธีแรก
+
 เหมาะสำหรับผู้ที่นาน ๆ ใช้ที
+
 1. เปิดหน้า https://docchula.com/resources.html
 1. ไปที่หัวข้อ Access via CUML1 proxy
 1. วาง URL ของบทความ และกด GO
 1. อาจต้องเข้าสู่ระบบเมื่อใช้ครั้งแรก
+
 #### วิธีที่ 2
+
 เหมาะสำหรับผู้ที่ใช้เป็นประจำ
+
 1. ลาก <a href="javascript:window.location.href='https://login.cuml1.md.chula.ac.th/login?qurl='+encodeURIComponent(document.location">CUML1</a> ขึ้นไปไว้ที่ bookmarks bar
 1. ในหน้าของบทความที่ต้องการ กดที่ **CUML1** บน bookmarks bar
 1. อาจต้องเข้าสู่ระบบเมื่อใช้ครั้งแรก
-![Drag to bookmarks bar](../2021-03-13-cuml-guide/drag.gif)
+   ![Drag to bookmarks bar](../2021-03-13-cuml-guide/drag.gif)
 
 ข้อดีของวิธีการนี้คือ เราสามารถเลือกเฉพาะ URL ที่เราต้องการได้ แต่ก็มีข้อเสียคือ สามารถใช้ได้กับเฉพาะเว็บที่คณะเปิดให้เชื่อมต่อผ่านวิธีนี้ อาจเกิดความสับสนระหว่างใช้งานว่าขณะนี้เข้าผ่าน CUML1 (EZproxy) หรือไม่ รวมทั้งไม่สามารถใช้โปรแกรมลิขสิทธิ์ต่าง ๆ ได้
