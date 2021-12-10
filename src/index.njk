@@ -17,7 +17,7 @@ contents:
     <h2 class="text-3xl leading-normal mb-2">I'm Thew Dhanat</h2>
     <p class="mb-2">Medical student · Software engineer · Learning Machine learning</p>
     <div class="my-4 flex">
-      <p class="mr-2 flex-shrink-0">Follow me on</p>
+      <p class="mr-2 shrink-0">Follow me on</p>
       <div class="-my-2 flex flex-wrap items-center">
         <a class="my-2 mx-2" href="https://twitter.com/ThewDhanat" aria-label="My Twitter">
           <svg class="w-5 h-5 fill-current" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@ contents:
       <p>These are some certificates that I earned from taking online courses during free time.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for certificate in online_certificates_front %}
-          {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+          {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
             <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ certificate.title | slug }}">{{ certificate.title }}</h4>
               <span class="text-sm">{{ certificate.platform }}
@@ -84,7 +84,7 @@ contents:
             </div>
           </{{"a" if certificate.url else "div"}}>
         {% endfor %}
-        <a href="/certificates/" aria-labelledby="more-certificates" class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+        <a href="/certificates/" aria-labelledby="more-certificates" class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
           <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full flex flex-col justify-center">
             <h4 class="font-medium text-xl" id="more-certificates">All {{ online_certificates | length }} certificates</h4>
           </div>
@@ -95,7 +95,7 @@ contents:
       <h3 class="text-lg leading-normal font-medium text-blue-700 dark:text-blue-300">Accomplishments</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for accomplishment in accomplishments %}
-          {% if accomplishment.url %}<a href="{{ accomplishment.url }}" aria-labelledby="{{ accomplishment.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out transform hover:scale-105">
+          {% if accomplishment.url %}<a href="{{ accomplishment.url }}" aria-labelledby="{{ accomplishment.title | slug }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
             <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ accomplishment.title | slug }}">{{ accomplishment.title }}</h4>
               <span class="text-sm">{{ accomplishment.summary }}</span>
