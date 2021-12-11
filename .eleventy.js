@@ -30,10 +30,7 @@ module.exports = function (eleventyConfig) {
   );
 
   eleventyConfig.addWatchTarget("./src/_styles/");
-  eleventyConfig.addAsyncShortcode(
-    "loadcss",
-    require("./lib/shortcodes/loadcss")
-  );
+  require("./lib/shortcodes/loadcss")(eleventyConfig);
 
   eleventyConfig.addAsyncShortcode(
     "loadjs",
