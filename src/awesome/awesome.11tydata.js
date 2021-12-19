@@ -20,6 +20,12 @@ const programmings = [
           "Path to a free self-taught education in Computer Science!",
         url: "https://github.com/ossu/computer-science#readme",
       },
+      {
+        title: "The System Design Primer",
+        description:
+          "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+        url: "https://github.com/donnemartin/system-design-primer#readme",
+      },
     ],
   },
   {
