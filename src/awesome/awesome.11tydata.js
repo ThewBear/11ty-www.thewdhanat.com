@@ -26,6 +26,11 @@ const programmings = [
           "A collection of (mostly) technical things every software developer should know about",
         url: "https://github.com/mtdvio/every-programmer-should-know#readme",
       },
+      {
+        title: "Best websites a programmer should visit",
+        description: "Some useful websites for programmers.",
+        url: "https://github.com/sdmg15/Best-websites-a-programmer-should-visit#readme",
+      },
     ],
   },
   {
