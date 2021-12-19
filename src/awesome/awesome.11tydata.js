@@ -21,6 +21,12 @@ const programmings = [
         url: "https://github.com/ossu/computer-science#readme",
       },
       {
+        title: "Every Programmer Should Know",
+        description:
+          "A collection of (mostly) technical things every software developer should know about",
+        url: "https://github.com/mtdvio/every-programmer-should-know#readme",
+      },
+      {
         title: "The System Design Primer",
         description:
           "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
