@@ -72,6 +72,12 @@ const programmings = [
         description: "Master the command line, in one page",
         url: "https://github.com/jlevy/the-art-of-command-line#readme",
       },
+      {
+        title: "Oh My Zsh",
+        description:
+          "A delightful community-driven (with 1900+ contributors) framework for managing your zsh configuration.",
+        url: "https://github.com/ohmyzsh/ohmyzsh#readme",
+      },
     ],
   },
   {
