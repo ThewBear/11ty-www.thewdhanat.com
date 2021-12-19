@@ -26,12 +26,6 @@ const programmings = [
           "A collection of (mostly) technical things every software developer should know about",
         url: "https://github.com/mtdvio/every-programmer-should-know#readme",
       },
-      {
-        title: "The System Design Primer",
-        description:
-          "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
-        url: "https://github.com/donnemartin/system-design-primer#readme",
-      },
     ],
   },
   {
@@ -48,6 +42,12 @@ const programmings = [
         title: "Free programming books",
         description: "Freely available programming books",
         url: "https://github.com/EbookFoundation/free-programming-books",
+      },
+      {
+        title: "The System Design Primer",
+        description:
+          "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+        url: "https://github.com/donnemartin/system-design-primer#readme",
       },
     ],
   },
