@@ -30,7 +30,7 @@ Object.keys(pages).forEach((url, index) => {
 
   const metadata = {
     width: 1440,
-    height: 1440 * 2,
+    height: 1440,
     format: "png",
   };
 

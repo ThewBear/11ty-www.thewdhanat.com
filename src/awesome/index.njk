@@ -44,8 +44,10 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
       <p class="mb-2">{{ subcontent.description }}</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         {%- for item in subcontent.items -%}
-        <div class="relative flex justify-end">
-          <div class="rounded-xl overflow-hidden w-1/2 m-2 shadow-md">
+        <div class="relative flex">
+          <div
+            class="rounded-xl overflow-hidden w-1/2 m-2 shadow-md self-start"
+          >
             <a
               class="block h-28"
               href="{{ item.url }}"
