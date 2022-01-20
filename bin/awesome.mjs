@@ -12,7 +12,7 @@ data.contents.forEach((value) => {
   );
 });
 
-const queue = new PQueue.default({ concurrency: 5 });
+const queue = new PQueue({ concurrency: 5 });
 const chrome = await chromium.launch();
 queue.on("idle", async () => {
   await chrome.close();

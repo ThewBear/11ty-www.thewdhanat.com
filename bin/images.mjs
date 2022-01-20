@@ -13,7 +13,7 @@ await fg([
   "!src/static/**/*",
 ]).then((entries) => entries.forEach((image) => (images[image] = null)));
 
-const queue = new PQueue.default({ concurrency: 3 });
+const queue = new PQueue({ concurrency: 3 });
 queue.on("idle", async () => {
   await fs.writeFile("_data/images/data.json", JSON.stringify(images));
 });
