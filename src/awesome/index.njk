@@ -28,7 +28,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
       {% for title in contents.keys() %}
       <a
         class="bg-black text-white dark:bg-gray-100 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 py-2 px-4 my-2 mx-2"
-        href="#{{ title | slug }}"
+        href="#{{ title | slugify }}"
       >
         {{ title }}
       </a>
@@ -36,7 +36,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
     </div>
   </section>
   {%- for key, content in contents -%}
-  <section id="{{ key | slug }}" class="my-8">
+  <section id="{{ key | slugify }}" class="my-8">
     <h1 class="text-3xl font-semibold mb-2">{{ key }}</h1>
     <div class="border-l-4 rounded border-black border-solid p-2">
       {%- for subcontent in content -%}
@@ -51,7 +51,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
             <a
               class="block h-28"
               href="{{ item.url }}"
-              aria-labelledby="{{ item.title | slug }}"
+              aria-labelledby="{{ item.title | slugify }}"
             >
               {% awesome item.url %}
             </a>
@@ -61,7 +61,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
               href="{{ item.url }}"
               class="text-blue-900 dark:text-blue-200 hover:text-blue-800 dark:hover:text-blue-300 hover:underline"
             >
-              <h3 class="font-medium text-lg" id="{{ item.title | slug }}">
+              <h3 class="font-medium text-lg" id="{{ item.title | slugify }}">
                 {{ item.title }}
               </h3>
             </a>
