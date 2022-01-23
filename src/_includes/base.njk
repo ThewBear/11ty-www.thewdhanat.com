@@ -10,15 +10,6 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ title }} | Thew Dhanat</title>
     <meta name="description" content="{{ description }}"/>
-    <meta property="og:title" content="{{ ogTitle | default(title) }} | Thew Dhanat" />
-    <meta property="og:type" content="{{ ogType | default("website") }}" />
-    <meta property="og:url" content="https://www.thewdhanat.com{{ page.url }}" />
-    <meta property="og:image" content="https://www.thewdhanat.com/og-image.png?path={{ ogImage | default(page.url) }}" />
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="manifest" href="/static/site.webmanifest">
     <meta name="theme-color" content="#3B82F6">
     {% if author %}
       <meta name="author" content="{{ author }}"/>
@@ -29,6 +20,15 @@ description: Dhanat Satta-awalo - Medical student · Software engineer · Learni
       <link href="{{ prism_theme | safe }}" rel="stylesheet" media="print" onload="this.media='all'">
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap&text=Buy%20me%20a%20coffee" rel="stylesheet" media="print" onload="this.media='all'">
+    <meta property="og:title" content="{{ ogTitle | default(title) }} | Thew Dhanat" />
+    <meta property="og:type" content="{{ ogType | default("website") }}" />
+    <meta property="og:url" content="https://www.thewdhanat.com{{ page.url }}" />
+    <meta property="og:image" content="https://www.thewdhanat.com/og-image.png?path={{ ogImage | default(page.url) }}" />
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
   </head>
   <body class="flex flex-col min-h-screen dark:bg-gray-900 dark:text-gray-100">
     {{ content | safe }}
