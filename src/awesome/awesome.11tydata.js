@@ -27,6 +27,12 @@ const programmings = [
         url: "https://github.com/mtdvio/every-programmer-should-know#readme",
       },
       {
+        title: "Computer Science courses with video lectures",
+        description: "List of Computer Science courses with video lectures.",
+        url: "https://github.com/Developer-Y/cs-video-courses#readme",
+      },
+
+      {
         title: "Best websites a programmer should visit",
         description: "Some useful websites for programmers.",
         url: "https://github.com/sdmg15/Best-websites-a-programmer-should-visit#readme",
