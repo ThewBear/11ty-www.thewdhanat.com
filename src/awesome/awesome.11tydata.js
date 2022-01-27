@@ -79,6 +79,12 @@ const programmings = [
         url: "https://github.com/public-apis/public-apis#readme",
       },
       {
+        title: "Open-source alternatives to SaaS",
+        description:
+          "Awesome list of open-source startup alternatives to well-known SaaS products",
+        url: "https://github.com/RunaCapital/awesome-oss-alternatives#readme",
+      },
+      {
         title: "The Art of Command Line",
         description: "Master the command line, in one page",
         url: "https://github.com/jlevy/the-art-of-command-line#readme",
