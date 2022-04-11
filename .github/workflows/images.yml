@@ -16,7 +16,7 @@ jobs:
           path: _data/awesome
       - run: npm ci
       - run: node bin/images.mjs
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: images
           path: _data/images
