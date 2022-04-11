@@ -169,7 +169,8 @@ const web = [
       },
       {
         title: "Huemint",
-        description: "Huemint uses machine learning to create unique color schemes for your brand, website or graphic.",
+        description:
+          "Huemint uses machine learning to create unique color schemes for your brand, website or graphic.",
         url: "https://huemint.com/",
       },
     ],
@@ -210,12 +211,13 @@ const data = [
     items: [
       {
         title: "pml-book",
-        description: "\"Probabilistic Machine Learning\" - a book series by Kevin Murphy",
+        description:
+          '"Probabilistic Machine Learning" - a book series by Kevin Murphy',
         url: "https://probml.github.io/pml-book/",
       },
     ],
   },
-]
+];
 
 module.exports = {
   contents: new Map([
