@@ -1,7 +1,7 @@
 const programmings = [
   {
     title: "Programming concepts",
-    description: "General programming",
+    description: "",
     items: [
       {
         title: "Coding Interview University",
@@ -95,6 +95,12 @@ const programmings = [
           "A delightful community-driven (with 1900+ contributors) framework for managing your zsh configuration.",
         url: "https://github.com/ohmyzsh/ohmyzsh#readme",
       },
+      {
+        title: ".tmux",
+        description:
+          "Self-contained, pretty and versatile .tmux.conf configuration file.",
+        url: "https://github.com/gpakosz/.tmux#readme",
+      },
     ],
   },
   {
@@ -161,6 +167,11 @@ const web = [
         description: "",
         url: "https://dev.to/kiranrajvjd/40-awesome-illustrations-resources-for-your-web-projects-2fea",
       },
+      {
+        title: "Huemint",
+        description: "Huemint uses machine learning to create unique color schemes for your brand, website or graphic.",
+        url: "https://huemint.com/",
+      },
     ],
   },
   {
@@ -192,10 +203,25 @@ const web = [
   },
 ];
 
+const data = [
+  {
+    title: "Books",
+    description: "",
+    items: [
+      {
+        title: "pml-book",
+        description: "\"Probabilistic Machine Learning\" - a book series by Kevin Murphy",
+        url: "https://probml.github.io/pml-book/",
+      },
+    ],
+  },
+]
+
 module.exports = {
   contents: new Map([
     ["General Programming", programmings],
     ["Python", python],
     ["Web", web],
+    ["Data science", data],
   ]),
 };

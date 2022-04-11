@@ -4,7 +4,7 @@ title: Awesome Thew
 description: Awesome tools / resources curated by Thew Dhanat for programmer, web developer, software engineer, data scientist, and machine learning engineer.
 ---
 
-<header class="w-full sm:w-4/5 xl:w-3/5 mx-auto my-4 px-4">
+<header class="w-full max-w-screen-xl mx-auto my-4 px-4">
   <h1 class="text-4xl font-bold mb-2">Awesome Thew</h1>
   <p class="mb-2">
     Awesome tools / resources curated by
@@ -21,7 +21,7 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
     <a class="underline" href="https://github.com/wesbos/awesome-uses">uses</a>.
   </p>
 </header>
-<main class="w-full sm:w-4/5 xl:w-3/5 mx-auto mb-4 px-4">
+<main class="w-full max-w-screen-xl mx-auto mb-4 px-4">
   <section class="">
     <h2 id="contents" class="text-3xl font-bold">Contents</h2>
     <div class="flex flex-wrap my-2">
@@ -38,15 +38,15 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
   {%- for key, content in contents -%}
   <section id="{{ key | slugify }}" class="my-8">
     <h1 class="text-3xl font-semibold mb-2">{{ key }}</h1>
-    <div class="border-l-4 rounded border-black border-solid p-2">
+    <div class="border-l-2 md:border-l-4 rounded border-black border-solid p-2">
       {%- for subcontent in content -%}
-      <h2 class="text-2xl font-medium mb-2">{{ subcontent.title }}</h2>
+      <h2 class="text-2xl font-medium mb-2" id="{{ key + '-' + subcontent.title | slugify }}">{{ subcontent.title }}</h2>
       <p class="mb-2">{{ subcontent.description }}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 mb-4">
         {%- for item in subcontent.items -%}
         <div class="relative flex">
           <div
-            class="rounded-xl overflow-hidden w-1/2 m-2 shadow-md self-start"
+            class="rounded-xl overflow-hidden w-1/2 m-2 shadow-md self-start hover:z-30 hover:scale-125 transition-transform origin-top-left"
           >
             <a
               class="block h-28"
@@ -61,11 +61,11 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
               href="{{ item.url }}"
               class="text-blue-900 dark:text-blue-200 hover:text-blue-800 dark:hover:text-blue-300 hover:underline"
             >
-              <h3 class="font-medium text-lg" id="{{ item.title | slugify }}">
+              <h3 class="font-medium md:text-lg" id="{{ item.title | slugify }}">
                 {{ item.title }}
               </h3>
             </a>
-            <p>{{ item.description }}</p>
+            <p class="text-sm md:text-base">{{ item.description }}</p>
           </div>
         </div>
         {%- endfor -%}
@@ -74,8 +74,5 @@ description: Awesome tools / resources curated by Thew Dhanat for programmer, we
     </div>
   </section>
   {%- endfor -%}
-  <p class="my-12 text-center text-xl">
-    {% twemoji "🚧" %} Work in progress {% twemoji "🚧" %}
-  </p>
   <aside>{% include "speedlify-score.njk" %}</aside>
 </main>
