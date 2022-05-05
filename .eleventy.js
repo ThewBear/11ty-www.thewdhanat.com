@@ -37,6 +37,8 @@ module.exports = function (eleventyConfig) {
     require("./lib/shortcodes/loadjs")
   );
 
+  eleventyConfig.addPairedShortcode("partytown", require("./lib/shortcodes/partytown"));
+
   eleventyConfig.addShortcode("awesome", require("./lib/shortcodes/awesome"));
 
   eleventyConfig.addCollection(
