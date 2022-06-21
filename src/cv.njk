@@ -17,13 +17,14 @@ description: Dhanat Satta-awalo Curriculum vitae
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
     {% parseCVcss %}
-        {% fetchInline "https://fonts.googleapis.com/css2?family=Sarabun&display=swap" %}
+        {% fetchInline "https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" %}
         @tailwind base;
         @tailwind components;
         @tailwind utilities;
     {% endparseCVcss %}
 </style>
 <meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
 <meta property="og:type" content="profile" />
 <meta property="profile:first_name" content="Dhanat" />
 <meta property="profile:last_name" content="Satta-awalo" />
@@ -34,13 +35,23 @@ description: Dhanat Satta-awalo Curriculum vitae
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
 <link rel="manifest" href="/static/site.webmanifest">
-{% partytown %}
+{# {% partytown %}
 partytown = {
 forward: [],
 };
-{% endpartytown %}
+{% endpartytown %} #}
 </head>
 <body class="font-body container mx-auto max-w-screen-lg p-4">
-    <p>Dhanat Satta-awalo</p>
+    <h1 class="text-3xl">Dhanat Satta-awalo</h1>
+    <p>Medical student</p>
+    <section class="py-4">
+        <h2 class="text-2xl">Education</h2>
+    </section>
+    <section class="py-4">
+        <h2 class="text-2xl">Experiences</h2>
+    </section>
+    <section class="py-4">
+        <h2 class="text-2xl">Awards</h2>
+    </section>
 </body>
 </html>
