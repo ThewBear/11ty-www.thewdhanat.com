@@ -24,6 +24,9 @@ jobs:
           path: _data/images
       - run: npm ci
       - run: npm run build
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
       - uses: actions/upload-artifact@v3
         with:
           name: build
