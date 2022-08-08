@@ -1,6 +1,7 @@
 ---
 lang: en
 description: Dhanat Satta-awalo - Medical student · Software · Aviation · Machine learning
+site_name: Thew Dhanat
 ---
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ description: Dhanat Satta-awalo - Medical student · Software · Aviation · Mac
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ title }} | Thew Dhanat</title>
+  <title>{{ title }} | {{ site_name }}</title>
   <meta name="description" content="{{ description }}" />
   <meta name="theme-color" content="#3B82F6">
   <meta name="generator" content="{{ eleventy.generator }}">
@@ -23,7 +24,9 @@ description: Dhanat Satta-awalo - Medical student · Software · Aviation · Mac
   {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap&text=Buy%20me%20a%20coffee" rel="stylesheet"
     media="print" onload="this.media='all'">
-  <meta property="og:title" content="{{ ogTitle | default(title) }} | Thew Dhanat" />
+  <meta property="og:title" content="{{ ogTitle | default(title) }} | {{ site_name }}" />
+  <meta property="og:site_name" content="{{ site_name }}" />
+  <meta property="og:description" content="{{ description }}" />
   <meta property="og:type" content="{{ ogType | default(" website") }}" />
   <meta property="og:url" content="https://www.thewdhanat.com{{ page.url }}" />
   <meta property="og:image" content="https://www.thewdhanat.com/og-image.png?path={{ ogImage | default(page.url) }}" />
