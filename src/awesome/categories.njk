@@ -18,7 +18,7 @@ permalink: "{{ page.filePathStem }}/{{ category | slugify }}/"
       <h2 class="text-3xl font-bold">
         {% twemoji "📁" %} Category: {{ category }}
       </h2>
-      <a href="/awesome" class="underline">See all categories and tags</a>
+      <a href="/awesome/" class="underline">See all categories and tags</a>
     </div>
     {{ list(groupedCategories[category], "category") }}
   </section>
