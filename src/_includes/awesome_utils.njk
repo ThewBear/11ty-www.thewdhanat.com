@@ -1,0 +1,49 @@
+{% macro list(pages, type) %}
+<div class="space-y-6 my-6">
+  {% for item in pages %}
+  <article class="md:grid gap-2 grid-cols-3">
+    <div class="flex flex-wrap gap-1 self-start md:my-2 text-sm md:text-base">
+      <a
+        href="/awesome/categories/{{
+          item.properties.Category.select.name | slugify
+        }}"
+        class="px-2 bg-indigo-700 hover:bg-indigo-800 rounded-md text-white"
+        title="category"
+      >
+        {% twemoji "📁" %} {{ item.properties.Category.select.name }}
+      </a>
+      {% for tag in item.properties.Tags.multi_select %}
+      <a
+        href="/awesome/tags/{{ tag.name | slugify }}"
+        class="px-2 bg-sky-700 hover:bg-sky-800 rounded-md text-white"
+      >
+        {% twemoji "🏷" %} {{ tag.name }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="col-span-2">
+      <div class="flex flex-wrap items-baseline gap-x-2">
+        <h2 class="font-semibold text-lg md:whitespace-nowrap">
+          {% for name in item.properties.Name.results %}
+          {{ name.title.plain_text }}
+          {% endfor %}
+        </h2>
+        <a
+          href="{{ item.properties.URL.url }}"
+          class="text-sm underline opacity-75 truncate"
+        >
+          {{ item.properties.URL.url }}
+        </a>
+      </div>
+      <p>
+        {% for description in item.properties.Description.results %}
+        {{ description.rich_text.plain_text }}
+        {% endfor %}
+      </p>
+    </div>
+  </article>
+  {% else %}
+  <div>This {{ type }} is empty.</div>
+  {% endfor %}
+</div>
+{% endmacro %}

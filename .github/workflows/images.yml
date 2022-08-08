@@ -9,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: dawidd6/action-download-artifact@v2
-        with:
-          workflow: awesome.yml
-          name: awesome
-          path: _data/awesome
       - run: npm ci
       - run: node bin/images.mjs
       - uses: actions/upload-artifact@v3

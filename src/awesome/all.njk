@@ -1,0 +1,17 @@
+---
+layout: awesome.njk
+title: All awesome
+description: All of awesome tools / resources curated by Thew Dhanat for programmer, web developer, software engineer, data scientist, and machine learning engineer.
+---
+
+{% from 'awesome_utils.njk' import list %}
+
+<main class="w-full max-w-screen-xl mx-auto mb-4 px-4">
+  <section>
+    <div class="flex flex-wrap gap-x-8 gap-y-2 items-baseline">
+      <h2 class="text-3xl font-bold">All awesome</h2>
+      <a href="/awesome" class="underline">See all categories and tags</a>
+    </div>
+    {{ list(results, "awesome") }}
+  </section>
+</main>

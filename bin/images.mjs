@@ -7,11 +7,9 @@ import sharp from "sharp";
 const IS_PRODUCTION = process.env.CI === "true";
 
 const images = {};
-await fg([
-  "_data/awesome/*.png",
-  "src/**/*.{jpg,jpeg,png,webp,avif}",
-  "!src/static/**/*",
-]).then((entries) => entries.forEach((image) => (images[image] = null)));
+await fg(["src/**/*.{jpg,jpeg,png,webp,avif}", "!src/static/**/*"]).then(
+  (entries) => entries.forEach((image) => (images[image] = null))
+);
 
 const queue = new PQueue({ concurrency: 3 });
 queue.on("idle", async () => {

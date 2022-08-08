@@ -1,6 +1,6 @@
 node_modules
 _site
-build
 _data
+.env
 
 .vercel

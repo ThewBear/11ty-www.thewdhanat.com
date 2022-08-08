@@ -1,0 +1,25 @@
+---
+layout: awesome.njk
+eleventyComputed:
+  title: Awesome {{ category }}
+  description: Awesome tools / resources in {{ category }} category curated by Thew Dhanat for programmer, web developer, software engineer, data scientist, and machine learning engineer.
+pagination:
+  data: categories
+  size: 1
+  alias: category
+permalink: "{{ page.filePathStem }}/{{ category | slugify }}/"
+---
+
+{% from 'awesome_utils.njk' import list %}
+
+<main class="w-full max-w-screen-xl mx-auto mb-4 px-4">
+  <section>
+    <div class="flex flex-wrap gap-x-8 gap-y-2 items-baseline">
+      <h2 class="text-3xl font-bold">
+        {% twemoji "📁" %} Category: {{ category }}
+      </h2>
+      <a href="/awesome" class="underline">See all categories and tags</a>
+    </div>
+    {{ list(groupedCategories[category], "category") }}
+  </section>
+</main>

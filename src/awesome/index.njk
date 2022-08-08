@@ -1,78 +1,43 @@
 ---
-layout: base.njk
+layout: awesome.njk
 title: Awesome Thew
 description: Awesome tools / resources curated by Thew Dhanat for programmer, web developer, software engineer, data scientist, and machine learning engineer.
 ---
 
-<header class="w-full max-w-screen-xl mx-auto my-4 px-4">
-  <h1 class="text-4xl font-bold mb-2">Awesome Thew</h1>
-  <p class="mb-2">
-    Awesome tools / resources curated by
-    <strong><a class="underline" href="/">Thew Dhanat</a></strong
-    >.
-  </p>
-  <p class="mb-2">
-    Inspired by
-    <a class="underline" href="https://www.swyx.io/writing/learn-in-public/"
-      >Learn In Public</a
-    >,
-    <a class="underline" href="https://github.com/sw-yx/spark-joy">spark-joy</a>
-    and
-    <a class="underline" href="https://github.com/wesbos/awesome-uses">uses</a>.
-  </p>
-</header>
+{% from 'awesome_utils.njk' import list %}
+
 <main class="w-full max-w-screen-xl mx-auto mb-4 px-4">
-  <section class="">
-    <h2 id="contents" class="text-3xl font-bold">Contents</h2>
-    <div class="flex flex-wrap my-2">
-      {% for title in contents.keys() %}
+  <section class="py-2">
+    <h2 class="text-3xl font-bold">{% twemoji "📁" %} Categories</h2>
+    <div class="flex flex-wrap my-4 gap-4">
+      {% for category in categories %}
       <a
-        class="bg-black text-white dark:bg-gray-100 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 py-2 px-4 my-2 mx-2"
-        href="#{{ title | slugify }}"
+        class="bg-indigo-700 text-white hover:bg-indigo-800 py-2 px-4"
+        href="categories/{{ category | slugify }}"
       >
-        {{ title }}
+        {{ category }}
       </a>
       {% endfor %}
     </div>
   </section>
-  {%- for key, content in contents -%}
-  <section id="{{ key | slugify }}" class="my-8">
-    <h1 class="text-3xl font-semibold mb-2">{{ key }}</h1>
-    <div class="border-l-2 md:border-l-4 rounded border-black border-solid p-2">
-      {%- for subcontent in content -%}
-      <h2 class="text-2xl font-medium mb-2" id="{{ key + '-' + subcontent.title | slugify }}">{{ subcontent.title }}</h2>
-      <p class="mb-2">{{ subcontent.description }}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 mb-4">
-        {%- for item in subcontent.items -%}
-        <div class="relative flex">
-          <div
-            class="rounded-xl overflow-hidden w-1/2 m-2 shadow-md self-start hover:z-30 hover:scale-125 transition-transform origin-top-left"
-          >
-            <a
-              class="block h-28"
-              href="{{ item.url }}"
-              aria-labelledby="{{ item.title | slugify }}"
-            >
-              {% awesome item.url %}
-            </a>
-          </div>
-          <div class="w-1/2">
-            <a
-              href="{{ item.url }}"
-              class="text-blue-900 dark:text-blue-200 hover:text-blue-800 dark:hover:text-blue-300 hover:underline"
-            >
-              <h3 class="font-medium md:text-lg" id="{{ item.title | slugify }}">
-                {{ item.title }}
-              </h3>
-            </a>
-            <p class="text-sm md:text-base">{{ item.description }}</p>
-          </div>
-        </div>
-        {%- endfor -%}
-      </div>
-      {%- endfor -%}
+  <section class="py-2">
+    <h2 class="text-3xl font-bold">{% twemoji "🏷" %} Tags</h2>
+    <div class="flex flex-wrap my-4 gap-4">
+      {% for tag in tags %}
+      <a
+        class="bg-sky-700 text-white hover:bg-sky-800 py-2 px-4"
+        href="tags/{{ tag | slugify }}"
+      >
+        {{ tag }}
+      </a>
+      {% endfor %}
     </div>
   </section>
-  {%- endfor -%}
-  <aside>{% include "speedlify-score.njk" %}</aside>
+  <section class="py-2">
+    <div class="flex flex-wrap gap-x-8 gap-y-2 items-baseline">
+      <h2 class="text-3xl font-bold">Featured</h2>
+      <a href="/awesome/all" class="underline">See all</a>
+    </div>
+    {{ list(results.slice(0, 5), "awesome") }}
+  </section>
 </main>

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     // Templates:
@@ -28,28 +30,29 @@ module.exports = function (eleventyConfig) {
     "readableDate",
     require("./lib/filters/readableDate")
   );
-  
+
   eleventyConfig.addWatchTarget("./src/_styles/");
   require("./lib/shortcodes/loadcss")(eleventyConfig);
-  
+
   eleventyConfig.addAsyncShortcode(
     "loadjs",
     require("./lib/shortcodes/loadjs")
-    );
+  );
 
   eleventyConfig.addAsyncShortcode(
     "fetchInline",
     require("./lib/shortcodes/fetchInline")
-    );
+  );
 
   eleventyConfig.addPairedShortcode(
     "parseCVcss",
     require("./lib/shortcodes/parseCVcss")
   );
 
-  eleventyConfig.addPairedShortcode("partytown", require("./lib/shortcodes/partytown"));
-
-  eleventyConfig.addShortcode("awesome", require("./lib/shortcodes/awesome"));
+  eleventyConfig.addPairedShortcode(
+    "partytown",
+    require("./lib/shortcodes/partytown")
+  );
 
   eleventyConfig.addCollection(
     "blogByYear",
