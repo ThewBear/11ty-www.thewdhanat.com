@@ -9,7 +9,7 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@builder.io/partytown": "^0.6.4",
     "@notionhq/client": "^2.1.1",
