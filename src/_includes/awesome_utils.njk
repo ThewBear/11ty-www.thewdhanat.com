@@ -6,7 +6,7 @@
       <a
         href="/awesome/categories/{{
           item.properties.Category.select.name | slugify
-        }}"
+        }}/"
         class="px-2 bg-indigo-700 hover:bg-indigo-800 rounded-md text-white"
         title="category"
       >
@@ -14,7 +14,7 @@
       </a>
       {% for tag in item.properties.Tags.multi_select %}
       <a
-        href="/awesome/tags/{{ tag.name | slugify }}"
+        href="/awesome/tags/{{ tag.name | slugify }}/"
         class="px-2 bg-sky-700 hover:bg-sky-800 rounded-md text-white"
       >
         {% twemoji "🏷" %} {{ tag.name }}
