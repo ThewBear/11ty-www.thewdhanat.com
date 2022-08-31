@@ -15,7 +15,7 @@
     "@notionhq/client": "^2.1.1",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.8",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.0.2",
     "esbuild": "^0.14.53",
     "fast-glob": "^3.2.7",
     "got": "^12.3.1",
