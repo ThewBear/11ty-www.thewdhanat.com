@@ -59,6 +59,10 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 ## Government
 
+[Artificial Intelligence and Machine Learning (AI/ML)-Enabled Medical Devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)
+
+[FDA-approved A.I.-based algorithms](https://medicalfuturist.com/fda-approved-ai-based-algorithms/)
+
 [European Health Data Space](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en)
 
 [Technical Performance Assessment of Quantitative Imaging in Radiological Device Premarket Submissions](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/technical-performance-assessment-quantitative-imaging-radiological-device-premarket-submissions)
