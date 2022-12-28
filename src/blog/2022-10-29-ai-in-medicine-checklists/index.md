@@ -43,6 +43,9 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [2022 AI Ethics Guidelines by NSTDA](https://waa.inter.nstda.or.th/stks/pub/2022/20220331-ori-ai-research-integrity-guideline.pdf)
 
+[2022 AI Ethics Guidelines by NSTDA (Book)](https://waa.inter.nstda.or.th/stks/pub/ori/docs/20220831-aw-book-ai-ethics-guideline.pdf)
+
+
 ## Reproducibility
 
 [Leakage and the Reproducibility Crisis in ML-based Science](https://reproducible.cs.princeton.edu/)
