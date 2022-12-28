@@ -13,6 +13,8 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [2021 AI Index Report](https://hai.stanford.edu/ai-index-2021)
 
+[Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/)
+
 ## Research
 
 [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)
