@@ -37,6 +37,12 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [An Accountability Framework for Federal Agencies and Other Entities](https://www.gao.gov/products/gao-21-519sp)
 
+### Thailand
+
+[2021 Thailand AI Ethics Guidelines by MDES](https://www.onde.go.th/assets/portals/1/files/Thailand%20AI%20Ethics%20Guideline%20(White%20paper)%20Edit%20Version.pdf)
+
+[2022 AI Ethics Guidelines by NSTDA](https://waa.inter.nstda.or.th/stks/pub/2022/20220331-ori-ai-research-integrity-guideline.pdf)
+
 ## Reproducibility
 
 [Leakage and the Reproducibility Crisis in ML-based Science](https://reproducible.cs.princeton.edu/)
