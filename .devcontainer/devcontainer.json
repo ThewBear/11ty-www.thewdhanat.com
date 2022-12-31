@@ -11,7 +11,8 @@
   "extensions": [
     "GitHub.copilot",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
