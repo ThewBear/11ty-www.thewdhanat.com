@@ -3,5 +3,6 @@
   "editor.formatOnPaste": true,
   "files.associations": {
     "*.njk": "html"
-  }
+  },
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
 }

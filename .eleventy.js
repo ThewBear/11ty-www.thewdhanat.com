@@ -8,16 +8,16 @@ module.exports = function (eleventyConfig) {
     "md",
     // Static Assets:
     "txt",
-    "svg",
-    "webp",
-    "png",
-    "jpg",
-    "jpeg",
-    "gif",
     "ico",
-    "webmanifest",
   ]);
-  eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy("src/static");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.svg");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.webp");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.png");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.gif");
+  eleventyConfig.addPassthroughCopy({ "cv/*.pdf": "." });
 
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
@@ -48,6 +48,8 @@ module.exports = function (eleventyConfig) {
     "parseCVcss",
     require("./lib/shortcodes/parseCVcss")
   );
+
+  eleventyConfig.addShortcode("fileVersion", require("./lib/shortcodes/fileVersion"));
 
   eleventyConfig.addPairedShortcode(
     "partytown",
