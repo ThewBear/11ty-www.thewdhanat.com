@@ -21,21 +21,17 @@
   thewdhanat.com/cv
 }
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
-\fancyfoot[R]{
-  \footnotesize
-  \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}
-  \\
-  \textcolor{gray}{
-    \today
-  }
-}
+\fancyfoot[R]{\textcolor{Sepia}{\footnotesize
+  \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
+  \today
+}}
 
 \usepackage{titlesec}
 \titleformat{\section}         % Customise the \section command 
-  {\Large\raggedright\bf}  % Make the \section headers large (\Large),
+  {\Large\raggedright\bf}      % Make the \section headers large (\Large),
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
-  [{\titlerule[0.75pt]}]                 % Inserts a horizontal line after the heading
+  [{\titlerule[0.75pt]}]       % Inserts a horizontal line after the heading
 
 
 \newenvironment{cv_table}{
