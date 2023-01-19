@@ -61,5 +61,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/cv",
+      "destination": "/cv.pdf",
+      "permanent": false
+    }
   ]
 }

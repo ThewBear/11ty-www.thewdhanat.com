@@ -22,6 +22,11 @@ jobs:
           workflow: images.yml
           name: images
           path: _data/images
+      - uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: cv.yml
+          name: cv
+          path: cv
       - run: npm ci
       - run: npm run build
         env:
@@ -43,6 +48,11 @@ jobs:
           workflow: images.yml
           name: images
           path: _data/images
+      - uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: cv.yml
+          name: cv
+          path: cv
       - run: |
           mkdir .vercel
           echo $VERCEL_PROJECT > .vercel/project.json
@@ -97,6 +107,11 @@ jobs:
           workflow: images.yml
           name: images
           path: _data/images
+      - uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: cv.yml
+          name: cv
+          path: cv
       - run: |
           mkdir .vercel
           echo $VERCEL_PROJECT > .vercel/project.json

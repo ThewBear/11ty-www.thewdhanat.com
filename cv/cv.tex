@@ -1,28 +1,27 @@
-\documentclass{article}
-\usepackage{fontspec}
-\usepackage{geometry}
+\documentclass{cv}
 \usepackage[]{fancyhdr}
 \usepackage{lastpage}
+\usepackage{xcolor}
 
-\setmainfont{Sarabun}
-\geometry{
-  a4paper,
-  left=20mm,
-  right=20mm,
-  bottom=20mm,
-  top=20mm}
+\usepackage{titlesec}
+
 
 \begin{document}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{
-    thewdhanat.com/cv
+\centerline{
+  \Large{
+    \textbf{Dhanat Satta-awalo}
+  }
 }
-\fancyfoot[C]{\thepage/\pageref{LastPage}}
-\fancyfoot[R]{
-    Version \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
-    Printed on \today
-}
-Pending...
+\centerline{Bangkok, Thailand}
+\centerline{thewdhanat.com \textbullet{} thew@thewdhanat.com}
+
+\section{Education}
+\begin{tabular*}{\columnwidth}{ll@{\extracolsep{\fill}}r}
+  Middle school & \textbf{Saint Dominic School}    & 2012--2015 \\
+  High school   & \textbf{Triam Udom Suksa School} & 2015--2018 \\
+  MD & \textbf{Faculty of Medicine, Chulalongkorn University} & 2018--2024
+\end{tabular*}
+
+\section{Experience}
+
 \end{document}
