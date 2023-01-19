@@ -1,0 +1,19 @@
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo .devcontainer/installTex.sh
+      - run: .devcontainer/setupTex.sh
+      - run: latexmk -xelatex
+        working-directory: cv
+      - run: "[ -f cv/cv.pdf ]"
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cv
+          path: cv/cv.pdf
