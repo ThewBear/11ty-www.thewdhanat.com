@@ -10,6 +10,9 @@
   bottom=20mm,
   top=15mm}
 
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+
+\usepackage{lastpage}
 \usepackage[]{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
@@ -33,3 +36,20 @@
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [{\titlerule[0.75pt]}]                 % Inserts a horizontal line after the heading
+
+
+\newenvironment{cv_table}{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\columnwidth}{ll@{\extracolsep{\fill}}r}
+}{\end{tabular*}}
+
+\newcommand{\cveduitem}[3]{
+  #1 & \textcolor{DarkSlateGray}{\textbf{#2}} & #3 \\
+}
+
+\newcommand{\cvcertificateitem}[4]{
+  \vtop{
+    \hbox{\strut#1}
+    \hbox{\strut\small{\textcolor{LightSlateGray}{#2}}}}
+  & \textcolor{SlateGray}{#3} & #4 \\
+}
