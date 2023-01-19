@@ -45,13 +45,6 @@ module.exports = function (eleventyConfig) {
   );
 
   eleventyConfig.addPairedShortcode(
-    "parseCVcss",
-    require("./lib/shortcodes/parseCVcss")
-  );
-
-  eleventyConfig.addShortcode("fileVersion", require("./lib/shortcodes/fileVersion"));
-
-  eleventyConfig.addPairedShortcode(
     "partytown",
     require("./lib/shortcodes/partytown")
   );
