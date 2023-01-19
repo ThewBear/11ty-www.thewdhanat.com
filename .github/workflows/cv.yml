@@ -1,6 +1,10 @@
 on:
   push:
+    paths:
+      - "cv/**"
   pull_request:
+    paths:
+      - "cv/**"
   workflow_dispatch:
 
 jobs:
