@@ -4,3 +4,12 @@ _data
 .env
 
 .vercel
+
+## latex
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.pdf
+cv/*.synctex.gz
+cv/*.xdv
