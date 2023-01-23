@@ -1,8 +1,13 @@
 on:
   push:
+    paths:
+      - "src/**/*.jpg"
+      - "src/**/*.jpeg"
+      - "src/**/*.png"
+      - "src/**/*.webp"
+      - "src/**/*.avif"
+      - "bin/images.mjs"
   workflow_dispatch:
-  schedule:
-    - cron: "30 3 */4 * *"
 
 jobs:
   build:
