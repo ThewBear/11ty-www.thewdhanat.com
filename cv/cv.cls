@@ -22,8 +22,8 @@
 }
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
 \fancyfoot[R]{\textcolor{Sepia}{\footnotesize
-  \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
-  \today
+  Version \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
+  Printed on \today
 }}
 
 \usepackage{titlesec}
@@ -43,9 +43,23 @@
   #1 & \textcolor{DarkSlateGray}{\textbf{#2}} & #3 \\
 }
 
-\newcommand{\cvcertificateitem}[4]{
-  \vtop{
-    \hbox{\strut#1}
-    \hbox{\strut\small{\textcolor{LightSlateGray}{#2}}}}
-  & \textcolor{SlateGray}{#3} & #4 \\
+\newcommand{\cvelecitem}[3]{
+  \textcolor{DarkSlateGray}{\textbf{#1}} & #2 & #3 \\
+}
+
+\usepackage{enumitem}
+\newenvironment{cv_itemize}{
+  \vspace{-0.5em}
+  \begin{itemize}[leftmargin=*,noitemsep]
+    }{\end{itemize}}
+
+\newcommand{\cvitemwithsubtitle}[4]{
+  #1 & \textcolor{SlateGray}{#3} & #4 \\[-0.5em]
+  \multicolumn{3}{l}{
+    \parbox{\columnwidth}{\small{\textcolor{LightSlateGray}{#2}}}
+  } \\
+}
+
+\newcommand{\cvonlinecourseitem}[4]{
+  \cvitemwithsubtitle{#1}{Online course by #2}{#3}{#4}
 }
