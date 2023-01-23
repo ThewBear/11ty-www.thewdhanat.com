@@ -56,7 +56,7 @@
 \newcommand{\cvitemwithsubtitle}[4]{
   #1 & \textcolor{SlateGray}{#3} & #4 \\[-0.5em]
   \multicolumn{3}{l}{
-    \parbox{\columnwidth}{\small{\textcolor{LightSlateGray}{#2}}}
+    \parbox{\columnwidth}{\small{\textcolor{SlateGray}{#2}}}
   } \\
 }
 
