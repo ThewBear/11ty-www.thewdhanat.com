@@ -1,6 +1,7 @@
 ---
 title: AI in Medicine Checklists
 description: AI in Medicine Checklists. General information, reporting guidelines and checklists for AI-in-medicine researchers.
+updated: 2023-03-06
 ---
 
 _This is an in progress post. More updates will be coming (soon)._
@@ -41,12 +42,11 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 ### Thailand
 
-[2021 Thailand AI Ethics Guidelines by MDES](https://www.onde.go.th/assets/portals/1/files/Thailand%20AI%20Ethics%20Guideline%20(White%20paper)%20Edit%20Version.pdf)
+[2021 Thailand AI Ethics Guidelines by MDES](<https://www.onde.go.th/assets/portals/1/files/Thailand%20AI%20Ethics%20Guideline%20(White%20paper)%20Edit%20Version.pdf>)
 
 [2022 AI Ethics Guidelines by NSTDA](https://waa.inter.nstda.or.th/stks/pub/2022/20220331-ori-ai-research-integrity-guideline.pdf)
 
 [2022 AI Ethics Guidelines by NSTDA (Book)](https://waa.inter.nstda.or.th/stks/pub/ori/docs/20220831-aw-book-ai-ethics-guideline.pdf)
-
 
 ## Reproducibility
 
@@ -66,7 +66,9 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [Proposed Requirements for Cardiovascular Imaging-Related Machine Learning Evaluation (PRIME): A Checklist: Reviewed by the American College of Cardiology Healthcare Innovation Council](https://www.sciencedirect.com/science/article/pii/S1936878X20306367)
 
-[Standardized Reporting of Machine Learning Applications in Urology: The STREAM-URO Framework](https://www.eu-focus.europeanurology.com/article/S2405-4569(21)00183-8/fulltext)
+[Standardized Reporting of Machine Learning Applications in Urology: The STREAM-URO Framework](<https://www.eu-focus.europeanurology.com/article/S2405-4569(21)00183-8/fulltext>)
+
+[Recommendations on compiling test datasets for evaluating artificial intelligence solutions in pathology](<https://mp.uscap.org/article/S0893-3952(22)05487-4/fulltext>)
 
 ## Government
 
