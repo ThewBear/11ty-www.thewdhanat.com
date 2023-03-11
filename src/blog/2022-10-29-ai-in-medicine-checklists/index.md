@@ -48,6 +48,8 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [2022 AI Ethics Guidelines by NSTDA (Book)](https://waa.inter.nstda.or.th/stks/pub/ori/docs/20220831-aw-book-ai-ethics-guideline.pdf)
 
+[2023 Thailand Artificial Intelligence Guidelines 1.0 (TAIG 1.0) by Faculty of Law, Chulalongkorn University](https://www.law.chula.ac.th/wp-content/uploads/2023/03/TAIG-20230222.pdf)
+
 ## Reproducibility
 
 [Leakage and the Reproducibility Crisis in ML-based Science](https://reproducible.cs.princeton.edu/)
