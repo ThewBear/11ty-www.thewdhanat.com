@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/blog/**/*.gif");
   eleventyConfig.addPassthroughCopy({ "cv/*.pdf": "." });
 
+  // https://github.com/11ty/eleventy/issues/2857
+  eleventyConfig.addWatchTarget("src/blog/**/*");
+
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
   /* Markdown Overrides */
