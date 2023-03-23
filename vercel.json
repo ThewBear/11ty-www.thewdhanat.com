@@ -49,19 +49,6 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/og-image.png",
-      "destination": "https://og-image.thew.pro/www.thewdhanat.com/image.png",
-      "has": [
-        {
-          "type": "query",
-          "key": "path",
-          "value": "(?!\\/+og-image\\.png).*"
-        }
-      ]
-    }
-  ],
   "redirects": [
     {
       "source": "/cv",
