@@ -1,7 +1,7 @@
 ---
 title: AI in Medicine Checklists
 description: AI in Medicine Checklists. General information, reporting guidelines and checklists for AI-in-medicine researchers.
-updated: 2023-03-11
+updated: 2023-04-04
 ---
 
 _This is an in progress post. More updates will be coming (soon)._
@@ -15,6 +15,12 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 [2021 AI Index Report](https://hai.stanford.edu/ai-index-2021)
 
 [Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/)
+
+## Community
+
+[Ethics & Society at Hugging Face](https://huggingface.co/spaces/society-ethics/about)
+
+[Ethical guidelines for developing the Diffusers library](https://huggingface.co/blog/ethics-diffusers)
 
 ## Research
 
