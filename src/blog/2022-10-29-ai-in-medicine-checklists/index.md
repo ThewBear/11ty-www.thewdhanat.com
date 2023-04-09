@@ -1,7 +1,7 @@
 ---
 title: AI in Medicine Checklists
 description: AI in Medicine Checklists. General information, reporting guidelines and checklists for AI-in-medicine researchers.
-updated: 2023-04-04
+updated: 2023-04-09
 ---
 
 _This is an in progress post. More updates will be coming (soon)._
@@ -10,11 +10,19 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 # General
 
+[State of AI Report 2021](https://www.stateof.ai/2021)
+
 [State of AI Report 2022](https://www.stateof.ai/)
 
-[2021 AI Index Report](https://hai.stanford.edu/ai-index-2021)
+[2021 AI Index Report](https://aiindex.stanford.edu/ai-index-report-2021/)
+
+[2022 AI Index Report](https://aiindex.stanford.edu/ai-index-report-2022/)
+
+[2023 AI Index Report](https://hai.stanford.edu/ai-index-2023)
 
 [Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/)
+
+[Generative AI in scientific paper authoring](../generative-ai-in-scientific-paper-authoring/)
 
 ## Community
 
