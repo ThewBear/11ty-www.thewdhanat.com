@@ -11,7 +11,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@builder.io/partytown": "^0.7.6",
+    "@builder.io/partytown": "^0.8.0",
     "@github/clipboard-copy-element": "^1.1.2",
     "@notionhq/client": "^2.2.3",
     "@tailwindcss/typography": "^0.5.9",
