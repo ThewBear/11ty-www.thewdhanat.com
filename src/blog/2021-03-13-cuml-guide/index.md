@@ -33,7 +33,7 @@ updated: 2023-04-14
 1. เปิดหน้า https://docchula.com/resources.html
 1. ไปที่หัวข้อ Access via CUML1 proxy
 1. วาง URL ของบทความ และกด GO
-1. อาจต้องเข้าสู่ระบบเมื่อใช้ครั้งแรก
+1. จะแสดงหน้าจอเข้าสู่ระบบเมื่อใช้ครั้งแรก
 
 #### วิธีที่ 2
 
@@ -41,7 +41,7 @@ updated: 2023-04-14
 
 1. ลาก <a href="javascript:window.location.href='https://login.cuml1.md.chula.ac.th/login?qurl='+encodeURIComponent(document.location">CUML1</a> ขึ้นไปไว้ที่ bookmarks bar ตามรูปด้านล่าง
 1. ในหน้าของบทความที่ต้องการ กดที่ **CUML1** บน bookmarks bar จากนั้นหน้าบทความนั้นจะเปลี่ยนเป็นการเข้าผ่าน CUML ทันที
-1. อาจต้องเข้าสู่ระบบเมื่อใช้ครั้งแรก
+1. จะแสดงหน้าจอเข้าสู่ระบบเมื่อใช้ครั้งแรก
    ![Drag to bookmarks bar](../2021-03-13-cuml-guide/drag.gif)
 
 #### วิธีที่ 3
@@ -50,13 +50,14 @@ updated: 2023-04-14
 
 วิธีนี้จะเปลี่ยนทุกเว็บไซต์ที่รองรับให้เป็นการเข้าผ่าน CUML ทันทีทุกครั้ง ถ้าต้องการเข้าโดยตรงไม่ผ่าน CUML เช่น กรณีที่จะแชร์ URL กับคนอื่น ต้องปิด Zotero ก่อน
 
-1. วิธีนี้ต้องติดตั้ง Zotero Connector บน browser ก่อน ดาวน์โหลดได้จาก [https://www.zotero.org/download/](https://www.zotero.org/download/) เลือกติดตั้ง Zotero Connector ทางด้านขวา ซึ่งตอนนี้รองรับ Chrome, Edge, Firefox, Safari
+1. วิธีนี้ต้องติดตั้ง Zotero Connector extension บน browser ก่อน ดาวน์โหลดได้จาก [https://www.zotero.org/download/](https://www.zotero.org/download/) เลือกติดตั้ง Zotero Connector ทางด้านขวา ซึ่งตอนนี้รองรับ Chrome, Edge, Firefox, Safari
 2. เข้าไปที่ Preferences ของ Zotero
    - Firefox: คลิกขวาบนปุ่ม Zotero และเลือก Preferences
    - Chrome: คลิกขวาบนปุ่ม Zotero และเลือก Options
    - Safari: คลิกขวาบนหน้าเว็บ และเลือก Zotero Preferences
 3. ไปที่หน้า Advanced ส่วน Advanced Configuration ที่อยู่ล่างสุด กดเปิด Config Editor
 4. เลื่อนลงไปจนเจอ `proxies.proxies` กดสองครั้งตรงค่าเดิมที่เป็น `[]` และ paste ข้อมูลด้านล่างลงไปแทน หรือ <clipboard-copy value="[{&#34;id&#34;:1672531200000,&#34;autoAssociate&#34;:true,&#34;toProxyScheme&#34;:&#34;https://login.cuml1.md.chula.ac.th/login?qurl=%u&#34;,&#34;toProperScheme&#34;:&#34;%h.cuml1.md.chula.ac.th/%p&#34;,&#34;hosts&#34;:[&#34;link.springer.com&#34;,&#34;library.md.chula.ac.th&#34;,&#34;sfx.md.chula.ac.th&#34;,&#34;www.ncbi.nlm.nih.gov&#34;,&#34;pubmed.ncbi.nlm.nih.gov&#34;,&#34;ebooks.aappublications.org&#34;,&#34;www.aafp.org&#34;,&#34;pediatrics.aappublications.org&#34;,&#34;accessanesthesiology.mhmedical.com&#34;,&#34;accesscardiology.mhmedical.com&#34;,&#34;dermatology.mhmedical.com&#34;,&#34;accessemergencymedicine.mhmedical.com&#34;,&#34;accessmedicine.mhmedical.com&#34;,&#34;neurology.mhmedical.com&#34;,&#34;accesspediatrics.mhmedical.com&#34;,&#34;accesspharmacy.mhmedical.com&#34;,&#34;accessphysiotherapy.mhmedical.com&#34;,&#34;pubs.acs.org&#34;,&#34;www.ajronline.org&#34;,&#34;cjasn.asnjournals.org&#34;,&#34;pats.atsjournals.org&#34;,&#34;acpjournals.org&#34;,&#34;www.annualreviews.org&#34;,&#34;www.the-aps.org&#34;,&#34;meridian.allenpress.com&#34;,&#34;www.asmscience.org&#34;,&#34;journals.asm.org&#34;,&#34;www.ajtmh.org&#34;,&#34;batesvisualguide.com&#34;,&#34;www.birpublications.org&#34;,&#34;www.birpublications.org&#34;,&#34;ashpublications.org&#34;,&#34;bestpractice.bmj.com&#34;,&#34;journals.bmj.com&#34;,&#34;www.bjj.boneandjoint.org.uk&#34;,&#34;www.cambridge.org&#34;,&#34;ceog.imrpress.com&#34;,&#34;www.clinicalkey.com&#34;,&#34;www.dustri.com&#34;,&#34;www.clinmicronow.org&#34;,&#34;www.cochranelibrary.com&#34;,&#34;www.deckerip.com&#34;,&#34;www.degruyter.com&#34;,&#34;www.diabetesjournals.org&#34;,&#34;www.diabetesjournals.org&#34;,&#34;www.imaios.com&#34;,&#34;search.ebscohost.com&#34;,&#34;www.emerald.com&#34;,&#34;www.bioscientifica.com&#34;,&#34;ejgo.imrpress.com&#34;,&#34;bioscience.org&#34;,&#34;elibrary.aao.org&#34;,&#34;app.expertpath.com&#34;,&#34;go.gale.com&#34;,&#34;link.gale.com&#34;,&#34;scholar.google.com&#34;,&#34;meded.lwwhealthlibrary.com&#34;,&#34;app.immunoquery.com&#34;,&#34;jcr.clarivate.com&#34;,&#34;content.iospress.com&#34;,&#34;jamaevidence.mhmedical.com&#34;,&#34;www.jci.org&#34;,&#34;www.psychiatrist.com&#34;,&#34;www.psychiatrist.com&#34;,&#34;rupress.org&#34;,&#34;www.jimmunol.org&#34;,&#34;thejns.org&#34;,&#34;www.journalofparasitology.org&#34;,&#34;journals.healio.com&#34;,&#34;pubs.asha.org&#34;,&#34;www.jove.com&#34;,&#34;www.karger.com&#34;,&#34;www.liebertpub.com&#34;,&#34;mhebooklibrary.com&#34;,&#34;www.micromedexsolutions.com&#34;,&#34;www.nature.com&#34;,&#34;masterclasses.nature.com&#34;,&#34;evidence.nejm.org&#34;,&#34;www.nejm.org&#34;,&#34;www.jwatch.org&#34;,&#34;resident360.nejm.org&#34;,&#34;www.nejm.org&#34;,&#34;ovidsp.ovid.com&#34;,&#34;library.car.chula.ac.th&#34;,&#34;academic.oup.com&#34;,&#34;oxfordmedicine.com&#34;,&#34;www.oxfordscholarship.com&#34;,&#34;search.proquest.com&#34;,&#34;pubs.rsna.org&#34;,&#34;www.reaxys.com&#34;,&#34;www.sciencemag.org&#34;,&#34;www.sciencedirect.com&#34;,&#34;www.scopus.com&#34;,&#34;www.scival.com&#34;,&#34;link.springer.com&#34;,&#34;app.statdx.com&#34;,&#34;www.taylorfrancis.com&#34;,&#34;www.tandfonline.com&#34;,&#34;tdc.thailis.or.th&#34;,&#34;www.thieme-connect.com&#34;,&#34;medone-education.thieme.com&#34;,&#34;www.unboundmedicine.com&#34;,&#34;www.visualdx.com&#34;,&#34;onlinelibrary.wiley.com&#34;,&#34;www.psychiatryonline.org&#34;,&#34;px.md.chula.ac.th&#34;]}]"><span class="text-blue-800 active:text-green-600">กดตรงนี้</span></clipboard-copy> เพื่อ copy
+5. เมื่อวางเสร็จแล้ว ให้ปิดแท็บการตั้งค่าได้เลย ปิดเบราว์เซอร์และเปิดใหม่ (หรือปิดเปิดใหม่เฉพาะ Zotero Connector extension) และลองเข้าเว็บ library.md.chula.ac.th จะแสดงหน้าจอเข้าสู่ระบบเมื่อใช้ครั้งแรก
 
 ```json
 [
