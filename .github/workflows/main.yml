@@ -134,7 +134,4 @@ jobs:
               deployment_id: deployment.id,
               state: 'success',
               log_url: require('fs').readFileSync('previewUrl.txt', 'utf8'),
-              mediaType: {
-                previews: "ant-man"
-              }
             });
