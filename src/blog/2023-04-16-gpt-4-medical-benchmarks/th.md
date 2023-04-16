@@ -5,7 +5,7 @@ slug: gpt-4-medical-benchmarks
 postLang: th
 ---
 
-หลังจากที่ GPT-4 เปิดตัวมาไม่นาน OpenAI และ Microsoft ได้เผยแพร่งานวิจัย [Capabilities of GPT-4 on Medical Challenge Problems](https://www.microsoft.com/en-us/research/publication/capabilities-of-gpt-4-on-medical-challenge-problems/) ซึ่งเป็นการทดลองนำ GPT-4 มาตอบข้อสอบแพทย์ โดยก่อนหน้านี้เคยมีงานวิจัยคล้ายกันที่ใช้ [ChatGPT](https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000198) ทำให้เรื่องที่ ChatGPT สามารถสอบผ่านข้อสอบแพทย์นี้กลายเป็น[ข่าว](https://www.blognone.com/node/132354)[ดัง](https://www.thedailybeast.com/chatgpt-passed-the-us-medical-licensing-exam-will-it-be-your-future-doctor)ออกมาก่อนหน้านี้แล้ว แต่ในโพสต์นี้เราจะมาวิเคราะห์งานวิจัยล่าสุดนี้กัน
+หลังจากที่ GPT-4 เปิดตัวมาไม่นาน OpenAI และ Microsoft ได้เผยแพร่งานวิจัย [Capabilities of GPT-4 on Medical Challenge Problems](https://www.microsoft.com/en-us/research/publication/capabilities-of-gpt-4-on-medical-challenge-problems/) ซึ่งเป็นการทดลองนำ GPT-4 มาตอบข้อสอบแพทย์ โดยก่อนหน้านี้เคยมีงานวิจัยคล้ายกันที่ใช้ [ChatGPT](https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000198) ทำให้เรื่องที่ ChatGPT สามารถสอบผ่านข้อสอบแพทย์นี้กลายเป็น[ข่าว](https://www.blognone.com/node/132354)[ดัง](https://www.thedailybeast.com/chatgpt-passed-the-us-medical-licensing-exam-will-it-be-your-future-doctor)ออกมาก่อนหน้านี้แล้ว แต่ในโพสต์นี้เราจะมาดูงานวิจัยล่าสุดนี้กัน
 
 ## Brief history
 
