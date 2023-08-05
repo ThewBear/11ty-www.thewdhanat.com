@@ -11,7 +11,10 @@
 .prose a[href^="https://"]:not(.no-external-icon)::after
 {
   content: "↗";
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   @apply font-black text-indigo-600 leading-3 pl-px;
 }
 

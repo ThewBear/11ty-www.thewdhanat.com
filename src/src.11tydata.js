@@ -150,7 +150,7 @@ online_certificates.forEach((certificate) => {
 
 Object.keys(online_certificates_by_year).forEach((year) => {
   online_certificates_by_year[year] = online_certificates_by_year[year].sort(
-    (a, b) => a.date - b.date
+    (a, b) => a.date - b.date,
   );
 });
 

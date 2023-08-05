@@ -26,7 +26,7 @@
 
       if (!this.fetches[speedlifyUrl]) {
         this.fetches[speedlifyUrl] = fetch(
-          SpeedlifyUrlStore.normalizeUrl(speedlifyUrl, "api/urls.json")
+          SpeedlifyUrlStore.normalizeUrl(speedlifyUrl, "api/urls.json"),
         );
       }
 
@@ -91,7 +91,7 @@
 
       async fetchData(hash) {
         let response = await fetch(
-          SpeedlifyUrlStore.normalizeUrl(this.speedlifyUrl, `api/${hash}.json`)
+          SpeedlifyUrlStore.normalizeUrl(this.speedlifyUrl, `api/${hash}.json`),
         );
         let json = await response.json();
 
@@ -102,7 +102,7 @@
         if (data.timestamp) {
           this.setAttribute(
             "title",
-            `Results from ${this.timeAgo(data.timestamp)}`
+            `Results from ${this.timeAgo(data.timestamp)}`,
           );
           this.setAttribute("data-timestamp", data.timestamp);
         }
@@ -127,23 +127,23 @@
         let scores = [];
         scores.push(
           `<span title="Performance" class="${this.getScoreClass(
-            data.lighthouse.performance
-          )}">${parseInt(data.lighthouse.performance * 100, 10)}</span>`
+            data.lighthouse.performance,
+          )}">${parseInt(data.lighthouse.performance * 100, 10)}</span>`,
         );
         scores.push(
           `<span title="Accessibility" class="${this.getScoreClass(
-            data.lighthouse.accessibility
-          )}">${parseInt(data.lighthouse.accessibility * 100, 10)}</span>`
+            data.lighthouse.accessibility,
+          )}">${parseInt(data.lighthouse.accessibility * 100, 10)}</span>`,
         );
         scores.push(
           `<span title="Best Practices" class="${this.getScoreClass(
-            data.lighthouse.bestPractices
-          )}">${parseInt(data.lighthouse.bestPractices * 100, 10)}</span>`
+            data.lighthouse.bestPractices,
+          )}">${parseInt(data.lighthouse.bestPractices * 100, 10)}</span>`,
         );
         scores.push(
           `<span title="SEO" class="${this.getScoreClass(
-            data.lighthouse.seo
-          )}">${parseInt(data.lighthouse.seo * 100, 10)}</span>`
+            data.lighthouse.seo,
+          )}">${parseInt(data.lighthouse.seo * 100, 10)}</span>`,
         );
         return scores.join(" ");
       }
@@ -163,12 +163,12 @@
         let summarySplit = data.weight.summary.split(" • ");
         if (this.hasAttribute("requests")) {
           content.push(
-            `<span class="speedlify-requests">${summarySplit[0]}</span>`
+            `<span class="speedlify-requests">${summarySplit[0]}</span>`,
           );
         }
         if (this.hasAttribute("weight")) {
           content.push(
-            `<span class="speedlify-weight">${summarySplit[1]}</span>`
+            `<span class="speedlify-weight">${summarySplit[1]}</span>`,
           );
         }
         if (this.hasAttribute("rank")) {
@@ -178,7 +178,7 @@
               rankUrl ? `a href="${rankUrl}"` : "span"
             } class="speedlify-rank">${data.ranks.cumulative}</${
               rankUrl ? "a" : "span"
-            }>`
+            }>`,
           );
         }
         if (this.hasAttribute("rank-change") && data.previousRanks) {
@@ -186,12 +186,12 @@
           content.push(
             `<span class="speedlify-rank-change ${
               change > 0 ? "up" : change < 0 ? "down" : "same"
-            }">${change !== 0 ? Math.abs(change) : ""}</span>`
+            }">${change !== 0 ? Math.abs(change) : ""}</span>`,
           );
         }
 
         return content.join("");
       }
-    }
+    },
   );
 })();
