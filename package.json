@@ -15,7 +15,7 @@
     "@github/clipboard-copy-element": "^1.2.1",
     "@notionhq/client": "^2.2.13",
     "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
     "esbuild": "^0.19.2",
     "fast-glob": "^3.3.1",
