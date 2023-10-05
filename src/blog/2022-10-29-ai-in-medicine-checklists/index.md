@@ -36,6 +36,16 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
 
+## AI in Peer Review
+
+[The Use of Generative Artificial Intelligence Technologies is Prohibited for the NIH Peer Review Process](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html)
+
+[Policy on Use of Generative Artificial Intelligence in the ARCs grants programs 2023](https://www.arc.gov.au/sites/default/files/2023-07/Policy%20on%20Use%20of%20Generative%20Artificial%20Intelligence%20in%20the%20ARCs%20grants%20programs%202023.pdf)
+
+[Science funding agencies say no to using AI for peer review](https://www.science.org/content/article/science-funding-agencies-say-no-using-ai-peer-review)
+
+[Funders agree on the use of AI tools in funding applications](https://www.nihr.ac.uk/news/funders-agree-on-the-use-of-ai-tools-in-funding-applications/34513)
+
 ## Government
 
 ### Europe
