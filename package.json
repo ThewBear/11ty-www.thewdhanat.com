@@ -17,7 +17,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
-    "esbuild": "^0.19.4",
+    "esbuild": "^0.19.5",
     "fast-glob": "^3.3.1",
     "got": "^13.0.0",
     "luxon": "^3.4.3",
