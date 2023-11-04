@@ -6,6 +6,8 @@ on:
     paths:
       - "cv/**"
   workflow_dispatch:
+  schedule:
+    - cron: "14 14 3/5 * *"
 
 jobs:
   build_cv:

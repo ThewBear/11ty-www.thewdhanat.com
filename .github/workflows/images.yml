@@ -8,6 +8,8 @@ on:
       - "src/**/*.avif"
       - "bin/images.mjs"
   workflow_dispatch:
+  schedule:
+    - cron: "14 14 2/5 * *"
 
 jobs:
   build:
