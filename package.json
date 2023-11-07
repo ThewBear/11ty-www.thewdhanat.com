@@ -18,7 +18,7 @@
     "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
     "esbuild": "^0.19.4",
-    "fast-glob": "^3.3.1",
+    "fast-glob": "^3.3.2",
     "got": "^13.0.0",
     "luxon": "^3.4.3",
     "markdown-it": "^13.0.2",
