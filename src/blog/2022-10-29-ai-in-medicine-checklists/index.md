@@ -1,7 +1,7 @@
 ---
 title: AI in Medicine Checklists
 description: AI in Medicine Checklists. General information, reporting guidelines and checklists for AI-in-medicine researchers.
-updated: 2023-04-09
+updated: 2023-11-20
 ---
 
 _This is an in progress post. More updates will be coming (soon)._
@@ -95,6 +95,8 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 [Standardized Reporting of Machine Learning Applications in Urology: The STREAM-URO Framework](<https://www.eu-focus.europeanurology.com/article/S2405-4569(21)00183-8/fulltext>)
 
 [Recommendations on compiling test datasets for evaluating artificial intelligence solutions in pathology](<https://mp.uscap.org/article/S0893-3952(22)05487-4/fulltext>)
+
+[Five critical quality criteria for artificial intelligence-based prediction models](https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehad727/7332053)
 
 ## Government
 
