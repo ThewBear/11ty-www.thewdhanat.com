@@ -29,6 +29,7 @@
     "prettier": "^3.0.3",
     "sharp": "^0.33.2",
     "tailwindcss": "^3.4.1",
-    "twemoji": "^14.0.2"
+    "@twemoji/api": "^15.0.3",
+    "@twemoji/parser": "^15.0.0"
   }
 }
