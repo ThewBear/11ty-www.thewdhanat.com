@@ -60,7 +60,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         if: github.event_name	== 'pull_request'
         with:
           script: |
@@ -70,7 +70,7 @@ jobs:
               repo: context.repo.repo,
               body: `Preview : ${require('fs').readFileSync('previewUrl.txt', 'utf8')} 🚀`
             })
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         if: github.event_name	!= 'pull_request'
         with:
           script: |
@@ -81,9 +81,6 @@ jobs:
               required_contexts: [],
               environment: 'preview',
               transient_environment: true,
-              mediaType: {
-                previews: "ant-man"
-              }
             });
             github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
@@ -91,9 +88,6 @@ jobs:
               deployment_id: deployment.id,
               state: 'success',
               log_url: require('fs').readFileSync('previewUrl.txt', 'utf8'),
-              mediaType: {
-                previews: "ant-man"
-              }
             });
 
   deploy_production:
@@ -119,7 +113,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         with:
           script: |
             const { data: deployment } = await github.rest.repos.createDeployment({
