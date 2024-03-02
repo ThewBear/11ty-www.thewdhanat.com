@@ -19,7 +19,7 @@ jobs:
       - run: latexmk -xelatex
         working-directory: cv
       - run: "[ -f cv/cv.pdf ]"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cv
           path: cv/cv.pdf
