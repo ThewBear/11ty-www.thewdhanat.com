@@ -23,7 +23,7 @@
     "luxon": "^3.4.3",
     "markdown-it": "^13.0.2",
     "markdown-it-anchor": "^8.6.7",
-    "p-queue": "^7.4.1",
+    "p-queue": "^8.0.1",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.3",
