@@ -115,3 +115,7 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 [Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension](https://www.nature.com/articles/s41591-020-1034-x)
 
 [Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension](https://www.nature.com/articles/s41591-020-1037-7)
+
+## Peer review
+
+[Think Again Before Using Generative AI During Peer Review or As You Prepare an Application](https://www.nccih.nih.gov/research/blog/think-again-before-using-generative-ai-during-peer-review-or-as-you-prepare-an-application)
