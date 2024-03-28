@@ -1,7 +1,7 @@
 ---
 title: AI in Medicine Checklists
 description: AI in Medicine Checklists. General information, reporting guidelines and checklists for AI-in-medicine researchers.
-updated: 2023-11-20
+updated: 2024-03-28
 ---
 
 _This is an in progress post. More updates will be coming (soon)._
