@@ -88,6 +88,8 @@ Artificial Intelligence / Machine learning application to other disciplines is a
 
 [Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI](https://www.equator-network.org/reporting-guidelines/reporting-guideline-for-the-early-stage-clinical-evaluation-of-decision-support-systems-driven-by-artificial-intelligence-decide-ai/)
 
+[Publishers’ and journals’ instructions to authors on use of generative artificial intelligence in academic and scientific publishing: bibliometric analysis](https://www.bmj.com/content/384/bmj-2023-077192)
+
 ## Specialty
 
 [Proposed Requirements for Cardiovascular Imaging-Related Machine Learning Evaluation (PRIME): A Checklist: Reviewed by the American College of Cardiology Healthcare Innovation Council](https://www.sciencedirect.com/science/article/pii/S1936878X20306367)
