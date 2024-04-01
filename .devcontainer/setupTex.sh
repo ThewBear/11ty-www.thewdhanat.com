@@ -21,4 +21,4 @@ mv fonts/* ~/.fonts
 rmdir fonts
 rm cv/sarabun_*
 
-# echo '$xelatex = "xelatex -shell-escape";' >> ~/.latexmkrc
+echo '$xelatex = "xelatex -shell-escape";' >> ~/.latexmkrc
