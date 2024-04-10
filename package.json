@@ -16,7 +16,7 @@
     "@notionhq/client": "^2.2.14",
     "@tailwindcss/typography": "^0.5.12",
     "@twemoji/api": "^15.1.0",
-    "@twemoji/parser": "^15.1.0",
+    "@twemoji/parser": "^15.1.1",
     "autoprefixer": "^10.4.19",
     "dotenv": "^16.4.5",
     "esbuild": "^0.20.2",
