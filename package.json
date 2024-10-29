@@ -19,7 +19,7 @@
     "@twemoji/parser": "^15.1.1",
     "autoprefixer": "^10.4.19",
     "dotenv": "^16.4.5",
-    "esbuild": "^0.21.3",
+    "esbuild": "^0.24.0",
     "fast-glob": "^3.3.2",
     "got": "^14.3.0",
     "luxon": "^3.4.3",
