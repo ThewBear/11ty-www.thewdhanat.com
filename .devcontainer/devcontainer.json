@@ -1,12 +1,10 @@
 {
   "name": "Node.js",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:20-bookworm",
-
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:22-bookworm",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
-        "GitHub.copilot-labs",
         "GitHub.copilot-chat",
         "dbaeumer.vscode-eslint",
         "eamodio.gitlens",
@@ -16,7 +14,8 @@
       ]
     }
   },
-
-  "forwardPorts": [8080],
+  "forwardPorts": [
+    8080
+  ],
   "remoteUser": "node"
 }
