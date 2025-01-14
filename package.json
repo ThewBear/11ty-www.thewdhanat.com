@@ -26,7 +26,7 @@
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "p-queue": "^8.0.1",
-    "postcss": "^8.4.47",
+    "postcss": "^8.5.1",
     "postcss-import": "^16.1.0",
     "prettier": "^3.3.3",
     "sharp": "^0.33.5",
