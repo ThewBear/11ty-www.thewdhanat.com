@@ -23,12 +23,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: images.yml
           name: images
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: cv.yml
           name: cv
@@ -49,12 +49,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: images.yml
           name: images
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: cv.yml
           name: cv
@@ -102,12 +102,12 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: images.yml
           name: images
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v6
+      - uses: dawidd6/action-download-artifact@v8
         with:
           workflow: cv.yml
           name: cv
