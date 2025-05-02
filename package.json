@@ -21,7 +21,7 @@
     "dotenv": "^16.4.5",
     "esbuild": "^0.24.0",
     "fast-glob": "^3.3.2",
-    "got": "^14.4.3",
+    "got": "^14.4.7",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
