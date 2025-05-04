@@ -27,11 +27,13 @@ jobs:
         with:
           workflow: images.yml
           name: images
+          branch: ${{ github.ref }}
           path: _data/images
       - uses: dawidd6/action-download-artifact@v9
         with:
           workflow: cv.yml
           name: cv
+          branch: ${{ github.ref }}
           path: cv
       - run: npm ci
       - run: npm run build
