@@ -20,7 +20,7 @@
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.5.0",
     "esbuild": "^0.25.0",
-    "fast-glob": "^3.3.2",
+    "fast-glob": "^3.3.3",
     "got": "^14.4.7",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
