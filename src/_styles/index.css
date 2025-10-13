@@ -1,6 +1,6 @@
-@import './speedlify-score.css' layer(base);
+@import "./speedlify-score.css" layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @config '../../tailwind.config.js';
 
