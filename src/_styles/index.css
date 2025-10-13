@@ -1,5 +1,3 @@
-@import "./speedlify-score.css" layer(base);
-
 @import "tailwindcss";
 
 @config '../../tailwind.config.js';
@@ -21,6 +19,8 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 }
+
+@import "./speedlify-score.css" layer(base);
 
 .prose a[href^="//"]:not(.no-external-icon)::after,
 .prose a[href^="http://"]:not(.no-external-icon)::after,
