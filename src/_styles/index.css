@@ -1,10 +1,26 @@
-@import "speedlify-score.css";
+@import "tailwindcss";
 
-@tailwind base;
+@config '../../tailwind.config.js';
 
-@tailwind components;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-@tailwind utilities;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@import "./speedlify-score.css" layer(base);
 
 .prose a[href^="//"]:not(.no-external-icon)::after,
 .prose a[href^="http://"]:not(.no-external-icon)::after,
