@@ -67,7 +67,7 @@ contents:
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for certificate in online_certificates_front %}
           {% if certificate.url %}<a href="{{ certificate.url }}" aria-labelledby="{{ certificate.title | slugify }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
-            <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
+            <div class="shadow-sm bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ certificate.title | slugify }}">{{ certificate.title }}</h4>
               <span class="text-sm">{{ certificate.platform }}
                 {% if certificate.children %}
@@ -82,7 +82,7 @@ contents:
           </{{"a" if certificate.url else "div"}}>
         {% endfor %}
         <a href="/certificates/" aria-labelledby="more-certificates" class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
-          <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full flex flex-col justify-center">
+          <div class="shadow-sm bg-blue-400 dark:bg-blue-800 p-4 h-full flex flex-col justify-center">
             <h4 class="font-medium text-xl" id="more-certificates">All {{ online_certificates | length }} certificates</h4>
           </div>
         </a>
@@ -93,7 +93,7 @@ contents:
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3 my-4">
         {% for accomplishment in accomplishments %}
           {% if accomplishment.url %}<a href="{{ accomplishment.url }}" aria-labelledby="{{ accomplishment.title | slugify }}"{% else %}<div{% endif %} class="h-full transition-transform duration-150 ease-in-out hover:scale-105">
-            <div class="shadow bg-blue-400 dark:bg-blue-800 p-4 h-full">
+            <div class="shadow-sm bg-blue-400 dark:bg-blue-800 p-4 h-full">
               <h4 class="font-medium" id="{{ accomplishment.title | slugify }}">{{ accomplishment.title }}</h4>
               <span class="text-sm">{{ accomplishment.summary }}</span>
             </div>
