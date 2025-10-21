@@ -14,7 +14,7 @@
     "@github/clipboard-copy-element": "^1.3.0",
     "@notionhq/client": "^5.1.0",
     "@qwik.dev/partytown": "^0.11.2",
-    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/postcss": "^4.1.15",
     "@tailwindcss/typography": "^0.5.15",
     "@twemoji/api": "^16.0.1",
     "@twemoji/parser": "^16.0.0",
