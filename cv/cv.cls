@@ -32,7 +32,7 @@
 {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
 {}                           % Can be used to insert code before the heading
 [{\titlerule[0.75pt]}]       % Inserts a horizontal line after the heading
-\titlespacing*{\section}{0pt}{*3}{*1}  % Reduce vertical space after title
+\titlespacing*{\section}{0pt}{*2}{*0.75}  % Reduce vertical space after title
 
 
 \newenvironment{cv_table}{
