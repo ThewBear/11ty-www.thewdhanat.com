@@ -22,22 +22,23 @@
 }
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
 \fancyfoot[R]{\textcolor{Sepia}{\footnotesize
-  Version \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
-  Printed on \today
-}}
+    Version \input{|"git rev-list --abbrev-commit -1 HEAD \jobname.tex"}\\
+    Printed on \today
+  }}
 
 \usepackage{titlesec}
 \titleformat{\section}         % Customise the \section command 
-  {\Large\raggedright\bf}      % Make the \section headers large (\Large),
-  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
-  {}                           % Can be used to insert code before the heading
-  [{\titlerule[0.75pt]}]       % Inserts a horizontal line after the heading
+{\Large\raggedright\bf}      % Make the \section headers large (\Large),
+{}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+{}                           % Can be used to insert code before the heading
+[{\titlerule[0.75pt]}]       % Inserts a horizontal line after the heading
+\titlespacing*{\section}{0pt}{*3}{*1}  % Reduce vertical space after title
 
 
 \newenvironment{cv_table}{
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular*}{\columnwidth}{ll@{\extracolsep{\fill}}r}
-}{\end{tabular*}}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular*}{\columnwidth}{ll@{\extracolsep{\fill}}r}
+    }{\end{tabular*}}
 
 \newcommand{\cveduitem}[3]{
   #1 & \textcolor{DarkSlateGray}{\textbf{#2}} & #3 \\

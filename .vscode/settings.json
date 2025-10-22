@@ -4,5 +4,6 @@
   "files.associations": {
     "*.njk": "html"
   },
-  "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  "latex-workshop.formatting.latex": "latexindent"
 }
