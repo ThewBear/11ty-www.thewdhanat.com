@@ -19,7 +19,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyhf{}
 \fancyfoot[L]{
-  thewdhanat.com/cv
+  \textcolor{DarkSlateGray}{thewdhanat.com/cv}
 }
 \fancyfoot[C]{\thepage/\pageref{LastPage}}
 \fancyfoot[R]{\textcolor{Sepia}{\footnotesize
