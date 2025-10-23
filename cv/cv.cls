@@ -11,7 +11,7 @@
   top=15mm}
 
 \usepackage[dvipsnames,svgnames,x11names]{xcolor}
-\definecolor{dark1}{rgb}{0.185, 0.185, 0.185}
+\definecolor{dark1}{rgb}{0.135, 0.135, 0.135}
 
 \usepackage{lastpage}
 \usepackage[]{fancyhdr}
