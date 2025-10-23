@@ -9,6 +9,9 @@ on:
   schedule:
     - cron: "14 14 3/5 * *"
 
+permissions:
+  contents: read
+
 jobs:
   build_cv:
     runs-on: ubuntu-latest
