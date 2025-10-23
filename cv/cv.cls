@@ -55,9 +55,9 @@
     }{\end{itemize}}
 
 \newcommand{\cvitemwithsubtitle}[4]{
-  #1 & \textcolor{SlateGray}{#3} & #4 \\[-0.5em]
+  #1 & \textcolor{DarkSlateGray}{#3} & #4 \\[-0.5em]
   \multicolumn{3}{l}{
-    \parbox{\columnwidth}{\small{\textcolor{SlateGray}{#2}}}
+    \parbox{\columnwidth}{\small{\textcolor{DarkSlateGray}{#2}}}
   } \\
 }
 
