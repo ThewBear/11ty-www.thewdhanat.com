@@ -24,7 +24,7 @@ jobs:
           node-version: "22"
       - run: npm ci
       - run: node bin/images.mjs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: images
           path: _data/images
