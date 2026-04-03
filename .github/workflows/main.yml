@@ -28,12 +28,12 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "22"
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: images.yml
           name: images
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: cv.yml
           name: cv
@@ -57,12 +57,12 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "22"
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: images.yml
           name: images
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: cv.yml
           name: cv
@@ -113,13 +113,13 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "22"
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: images.yml
           name: images
           branch: main
           path: _data/images
-      - uses: dawidd6/action-download-artifact@v11
+      - uses: dawidd6/action-download-artifact@v20
         with:
           workflow: cv.yml
           name: cv
