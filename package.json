@@ -23,7 +23,7 @@
     "fast-glob": "^3.3.3",
     "got": "^14.6.6",
     "luxon": "^3.5.0",
-    "markdown-it": "^14.1.1",
+    "markdown-it": "^14.2.0",
     "markdown-it-anchor": "^9.2.0",
     "p-queue": "^9.1.1",
     "postcss": "^8.5.8",
