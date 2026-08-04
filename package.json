@@ -19,7 +19,7 @@
     "@twemoji/api": "^17.0.2",
     "@twemoji/parser": "^17.0.1",
     "dotenv": "^17.4.0",
-    "esbuild": "^0.27.7",
+    "esbuild": "^0.28.0",
     "fast-glob": "^3.3.3",
     "got": "^14.6.6",
     "luxon": "^3.5.0",
