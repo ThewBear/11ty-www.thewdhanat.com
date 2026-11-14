@@ -1,3 +1,5 @@
+name: cv
+
 on:
   push:
     paths:
